@@ -1,4 +1,7 @@
-"""Parser for Flipper Zero NFC device files (v4, SLIX) describing Tonie tags."""
+"""Parser for Flipper Zero NFC device files (v4, SLIX) describing Tonie tags.
+
+The format is documented in docs/WORKFLOW.md ("The `.nfc` file format").
+"""
 
 from __future__ import annotations
 

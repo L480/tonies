@@ -40,7 +40,7 @@ Preview without touching hardware: `./tonie write "Zuma" --dry-run`.
 1. **Never run `hf 15 csetuid`, with or without `--v2`.** The `--v2` path sends the Gen2
    layout command `02 E0 09 47 …`, which **permanently bricks magic SLIX-L tags**. The
    UID is written with two raw frames instead; `tonie_writer/proxmark.py` already does
-   this correctly. See `docs/HARDWARE.md` and §4.4 of `plan.md`.
+   this correctly. See "Why this repo never calls `csetuid`" in `docs/HARDWARE.md`.
 2. **Data blocks are written before the UID.** Once the tag carries a foreign UID the
    blocks may no longer be writable. Do not reorder.
 3. **Block writes are non-addressed** (`hf 15 wrbl --ua`, flags `0x02`, retry with `-o`

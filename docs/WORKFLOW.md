@@ -13,6 +13,52 @@
 All generated paths are marked `linguist-generated=true` in
 `.gitattributes` so they collapse in GitHub diffs by default.
 
+## The `.nfc` file format
+
+The mirrored dumps are Flipper Zero NFC device files (v4, `Device type: SLIX`).
+`tonie_writer/nfcfile.py` parses them; one file looks like this:
+
+```
+Filetype: Flipper NFC device
+Version: 4
+Device type: SLIX
+UID: E0 04 03 50 20 30 36 1D
+DSFID: 00
+AFI: 00
+IC Reference: 03
+Lock DSFID: false
+Lock AFI: false
+Block Count: 8
+Block Size: 04
+Data Content: D9 3F EB 0A DB 3D 44 47 8B E4 85 49 DB 4E 04 E1 93 9A 22 6B 2F B3 91 1D 98 2C 1C 55 00 F2 00 64
+Security Status: 00 00 00 00 00 00 00 00
+Capabilities: Default
+Password Privacy: 7F FD 6E 5B
+Password Destroy: 0F 0F 0F 0F
+Password EAS: 00 00 00 00
+Privacy Mode: false
+Lock EAS: false
+```
+
+Lines starting with `#` are comments and are ignored; the key/value separator
+is `: `. The fields that matter for writing a tag:
+
+* **`UID`** — 8 bytes in display order (`E0` first). That is exactly the order
+  the magic UID frames expect; they reverse each half themselves (see
+  [HARDWARE.md](HARDWARE.md#-why-this-repo-never-calls-csetuid)).
+* **`Data Content`** — 32 bytes = 8 blocks × 4 bytes; block 0 is the first
+  4 bytes.
+* **`Privacy Mode: false`** — true for every upstream file, so the write flow
+  never has to disable privacy mode first.
+* **`Password Privacy: 7F FD 6E 5B`** — the well-known Tonies privacy
+  password. This repo never writes passwords; see the expert notes in
+  [HARDWARE.md](HARDWARE.md).
+
+A file is rejected by the parser if it is not `Device type: SLIX`, the UID is
+not 8 bytes, `Block Count` is not 8, `Block Size` is not `04`, or
+`Data Content` is not exactly 32 bytes. `scripts/build_index.py` warns about
+and skips such files instead of failing the whole build.
+
 ## The nightly job
 
 [`.github/workflows/sync-tonies.yml`](../.github/workflows/sync-tonies.yml)
