@@ -1,0 +1,19 @@
+Filetype: Flipper NFC device
+Version: 4
+Device type: SLIX
+UID: E0 04 03 50 20 30
+DSFID: 00
+AFI: 00
+IC Reference: 03
+Lock DSFID: false
+Lock AFI: false
+Block Count: 8
+Block Size: 04
+Data Content: D9 3F EB 0A DB 3D 44 47 8B E4 85 49 DB 4E 04 E1 93 9A 22 6B 2F B3 91 1D 98 2C 1C 55 00 F2 00 64
+Security Status: 00 00 00 00 00 00 00 00
+Capabilities: Default
+Password Privacy: 7F FD 6E 5B
+Password Destroy: 0F 0F 0F 0F
+Password EAS: 00 00 00 00
+Privacy Mode: false
+Lock EAS: false
