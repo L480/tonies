@@ -27,7 +27,8 @@ Build a repository that:
 |------|-------|
 | Host OS | macOS on Apple Silicon (ARM64) |
 | Reader/Writer | "Proxmark3 512M" from AliExpress — a **Proxmark3 Easy clone** with a 512 KB ARM MCU. Runs the Iceman (RfidResearchGroup) firmware, built with `PLATFORM=PM3GENERIC`. |
-| Tags | AliExpress "SLIX 15693 Dia 30 mm, ISO 15693, 13.56 MHz, programmable RFID sticker" |
+| Toniebox | **Stock / unmodified** (no TeddyCloud, no HackieboxNG) → cloning a real Tonie UID is the only viable path |
+| Tags | **Magic SLIX-L with changeable UID** (see §2.3). The AliExpress "SLIX 15693 Dia 30 mm … programmable RFID sticker" the user already owns is expected *not* to work — see §2.4. |
 | Python | `python3` from Xcode Command Line Tools (3.9+). **Standard library only** — no `pip install` step for the end user. |
 
 ---
@@ -49,36 +50,78 @@ of failing cryptically.
 * Every `.nfc` file in the upstream repo therefore contains a UID starting with
   `E0 04 03` plus a 32-byte `Data Content`.
 
-### 2.2 The problem with "genuine" tags
+### 2.2 Target box: **stock / unmodified Toniebox** (confirmed)
+
+This changes nothing about the software, but it fixes the requirement:
+on an unmodified box the only way to make a tag play something is to **clone the UID
+of a real Tonie** the box (or the cloud) already knows. Assigning custom content to a
+tag's own UID requires a modified box (TeddyCloud / HackieboxNG) and is out of scope
+(§12).
+
+### 2.3 Which tags actually work — and which do not
 
 * On a **genuine** NXP tag the UID is laser-programmed at the factory and is
-  **permanently read-only**. It cannot be changed by any reader, Proxmark3 included.
-* A genuine **ICODE SLIX** (not SLIX-L) tag reports `E0 04 02`, not `E0 04 03`.
-* Consequence: **a genuine SLIX sticker can never be turned into a clone of a specific Tonie.**
+  **permanently read-only**. No reader can change it, Proxmark3 included.
+* A genuine **ICODE SLIX** (not SLIX-L) reports `E0 04 02` and additionally lacks the
+  privacy-password support the box expects. Stock firmware rejects it; only patched
+  firmware ("allow tags without privacy password support, e.g. SLIX") accepts it.
+* Historically no UID-changeable SLIX-**L** existed — all magic ISO 15693 tags were
+  SLI/SLIX class, which is why "cloning a Tonie" was long considered impossible.
+* That has changed: **magic SLIX-L tags are now sold** (e.g. RFIDFriend). Upstream
+  issue [nortakales/flipper-zero-tonies#170](https://github.com/nortakales/flipper-zero-tonies/issues/170)
+  reports them working on **original, unmodified Toniebox 1 and 2**.
 
-To write a Tonie UID you need a **"magic" / UID-changeable ISO 15693 tag**
-(sold as *magic ISO15693*, *ICODE gen1/gen2 magic*, *changeable UID NFC-V*).
-The Proxmark3 Iceman firmware writes those with `hf 15 csetuid`.
+**Buying guidance for `docs/HARDWARE.md` — be specific, this is where money gets wasted:**
 
-The AliExpress listing the user bought ("Echtes SLIX 15693 … programmierbarer
-RFID-Aufkleber") advertises *programmable memory*, which is **not** the same as a
-*changeable UID*. It may or may not be a magic tag — many "SLIX" stickers sold for
-Toniebox use actually are UID-changeable, but the listing does not prove it.
+| Tag | Stock box | Verdict |
+|-----|-----------|---------|
+| Magic **SLIX-L**, changeable UID | ✅ | **This is what you need.** |
+| Generic "magic ISO15693 / ICODE SLI / SLIX, UID changeable" | ❌ likely | UID can be set to `E00403…`, but the chip is SLI/SLIX class and fails the box's privacy-password step. |
+| Genuine SLIX-L, fixed UID | ❌ | UID is unknown to the cloud → box ignores it. Only useful on a modified box. |
+| Genuine SLIX (the AliExpress stickers, see below) | ❌ | Wrong UID prefix *and* no privacy support. |
 
-**Therefore: the very first thing the user runs is `./tonie doctor`,** which reports
-the tag's UID prefix and whether `hf 15 csetuid` succeeds. The docs must state the two
-outcomes plainly:
+### 2.4 The tags the user already owns
+
+AliExpress "Echtes SLIX 15693 Dia 30 mm … programmierbarer RFID-Aufkleber".
+"Programmable" refers to the **memory**, not the UID. The listing's reviews are the
+tell — every positive report describes a **patched** box:
+
+> "Funktioniert perfekt mit meiner Toniebox (CC3200), die den benutzerdefinierten Bootloader HackieboxNG verwendet."
+> "Funktioniert mit Toniebox/Teddycloud mit aktivierten Patches."
+
+The patch in question is exactly the HackieboxNG OFW patch that allows tags *without*
+privacy-password support (i.e. plain SLIX). Needing that patch is strong evidence the
+stickers are genuine SLIX with a fixed `E0 04 02…` UID — not magic, not SLIX-L.
+No review claims a stock box works.
+
+**Expected outcome: these stickers will not work for this project.** Say so in the
+README, do not let the user discover it after 30 failed writes. They remain usable if
+the box is ever modified.
+
+### 2.5 The 2-minute verification the user runs first
+
+`./tonie doctor [--probe-magic]` reports the tag's UID prefix and whether
+`hf 15 csetuid` takes. Document the three outcomes plainly:
 
 | Outcome | Meaning | What to do |
 |---------|---------|------------|
-| `hf 15 csetuid` succeeds, UID becomes the requested `E0 04 03…` | Magic tag ✅ | Everything in this repo works as designed. |
-| `hf 15 csetuid` fails / UID unchanged | Genuine, locked-UID tag ❌ | Cloning is physically impossible with these stickers. Either buy magic ISO 15693 tags, or keep the tag's own UID and assign content to it on a **modified** Toniebox (TeddyCloud custom tags). Writing memory blocks still works, but a stock Toniebox will ignore the tag. |
+| `csetuid` ok, UID becomes `E0 04 03…`, chip behaves as SLIX-L | Magic SLIX-L ✅ | Everything in this repo works as designed. |
+| `csetuid` ok, but the tag is SLI/SLIX class | Magic, wrong class ⚠️ | Write succeeds, stock box will most likely still ignore the tag. Try it, but expect failure. |
+| `csetuid` fails / UID unchanged | Fixed-UID tag ❌ | Cloning is physically impossible with these. Buy magic SLIX-L tags. |
 
-Document this in `docs/HARDWARE.md` and link it from the README's first section.
+**Residual risk to flag in `docs/HARDWARE.md`:** the upstream success report used a
+**Flipper Zero** with the [SLI-Writer](https://github.com/Julienbxl/SLI-Writer) app, not
+a Proxmark3. Whether a given magic SLIX-L batch answers the gen1 or the gen2 magic
+command is vendor-specific — hence `--gen2` and the automatic gen1→gen2 retry in §8.5
+step 6. If neither works, the fallback is Flipper Zero + SLI-Writer with the very same
+`.nfc` files from `data/tonies/` (they are Flipper-native — mention this, it costs one
+sentence and saves the project).
+
+Document all of §2 in `docs/HARDWARE.md` and link it from the README's first section.
 Do **not** hide it in a footnote — it is the single most likely reason the project
 "doesn't work" for the user.
 
-### 2.3 Legal / scope note (one short paragraph in the README)
+### 2.6 Legal / scope note (one short paragraph in the README)
 
 This tooling clones identifiers of Tonie figures for personal use with figures and
 content the user owns (e.g. replacing a lost or damaged figure with a sticker on a
@@ -505,7 +548,7 @@ Flags: `--dry-run`, `--yes`, `--port`, `--gen2` (use `csetuid --v2`), `--uid-onl
 6. **Write UID:** `hf 15 csetuid -u <UID>` (or with `--v2` when `--gen2`).
    * Parse stdout for `Setting new UID ( ok )` / `( fail )` / `no tag found`.
    * On failure without `--gen2`, **automatically retry once with `--v2`** and say so.
-   * If both fail → print the "genuine vs. magic tag" explanation from §2.2 verbatim
+   * If both fail → print the "fixed-UID vs. magic SLIX-L tag" explanation from §2.3/§2.5 verbatim
      (one short paragraph + link to `docs/HARDWARE.md`) and exit 5. This is the single
      most important error message in the tool.
 7. **Write blocks:** for `b` in 0..7 → `hf 15 wrbl -* -b <b> -d <8 hex chars>`.
@@ -564,7 +607,8 @@ Checks, each printed as `✅ / ⚠️ / ❌` with a fix hint:
 ### `README.md` (top-level, concise)
 
 1. One-paragraph what/why.
-2. **Compatibility warning box** (§2.2 condensed, 4 lines) linking to `docs/HARDWARE.md`.
+2. **Compatibility warning box** (§2.3/§2.4 condensed, 4 lines): magic **SLIX-L** tags required,
+   plain SLIX stickers do not work on a stock box. Link to `docs/HARDWARE.md`.
 3. Quickstart:
    ```sh
    git clone https://github.com/l480/tonies.git && cd tonies
@@ -577,7 +621,7 @@ Checks, each printed as `✅ / ⚠️ / ❌` with a fix hint:
    ```
 4. Command table (§8.2).
 5. Link to `TONIES.md`, note that it and `data/` are regenerated nightly.
-6. Credits: upstream repo + Proxmark3 Iceman fork; legal note (§2.3).
+6. Credits: upstream repo + Proxmark3 Iceman fork; legal note (§2.6).
 
 ### `docs/HARDWARE.md`
 
