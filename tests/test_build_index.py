@@ -86,6 +86,31 @@ class TestBuildIndex(unittest.TestCase):
         self.assertIn("generated_at", payload)
         json.dumps(payload)  # must be JSON-serializable
 
+    def test_generated_at_tracks_the_sync_not_the_clock(self):
+        """Two builds must be byte-identical while the mirror has not moved.
+
+        Regression guard: deriving generated_at from datetime.now() made the
+        nightly job commit a timestamp-only diff every single night.
+        """
+        entries = build_index.collect_entries(self.tonies_dir)
+        upstream = {
+            "commit": "e6f8fd419bed396be9575930412da9a0e2d7a6cc",
+            "synced_at": "2026-08-02T17:17:01Z",
+        }
+        upstream_json = Path(self.tmp) / "UPSTREAM.json"
+        upstream_json.write_text(json.dumps(upstream), encoding="utf-8")
+
+        original = build_index.UPSTREAM_JSON
+        build_index.UPSTREAM_JSON = upstream_json
+        try:
+            first = build_index.build_tonies_json_payload(entries, "e6f8fd4")
+            second = build_index.build_tonies_json_payload(entries, "e6f8fd4")
+        finally:
+            build_index.UPSTREAM_JSON = original
+
+        self.assertEqual(first["generated_at"], upstream["synced_at"])
+        self.assertEqual(json.dumps(first), json.dumps(second))
+
     def test_duplicate_uid_detection(self):
         entries = build_index.collect_entries(self.tonies_dir)
         dupes = build_index.find_duplicate_uids(entries)

@@ -76,6 +76,20 @@ runs on a schedule (02:27 UTC nightly) and can also be triggered manually:
    `github-actions[bot]` with a message naming the upstream short SHA and
    file count, and pushes directly to the branch the workflow runs on.
 
+"Nothing changed" is meant literally, which takes some care with timestamps:
+
+* `sync_upstream.sh` leaves `data/UPSTREAM.json` untouched when the upstream
+  commit it just fetched matches the one already recorded. Rewriting
+  `synced_at` on every run would make the file differ every night even when
+  the mirror is identical.
+* `build_index.py` takes `generated_at` from that `synced_at` rather than
+  from the current clock, so `data/tonies.json` and `TONIES.md` inherit the
+  same property.
+
+Together this means a night with no upstream activity produces a genuinely
+empty diff and therefore no commit. `tests/test_build_index.py` guards the
+second half of this.
+
 Triggering it manually (e.g. from the Actions tab, "Run workflow") accepts a
 `dry_run` input: when true, the sync and index rebuild still run, but the
 commit step only prints what it *would* commit (`git diff --cached --stat`)

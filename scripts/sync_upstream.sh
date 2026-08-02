@@ -56,6 +56,7 @@ AFTER_COUNT="$(find "$DEST_DIR" -name '*.nfc' | wc -l | tr -d ' ')"
 
 python3 - "$UPSTREAM_JSON" "$UPSTREAM_URL" "$UPSTREAM_BRANCH" "$COMMIT_SHA" "$COMMIT_DATE" "$SYNCED_AT" "$AFTER_COUNT" <<'PYEOF'
 import json
+import os
 import sys
 
 out_path, repository, branch, commit, commit_date, synced_at, file_count = sys.argv[1:8]
@@ -68,6 +69,24 @@ data = {
     "synced_at": synced_at,
     "file_count": int(file_count),
 }
+
+# Only rewrite the file when the mirror actually moved. "synced_at" changes on
+# every run by definition, so writing it unconditionally would produce a
+# timestamp-only diff -- and therefore a pointless commit -- every night.
+# Everything else in the record is derived from the upstream commit, so an
+# unchanged SHA means an unchanged mirror.
+if os.path.exists(out_path):
+    try:
+        with open(out_path, encoding="utf-8") as f:
+            previous = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        previous = None
+
+    if previous is not None:
+        comparable = {k: v for k, v in data.items() if k != "synced_at"}
+        if all(previous.get(k) == v for k, v in comparable.items()):
+            print("Upstream unchanged, keeping existing UPSTREAM.json", file=sys.stderr)
+            sys.exit(0)
 
 with open(out_path, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)

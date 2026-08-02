@@ -74,20 +74,36 @@ def collect_entries(tonies_dir: Path) -> list[dict]:
     return entries
 
 
-def load_upstream_commit() -> str:
+def load_upstream() -> dict:
+    """Read data/UPSTREAM.json, tolerating a missing or corrupt file."""
     if not UPSTREAM_JSON.exists():
-        return "unknown"
+        return {}
     try:
-        data = json.loads(UPSTREAM_JSON.read_text(encoding="utf-8"))
+        return json.loads(UPSTREAM_JSON.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
-        return "unknown"
-    commit = data.get("commit", "unknown")
+        return {}
+
+
+def load_upstream_commit() -> str:
+    commit = load_upstream().get("commit", "unknown")
     return commit[:7] if commit != "unknown" else commit
+
+
+def load_synced_at() -> str:
+    """Timestamp of the last upstream sync.
+
+    Deliberately not "now": the generated files must be byte-identical when
+    the upstream mirror has not moved, otherwise the nightly job commits a
+    timestamp-only diff every single night.
+    """
+    return load_upstream().get(
+        "synced_at", datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    )
 
 
 def build_tonies_json_payload(entries: list[dict], upstream_commit: str) -> dict:
     return {
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at": load_synced_at(),
         "upstream_commit": upstream_commit,
         "count": len(entries),
         "tonies": entries,
@@ -187,12 +203,7 @@ def render_tonies_md(
 
 def write_tonies_md(entries: list[dict]) -> None:
     upstream_commit = load_upstream_commit()
-    synced_at = "unknown"
-    if UPSTREAM_JSON.exists():
-        try:
-            synced_at = json.loads(UPSTREAM_JSON.read_text(encoding="utf-8")).get("synced_at", "unknown")
-        except (json.JSONDecodeError, OSError):
-            pass
+    synced_at = load_upstream().get("synced_at", "unknown")
     TONIES_MD.write_text(render_tonies_md(entries, upstream_commit, synced_at), encoding="utf-8")
 
 
