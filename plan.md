@@ -67,9 +67,15 @@ tag's own UID requires a modified box (TeddyCloud / HackieboxNG) and is out of s
   firmware ("allow tags without privacy password support, e.g. SLIX") accepts it.
 * Historically no UID-changeable SLIX-**L** existed — all magic ISO 15693 tags were
   SLI/SLIX class, which is why "cloning a Tonie" was long considered impossible.
-* That has changed: **magic SLIX-L tags are now sold** (e.g. RFIDFriend). Upstream
-  issue [nortakales/flipper-zero-tonies#170](https://github.com/nortakales/flipper-zero-tonies/issues/170)
-  reports them working on **original, unmodified Toniebox 1 and 2**.
+* That has changed: **magic SLIX-L tags with changeable UID are now sold by
+  [rfidfriend.com](http://rfidfriend.com)** (contact `rfidfriend@gmail.com`; they also
+  sell fixed-UID SLIX-L for TeddyCloud — **order the magic variant explicitly**).
+  Two independent confirmations:
+  * Upstream issue [nortakales/flipper-zero-tonies#170](https://github.com/nortakales/flipper-zero-tonies/issues/170)
+    — magic SLIX-L from RFIDFriend work on **original, unmodified Toniebox 1 and 2**.
+  * [SLI-Writer](https://github.com/Julienbxl/SLI-Writer) lists "SLIX-L Tags:
+    rfidfriend.com in **normal** mode" as supported, and documents the exact write
+    sequence we reuse in §4.4.
 
 **Buying guidance for `docs/HARDWARE.md` — be specific, this is where money gets wasted:**
 
@@ -100,26 +106,25 @@ the box is ever modified.
 
 ### 2.5 The 2-minute verification the user runs first
 
-`./tonie doctor [--probe-magic]` reports the tag's UID prefix and whether
-`hf 15 csetuid` takes. Document the three outcomes plainly:
+`./tonie doctor [--probe-magic]` reports the tag's UID prefix and whether the magic UID
+write takes. Document the three outcomes plainly:
 
 | Outcome | Meaning | What to do |
 |---------|---------|------------|
-| `csetuid` ok, UID becomes `E0 04 03…`, chip behaves as SLIX-L | Magic SLIX-L ✅ | Everything in this repo works as designed. |
-| `csetuid` ok, but the tag is SLI/SLIX class | Magic, wrong class ⚠️ | Write succeeds, stock box will most likely still ignore the tag. Try it, but expect failure. |
-| `csetuid` fails / UID unchanged | Fixed-UID tag ❌ | Cloning is physically impossible with these. Buy magic SLIX-L tags. |
+| Magic write ok, UID becomes `E0 04 03…`, chip reports SLIX-L | Magic SLIX-L ✅ | Everything in this repo works as designed. |
+| Magic write ok, but the chip is SLI/SLIX/TAG-it class | Magic, wrong class ⚠️ | Write succeeds, stock box will most likely still ignore the tag. Useful as a **development/test tag** (see below), not for the box. |
+| UID unchanged after the write | Fixed-UID tag ❌ | Cloning is physically impossible with these. Buy magic SLIX-L tags. |
 
-**Residual risk to flag in `docs/HARDWARE.md`:** the upstream success report used a
-**Flipper Zero** with the [SLI-Writer](https://github.com/Julienbxl/SLI-Writer) app, not
-a Proxmark3. Whether a given magic SLIX-L batch answers the gen1 or the gen2 magic
-command is vendor-specific — hence `--gen2` and the automatic gen1→gen2 retry in §8.5
-step 6. If neither works, the fallback is Flipper Zero + SLI-Writer with the very same
-`.nfc` files from `data/tonies/` (they are Flipper-native — mention this, it costs one
-sentence and saves the project).
+**Development/test tags:** cheap AliExpress magic ISO 15693 tags (ICODE SLI, SLIX,
+TAG-it TI2048 …) accept the very same magic UID frames and block writes. They will not
+satisfy a stock Toniebox, but they are ideal for exercising the whole CLI path —
+write, read-back, verify, error handling — without burning the expensive SLIX-L tags.
+Mention this in `docs/HARDWARE.md` under a "Test tags" heading.
 
-Document all of §2 in `docs/HARDWARE.md` and link it from the README's first section.
-Do **not** hide it in a footnote — it is the single most likely reason the project
-"doesn't work" for the user.
+**Fallback if the Proxmark3 path fails on a given batch:** Flipper Zero +
+[SLI-Writer](https://github.com/Julienbxl/SLI-Writer), using the very same `.nfc` files
+from `data/tonies/` — they are Flipper-native. One sentence in the README, and it saves
+the project if the hardware surprises us.
 
 ### 2.6 Legal / scope note (one short paragraph in the README)
 
@@ -177,7 +182,7 @@ Lock EAS: false
 Lines starting with `#` are comments and must be ignored. Key/value separator is `: `.
 
 * `UID` — 8 bytes, **display order** (`E0` first). This is exactly the order
-  `hf 15 csetuid -u …` expects.
+  the magic UID frames in §4.4 expect (they reverse each half themselves).
 * `Data Content` — 32 bytes = 8 blocks × 4 bytes, block 0 = first 4 bytes.
 * `Privacy Mode: false` → we never need to disable privacy before writing.
 * `Password Privacy: 7F FD 6E 5B` is the well-known Tonies privacy password. **Do not
@@ -226,21 +231,62 @@ The CLI shells out to `pm3` (fall back to `proxmark3` if `pm3` is not on `PATH`)
 | Command | Purpose |
 |---------|---------|
 | `hf 15 info` | tag present? shows UID, chip type |
-| `hf 15 csetuid -u E00403502030361D` | set UID on a **magic** tag (gen1 command) |
-| `hf 15 csetuid -u E00403502030361D --v2` | same, gen2 magic command |
-| `hf 15 wrbl -* -b <0-7> -d AABBCCDD` | write one 4-byte block, unaddressed mode |
-| `hf 15 rdbl -* -b <0-7>` | read one block back (verification) |
+| `hf 15 wrbl --ua -b <0-7> -d AABBCCDD` | write one 4-byte block, **non-addressed** (flags `0x02`) |
+| `hf 15 wrbl --ua -o -b <0-7> -d AABBCCDD` | same with OPTION flag (`0x42`) — retry variant |
+| `hf 15 raw -acw -d 02E00940<b7><b6><b5><b4>` | magic UID, high half |
+| `hf 15 raw -acw -d 02E00941<b3><b2><b1><b0>` | magic UID, low half |
+| `hf 15 rdbl --ua -b <0-7>` | read one block back (verification) |
 | `hf 15 dump --ns` | read all blocks, don't save to file |
 
-Verified behaviour of `csetuid`: the UID argument is 8 hex bytes in display order and
-**must start with `E0`**; the command finds the tag, writes, re-reads and prints
-`Setting new UID ( ok )` or `( fail )` — i.e. it self-verifies. Exit code alone is not
-reliable across versions, so parse stdout too.
+`hf 15 raw` flags: `-a` activate field, `-c` append CRC, `-w` wait longer (writes).
+Note `--ua` = unaddressed; `-*` means "scan for tag" and then writes **addressed** —
+not what we want (see §4.4).
 
 Do **not** use `hf 15 restore -f …`: it requires a full `iso15_tag_t` binary struct dump
-whose layout changes between releases. `csetuid` + 8× `wrbl` is stable and explicit.
+whose layout changes between releases.
 
----
+### 4.4 ⚠️ DANGER: never use `hf 15 csetuid --v2` on SLIX-L magic tags
+
+This is the most important technical finding in this plan. **`hf 15 csetuid --v2` can
+permanently brick a magic SLIX-L tag.**
+
+The Proxmark3 firmware (`armsrc/iso15693.c`, `SetTag15693Uid_v2`) sends **four** frames:
+
+```
+02 E0 09 47 3f 03 8b 00      <-- Gen2 "layout" command   ** BRICKS SLIX-L MAGIC **
+02 E0 09 52 00 00 00 00
+02 E0 09 40 <uid[7]><uid[6]><uid[5]><uid[4]>
+02 E0 09 41 <uid[3]><uid[2]><uid[1]><uid[0]>
+```
+
+The known-working [SLI-Writer](https://github.com/Julienbxl/SLI-Writer) sends **only the
+last two** and states explicitly: *"The Gen2 layout command (`0x47`) is intentionally NOT
+sent. Not required for most readers. **Will brick SLIX-L magic cards.**"*
+
+Frames 3 and 4 are byte-for-byte identical between the two implementations (verified
+against `SetTag15693Uid_v2` and `magic_write_uid()` in `sli_writer.c`), so the safe
+Proxmark3 equivalent is to send those two frames by hand with `hf 15 raw`:
+
+```
+hf 15 raw -acw -d 02E00940<uid[7]><uid[6]><uid[5]><uid[4]>
+hf 15 raw -acw -d 02E00941<uid[3]><uid[2]><uid[1]><uid[0]>
+```
+
+**Byte order** (`uid[0]` = first byte of the `.nfc` `UID:` line = `E0`): each half is sent
+**reversed**, because the card stores the UID LSB-first. For
+`UID: E0 04 03 50 20 30 36 1D`:
+
+```
+hf 15 raw -acw -d 02E009401D363020
+hf 15 raw -acw -d 02E009415003 04E0
+```
+(without the space: `02E00941500304E0`)
+
+`hf 15 csetuid` **without** `--v2` is a different, older magic protocol
+(`WRITEBLOCK` to blocks `0x3e/0x3f/0x38/0x39`). It does not brick anything, but it does
+not work on these tags either. The CLI must therefore **never call `csetuid` at all** —
+neither variant, and there must be no automatic gen1→gen2 fallback. Implement the two
+raw frames and nothing else.
 
 ## 5. Target repository layout
 
@@ -522,8 +568,9 @@ Warn (don't fail) if `Privacy Mode` is `true`.
 
 ### 8.5 `tonie write` — exact flow
 
-Flags: `--dry-run`, `--yes`, `--port`, `--gen2` (use `csetuid --v2`), `--uid-only`
-(skip data blocks), `--blocks-only` (skip UID), `--no-verify`, `--retries N` (default 2).
+Flags: `--dry-run`, `--yes`, `--port`, `--uid-only` (skip data blocks), `--blocks-only`
+(skip UID), `--no-verify`, `--retries N` (default 2).
+There is deliberately **no** `--gen2` flag — see §4.4.
 
 1. **Resolve** the Tonie (§8.3) and parse its `.nfc` (§8.4).
 2. **Locate `pm3`** (`shutil.which("pm3")` → `proxmark3`). Missing → actionable error
@@ -545,17 +592,27 @@ Flags: `--dry-run`, `--yes`, `--port`, `--gen2` (use `csetuid --v2`), `--uid-onl
    with upstream data).
 5. **`--dry-run`** prints the exact `pm3` command list and exits 0. Nothing is sent to
    the device. This is also what CI/tests exercise.
-6. **Write UID:** `hf 15 csetuid -u <UID>` (or with `--v2` when `--gen2`).
-   * Parse stdout for `Setting new UID ( ok )` / `( fail )` / `no tag found`.
-   * On failure without `--gen2`, **automatically retry once with `--v2`** and say so.
-   * If both fail → print the "fixed-UID vs. magic SLIX-L tag" explanation from §2.3/§2.5 verbatim
-     (one short paragraph + link to `docs/HARDWARE.md`) and exit 5. This is the single
-     most important error message in the tool.
-7. **Write blocks:** for `b` in 0..7 → `hf 15 wrbl -* -b <b> -d <8 hex chars>`.
-   Batch them into one `pm3 -c "c1;c2;…"` invocation to avoid 8 device reconnects, but
-   fall back to one command per invocation when `--verbose` (clearer errors) or when a
-   batch fails, so the failing block can be identified and retried (`--retries`).
-8. **Verify** unless `--no-verify`: `hf 15 info` (UID) + `hf 15 rdbl -* -b <0..7>`,
+6. **Write the data blocks FIRST.** Order matters: SLI-Writer's "normal mode" writes
+   blocks *before* setting the UID, because once the tag carries a foreign (Tonie) UID
+   the blocks may no longer be writable. Do not reverse this.
+   For `b` in 0..7 → `hf 15 wrbl --ua -b <b> -d <8 hex chars>`.
+   * On failure, retry the same block with the OPTION flag: `hf 15 wrbl --ua -o -b …`
+     (flags `0x42`), mirroring SLI-Writer's auto-retry. Up to `--retries` attempts each.
+   * Batch the blocks into one `pm3 -c "c1;c2;…"` invocation to avoid 8 device
+     reconnects; fall back to one command per invocation under `--verbose` or after a
+     batch failure, so the failing block can be named.
+7. **Write the UID** with the two raw frames from §4.4 — never `csetuid`:
+   ```
+   hf 15 raw -acw -d 02E00940<uid[7]><uid[6]><uid[5]><uid[4]>
+   hf 15 raw -acw -d 02E00941<uid[3]><uid[2]><uid[1]><uid[0]>
+   ```
+   * Retry each frame up to 3× with a short delay (SLI-Writer does the same).
+   * Confirm by re-reading: `hf 15 info` must now report the target UID. The raw
+     command gives no success indication of its own, so the read-back **is** the check.
+   * On failure → print the "fixed-UID vs. magic SLIX-L tag" explanation from
+     §2.3/§2.5 verbatim (one short paragraph + link to `docs/HARDWARE.md`) and exit 5.
+     This is the single most important error message in the tool.
+8. **Verify** unless `--no-verify`: `hf 15 info` (UID) + `hf 15 rdbl --ua -b <0..7>`,
    regex-extract the 4 bytes per block and compare against the expected values.
    * Output-parsing must be defensive: if a line cannot be parsed, report
      "verification inconclusive (unexpected pm3 output)" as a **warning**, not a
@@ -582,9 +639,11 @@ Checks, each printed as `✅ / ⚠️ / ❌` with a fix hint:
 4. `hf 15 info` → tag present? UID? chip type? Flag whether the UID prefix is `E00403`
    (SLIX-L, Toniebox-compatible), `E00402` (plain SLIX), or something else.
 5. **Magic-tag probe** — only with `--probe-magic`, because it overwrites the UID:
-   write the harmless test UID `E0 04 03 00 00 00 00 01`, read it back, then restore the
-   tag's original UID if it was readable in step 4. Report magic / not magic and whether
-   gen1 or gen2 worked. Require an explicit confirmation prompt before running.
+   write the harmless test UID `E0 04 03 00 00 00 00 01` **using the two raw frames from
+   §4.4** (never `csetuid`), read it back with `hf 15 info`, then restore the tag's
+   original UID if it was readable in step 4. Report magic / not magic. Require an
+   explicit confirmation prompt before running, and warn that a tag whose original UID
+   cannot be read may not be restorable.
 6. Catalog present and parseable (`data/tonies.json`, file count).
 
 ### 8.7 `proxmark.py`
@@ -597,8 +656,8 @@ Checks, each printed as `✅ / ⚠️ / ❌` with a fix hint:
   `re.fullmatch(r"[0-9A-F]{8}", …)` / `0 <= b <= 7`.
 * Timeout → clear message ("Proxmark3 did not respond — is another pm3 session open?").
 * All parsing helpers live here and are pure functions over strings so they can be
-  unit-tested without hardware: `parse_info_uid()`, `parse_csetuid_result()`,
-  `parse_rdbl_data()`.
+  unit-tested without hardware: `parse_info_uid()`, `parse_rdbl_data()`,
+  `build_uid_frames()`.
 
 ---
 
@@ -629,7 +688,7 @@ Proxmark3 Easy "512M" specifics · macOS ARM install & flashing (incl. the butto
 `/dev/tty.usbmodemiceman1`, client/firmware version match) · tag requirements and the
 magic-vs-genuine explanation · the `hf 15` command reference from §4.3 · expert notes
 (privacy password, `slixwritepwd`, why we don't use `hf 15 restore`) · troubleshooting
-table (no tag found, antenna placement, `csetuid` fail, permission/port issues,
+table (no tag found, antenna placement, UID write not taking, port/permission issues,
 verification mismatch).
 
 ### `docs/WORKFLOW.md`
@@ -671,9 +730,10 @@ No test may require hardware or network.
 **Done when:**
 
 * [ ] `./tonie search "zuma"` finds the Tonie on a fresh clone with no `pip install`.
-* [ ] `./tonie write "Zuma" --dry-run` prints exactly:
-      `hf 15 csetuid -u E00403502030361D` followed by 8 `hf 15 wrbl -* -b N -d XXXXXXXX` lines
-      with the block data from the `.nfc` file, and touches no hardware.
+* [ ] `./tonie write "Zuma" --dry-run` prints exactly: 8 `hf 15 wrbl --ua -b N -d XXXXXXXX`
+      lines with the block data from the `.nfc` file, **followed by** the two
+      `hf 15 raw -acw -d 02E00940…` / `…41…` UID frames — in that order, and touches no
+      hardware. No `csetuid` anywhere in the output.
 * [ ] `./tonie doctor` runs and degrades gracefully with no Proxmark3 attached.
 * [ ] `python3 -m unittest discover -s tests` is green.
 * [ ] `scripts/sync_upstream.sh && python3 scripts/build_index.py` is idempotent
