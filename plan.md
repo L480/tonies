@@ -28,16 +28,17 @@ Build a repository that:
 | Host OS | macOS on Apple Silicon (ARM64) |
 | Reader/Writer | "Proxmark3 512M" from AliExpress — a **Proxmark3 Easy clone** with a 512 KB ARM MCU. Runs the Iceman (RfidResearchGroup) firmware, built with `PLATFORM=PM3GENERIC`. |
 | Toniebox | **Stock / unmodified** (no TeddyCloud, no HackieboxNG) → cloning a real Tonie UID is the only viable path |
-| Tags | **Magic SLIX-L with changeable UID** (see §2.3). The AliExpress "SLIX 15693 Dia 30 mm … programmable RFID sticker" the user already owns is expected *not* to work — see §2.4. |
+| Tags | **Magic SLIX-L with changeable UID from [rfidfriend.com](http://rfidfriend.com)** — assume the user has these. See §2.3 for why nothing else works and §4.4 for how to write them. |
 | Python | `python3` from Xcode Command Line Tools (3.9+). **Standard library only** — no `pip install` step for the end user. |
 
 ---
 
 ## 2. Hardware reality check — READ BEFORE WRITING CODE
 
-This section does **not** change what we build, but it determines whether the hardware
-the user already bought will work. The CLI must surface these facts to the user instead
-of failing cryptically.
+The hardware is settled: a stock Toniebox and magic SLIX-L tags from rfidfriend.com.
+This section records *why* that is the only combination that works, so the CLI can
+explain failures instead of dying cryptically — and so nobody "simplifies" the write
+sequence in §4.4 back into something that bricks tags.
 
 ### 2.1 What a Toniebox actually checks
 
@@ -86,28 +87,31 @@ tag's own UID requires a modified box (TeddyCloud / HackieboxNG) and is out of s
 | Genuine SLIX-L, fixed UID | ❌ | UID is unknown to the cloud → box ignores it. Only useful on a modified box. |
 | Genuine SLIX (the AliExpress stickers, see below) | ❌ | Wrong UID prefix *and* no privacy support. |
 
-### 2.4 The tags the user already owns
+### 2.4 Tag classes that do *not* work (for `docs/HARDWARE.md` troubleshooting)
 
-AliExpress "Echtes SLIX 15693 Dia 30 mm … programmierbarer RFID-Aufkleber".
-"Programmable" refers to the **memory**, not the UID. The listing's reviews are the
-tell — every positive report describes a **patched** box:
+The user also owns AliExpress "SLIX 15693 Dia 30 mm … programmable RFID sticker" and may
+have generic magic tags (ICODE SLI / SLIX2 / TAG-it TI2048). None of them drive a stock
+box; record why, because these are the listings anyone shopping for replacements will
+hit first:
 
-> "Funktioniert perfekt mit meiner Toniebox (CC3200), die den benutzerdefinierten Bootloader HackieboxNG verwendet."
-> "Funktioniert mit Toniebox/Teddycloud mit aktivierten Patches."
+* **Plain SLIX stickers** — "programmable" refers to the *memory*, not the UID. Every
+  positive review of these describes a **patched** box ("Toniebox (CC3200) mit
+  HackieboxNG", "Toniebox/Teddycloud mit aktivierten Patches"). The patch in question is
+  the HackieboxNG OFW patch that allows tags *without* privacy-password support, i.e.
+  plain SLIX. Fixed `E0 04 02…` UID, wrong chip class.
+* **Generic magic ISO 15693** (ICODE SLI, SLIX2, TAG-it TI2048) — UID *is* changeable,
+  so `E0 04 03…` can be written, but the chip is not SLIX-L and fails the box's
+  privacy-password step. This is why "cloning a Tonie" was long considered impossible.
+* **Genuine SLIX-L with fixed UID** — right chip, but the UID belongs to no Tonie, so
+  the cloud lookup finds nothing. This is the TeddyCloud product.
 
-The patch in question is exactly the HackieboxNG OFW patch that allows tags *without*
-privacy-password support (i.e. plain SLIX). Needing that patch is strong evidence the
-stickers are genuine SLIX with a fixed `E0 04 02…` UID — not magic, not SLIX-L.
-No review claims a stock box works.
-
-**Expected outcome: these stickers will not work for this project.** Say so in the
-README, do not let the user discover it after 30 failed writes. They remain usable if
-the box is ever modified.
+All of these remain useful as **development/test tags** (§2.5).
 
 ### 2.5 The 2-minute verification the user runs first
 
 `./tonie doctor [--probe-magic]` reports the tag's UID prefix and whether the magic UID
-write takes. Document the three outcomes plainly:
+write takes. With the rfidfriend tags the expected result is the first row; the other
+two exist so a wrong batch or a mixed-up bag of tags is diagnosed in seconds:
 
 | Outcome | Meaning | What to do |
 |---------|---------|------------|
