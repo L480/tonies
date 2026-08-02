@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import sys
+import pathlib
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from tonie_writer.cli import main
+
+raise SystemExit(main())

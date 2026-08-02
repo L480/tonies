@@ -1,0 +1,54 @@
+name: Sync Tonies
+
+on:
+  schedule:
+    - cron: "27 2 * * *"     # 02:27 UTC nightly
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Skip the commit step (for testing)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-tonies
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sync upstream .nfc files
+        run: ./scripts/sync_upstream.sh
+      - name: Rebuild index
+        run: python3 scripts/build_index.py
+      - name: Commit changes
+        run: |
+          git add data TONIES.md
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "dry_run: would commit the following changes:"
+            git diff --cached --stat
+            exit 0
+          fi
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          SHORT_SHA="$(python3 -c "import json; print(json.load(open('data/UPSTREAM.json'))['commit'][:7])")"
+          FILE_COUNT="$(python3 -c "import json; print(json.load(open('data/UPSTREAM.json'))['file_count'])")"
+
+          git commit -m "chore: sync tonies from upstream ($SHORT_SHA, $FILE_COUNT files)"
+          git push
