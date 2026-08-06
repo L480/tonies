@@ -17,8 +17,8 @@ EXPECTED_ZUMA_DRY_RUN = [
     "hf 15 wrbl --ua -b 5 -d 2FB3911D",
     "hf 15 wrbl --ua -b 6 -d 982C1C55",
     "hf 15 wrbl --ua -b 7 -d 00F20064",
-    "hf 15 raw -acw -d 02E009401D363020",
-    "hf 15 raw -acw -d 02E00941500304E0",
+    "hf 15 raw -akrc -d 02E00941500304E0",
+    "hf 15 raw -akrc -d 02E009401D363020",
 ]
 
 
@@ -83,14 +83,32 @@ class TestWriteUid(unittest.TestCase):
     def test_success_on_first_attempt(self):
         tag = parse_nfc_file(FIXTURES / "Zuma.nfc")
         responses = [
-            Pm3Result("", "", 0),  # high frame
-            Pm3Result("", "", 0),  # low frame
+            Pm3Result("", "", 0),  # both UID frames, one session
             Pm3Result("[+] UID.................. E0 04 03 50 20 30 36 1D", "", 0),  # info
         ]
         runner = FakeRunner(responses=responses)
         result = writer.write_uid(tag, WriteOptions(), run_fn=runner, sleep_fn=lambda s: None)
         self.assertTrue(result.ok)
         self.assertEqual(result.read_back_uid, tag.uid)
+
+    def test_both_frames_share_one_session(self):
+        """The field must stay up between the two halves — one pm3 call, in
+        vendor order (0x41 first)."""
+        tag = parse_nfc_file(FIXTURES / "Zuma.nfc")
+        runner = FakeRunner(
+            responses=[
+                Pm3Result("", "", 0),
+                Pm3Result("[+] UID.................. E0 04 03 50 20 30 36 1D", "", 0),
+            ]
+        )
+        writer.write_uid(tag, WriteOptions(), run_fn=runner, sleep_fn=lambda s: None)
+        self.assertEqual(
+            runner.calls[0],
+            [
+                "hf 15 raw -akrc -d 02E00941500304E0",
+                "hf 15 raw -akrc -d 02E009401D363020",
+            ],
+        )
 
     def test_failure_when_uid_never_matches(self):
         tag = parse_nfc_file(FIXTURES / "Zuma.nfc")

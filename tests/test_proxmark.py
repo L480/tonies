@@ -38,9 +38,16 @@ RDBL_OUTPUT_GARBAGE = "connection reset by peer\n"
 class TestBuildUidFrames(unittest.TestCase):
     def test_known_vector_from_plan(self):
         uid = bytes.fromhex("E00403502030361D")
-        high, low = build_uid_frames(uid)
-        self.assertEqual(high, "hf 15 raw -acw -d 02E009401D363020")
-        self.assertEqual(low, "hf 15 raw -acw -d 02E00941500304E0")
+        first, last = build_uid_frames(uid)
+        self.assertEqual(first, "hf 15 raw -akrc -d 02E00941500304E0")
+        self.assertEqual(last, "hf 15 raw -akrc -d 02E009401D363020")
+
+    def test_matches_vendor_documented_example(self):
+        """The worked example on the rfidfriend.com instruction sheet:
+        UID E0 04 03 50 12 34 56 78, step 1 then step 2."""
+        first, last = build_uid_frames(bytes.fromhex("E004035012345678"))
+        self.assertEqual(first, "hf 15 raw -akrc -d 02E00941500304E0")
+        self.assertEqual(last, "hf 15 raw -akrc -d 02E0094078563412")
 
     def test_rejects_wrong_length(self):
         with self.assertRaises(ValueError):
@@ -48,9 +55,8 @@ class TestBuildUidFrames(unittest.TestCase):
 
     def test_never_mentions_csetuid(self):
         uid = bytes.fromhex("E00403502030361D")
-        high, low = build_uid_frames(uid)
-        self.assertNotIn("csetuid", high)
-        self.assertNotIn("csetuid", low)
+        for frame in build_uid_frames(uid):
+            self.assertNotIn("csetuid", frame)
 
 
 class TestBuildCommands(unittest.TestCase):

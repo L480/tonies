@@ -117,14 +117,15 @@ instead.
 | `hf 15 info` | tag present? shows UID, chip type |
 | `hf 15 wrbl --ua -b <0-7> -d AABBCCDD` | write one 4-byte block, non-addressed (flags `0x02`) |
 | `hf 15 wrbl --ua -o -b <0-7> -d AABBCCDD` | same with the OPTION flag (`0x42`) — retry variant |
-| `hf 15 raw -acw -d 02E00940<b7><b6><b5><b4>` | magic UID write, high half |
-| `hf 15 raw -acw -d 02E00941<b3><b2><b1><b0>` | magic UID write, low half |
+| `hf 15 raw -akrc -d 02E00941<b3><b2><b1><b0>` | magic UID write, step 1 (first four UID bytes) |
+| `hf 15 raw -akrc -d 02E00940<b7><b6><b5><b4>` | magic UID write, step 2 (last four UID bytes) |
 | `hf 15 rdbl --ua -b <0-7>` | read one block back (verification) |
 | `hf 15 dump --ns` | read all blocks, don't save to file |
 
-`hf 15 raw` flags: `-a` activate field, `-c` append CRC, `-w` wait longer
-(writes). `--ua` means unaddressed; without it, `hf 15` scans for a tag and
-writes *addressed*, which is not what we want here.
+`hf 15 raw` flags: `-a` activate field, `-k` keep the field on after the
+frame, `-r` don't wait for a reply (the magic UID write doesn't send one),
+`-c` append CRC. `--ua` means unaddressed; without it, `hf 15` scans for a
+tag and writes *addressed*, which is not what we want here.
 
 ### ⚠️ Why this repo never calls `csetuid`
 
@@ -135,12 +136,13 @@ reference implementation, sends only the two UID frames and states
 explicitly that the layout command is "intentionally NOT sent... will brick
 SLIX-L magic cards."
 
-The safe equivalent — what this repo actually sends — is those two frames by
-hand:
+The safe equivalent — what this repo actually sends, and what the printed
+instruction sheet shipped with the rfidfriend.com tags documents — is those
+two frames by hand:
 
 ```
-hf 15 raw -acw -d 02E00940<uid[7]><uid[6]><uid[5]><uid[4]>
-hf 15 raw -acw -d 02E00941<uid[3]><uid[2]><uid[1]><uid[0]>
+hf 15 raw -akrc -d 02E00941<uid[3]><uid[2]><uid[1]><uid[0]>
+hf 15 raw -akrc -d 02E00940<uid[7]><uid[6]><uid[5]><uid[4]>
 ```
 
 Each half is sent **reversed** (`uid[0]` = the first byte of the `.nfc`
@@ -148,14 +150,21 @@ file's `UID:` line = `E0`), because the card stores the UID LSB-first. For
 `UID: E0 04 03 50 20 30 36 1D`:
 
 ```
-hf 15 raw -acw -d 02E009401D363020
-hf 15 raw -acw -d 02E00941500304E0
+hf 15 raw -akrc -d 02E00941500304E0
+hf 15 raw -akrc -d 02E009401D363020
 ```
 
-`hf 15 csetuid` *without* `--v2` is a different, older magic protocol. It
-won't brick the tag, but it doesn't work on these tags either. There is
-deliberately no `--gen2` flag or automatic gen1→gen2 fallback anywhere in
-this CLI — only the two raw frames above are ever sent.
+Both frames go out in a **single** `pm3 -c` session, and `-k` keeps the
+field up between them. Sending them as two separate pm3 invocations power-
+cycles the tag in between, which can leave the UID half-written.
+
+`hf 15 csetuid` *without* `--v2` is a different, older magic protocol —
+it writes tag blocks `0x3E`/`0x3F` (config) plus `0x38`/`0x39`. The vendor
+sheet warns against `csetuid` in *any* form, saying it destroys
+configuration properties and internally reformats the tag; assume that
+covers the gen1 path too. There is deliberately no `--gen1`/`--gen2` flag
+or automatic fallback anywhere in this CLI — only the two raw frames above
+are ever sent.
 
 Do **not** use `hf 15 restore -f …` either: it requires a full binary tag
 struct dump whose layout changes between Proxmark3 releases.

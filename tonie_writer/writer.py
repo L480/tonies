@@ -78,17 +78,15 @@ class WriteReport:
 def plan_write_commands(tag: TonieTag, options: WriteOptions) -> list[str]:
     """The exact, ordered pm3 command list a real write would send.
 
-    Data blocks are written before the UID (§4.4/§8.5): once the tag carries
-    a foreign UID, the blocks may no longer be writable. Never reorder this.
+    Data blocks are written before the UID: once the tag carries a foreign
+    UID, the blocks may no longer be writable. Never reorder this.
     """
     commands: list[str] = []
     if not options.uid_only:
         for block, data in enumerate(tag.blocks):
             commands.append(proxmark.build_wrbl_command(block, data))
     if not options.blocks_only:
-        high, low = proxmark.build_uid_frames(tag.uid_bytes)
-        commands.append(high)
-        commands.append(low)
+        commands.extend(proxmark.build_uid_frames(tag.uid_bytes))
     return commands
 
 
@@ -132,15 +130,16 @@ def write_uid(
     run_fn: RunFn = proxmark.run,
     sleep_fn: Callable[[float], None] = time.sleep,
 ) -> UidWriteResult:
-    """Write the target UID using the two safe raw frames from §4.4 — never
-    csetuid. Confirms via `hf 15 info` read-back, which is the only success
-    signal these raw frames give. Retries up to 3 times with a short delay."""
-    high, low = proxmark.build_uid_frames(tag.uid_bytes)
+    """Write the target UID using the two safe raw frames — never csetuid.
+    Both frames go into a single pm3 session so the field stays up between
+    them (`-k`); a power cycle in between can leave the UID half-written.
+    Confirms via `hf 15 info` read-back, which is the only success signal
+    these raw frames give. Retries up to 3 times with a short delay."""
+    frames = list(proxmark.build_uid_frames(tag.uid_bytes))
     read_back: str | None = None
     max_attempts = 3
     for attempt in range(1, max_attempts + 1):
-        run_fn([high], port=options.port, pm3_bin=options.pm3_bin)
-        run_fn([low], port=options.port, pm3_bin=options.pm3_bin)
+        run_fn(frames, port=options.port, pm3_bin=options.pm3_bin)
         info = run_fn(["hf 15 info"], port=options.port, pm3_bin=options.pm3_bin)
         read_back = proxmark.parse_info_uid(info.stdout)
         if read_back == tag.uid:
