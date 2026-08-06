@@ -41,11 +41,14 @@ Preview without touching hardware: `./tonie write "Zuma" --dry-run`.
    layout command `02 E0 09 47 …`, which **permanently bricks magic SLIX-L tags**. The
    UID is written with two raw frames instead; `tonie_writer/proxmark.py` already does
    this correctly. See "Why this repo never calls `csetuid`" in `docs/HARDWARE.md`.
-2. **Data blocks are written before the UID.** Once the tag carries a foreign UID the
+2. **The two UID frames go out together, `0x41` half first** (`-akrc`, one pm3 session),
+   exactly as the rfidfriend.com instruction sheet documents. Splitting them across two
+   pm3 invocations power-cycles the tag mid-write.
+3. **Data blocks are written before the UID.** Once the tag carries a foreign UID the
    blocks may no longer be writable. Do not reorder.
-3. **Block writes are non-addressed** (`hf 15 wrbl --ua`, flags `0x02`, retry with `-o`
+4. **Block writes are non-addressed** (`hf 15 wrbl --ua`, flags `0x02`, retry with `-o`
    = `0x42`). `-*` means "scan, then write addressed" and is not the verified sequence.
-4. **Never write SLIX passwords or enable privacy mode** (`slixwritepwd`,
+5. **Never write SLIX passwords or enable privacy mode** (`slixwritepwd`,
    `passprotectafi`, `passprotecteas`). These are irreversible and are not needed —
    genuine Tonie dumps have `Privacy Mode: false`.
 

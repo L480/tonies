@@ -388,17 +388,15 @@ def cmd_doctor(args: argparse.Namespace) -> int:
                 confirm = ""
             if confirm == "y":
                 test_uid = bytes.fromhex("E004030000000001")
-                high, low = proxmark.build_uid_frames(test_uid)
-                proxmark.run([high], port=args.port, pm3_bin=pm3_bin)
-                proxmark.run([low], port=args.port, pm3_bin=pm3_bin)
+                frames = list(proxmark.build_uid_frames(test_uid))
+                proxmark.run(frames, port=args.port, pm3_bin=pm3_bin)
                 check = proxmark.run(["hf 15 info"], port=args.port, pm3_bin=pm3_bin)
                 new_uid = proxmark.parse_info_uid(check.stdout)
                 if new_uid == test_uid.hex().upper():
                     print("✅ magic write succeeded — this is a magic tag.")
                     if uid:
-                        orig_high, orig_low = proxmark.build_uid_frames(bytes.fromhex(uid))
-                        proxmark.run([orig_high], port=args.port, pm3_bin=pm3_bin)
-                        proxmark.run([orig_low], port=args.port, pm3_bin=pm3_bin)
+                        orig = list(proxmark.build_uid_frames(bytes.fromhex(uid)))
+                        proxmark.run(orig, port=args.port, pm3_bin=pm3_bin)
                         print(f"Restored original UID {_format_uid(uid)}.")
                 else:
                     print("❌ UID unchanged — this tag's UID cannot be written (fixed-UID tag).")

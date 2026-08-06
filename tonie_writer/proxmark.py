@@ -115,19 +115,25 @@ def build_rdbl_command(block: int) -> str:
 
 
 def build_uid_frames(uid_bytes: bytes) -> tuple[str, str]:
-    """The two safe raw magic-UID frames from plan §4.4. Never `csetuid`.
+    """The two safe raw magic-UID frames, in the order and with the flags the
+    tag vendor (rfidfriend.com) documents. Never `csetuid`.
 
     Each half is sent reversed (the card stores the UID LSB-first):
-      high frame (0x40): uid[7] uid[6] uid[5] uid[4]
-      low  frame (0x41): uid[3] uid[2] uid[1] uid[0]
+      step 1 (0x41): uid[3] uid[2] uid[1] uid[0]  — the first four UID bytes
+      step 2 (0x40): uid[7] uid[6] uid[5] uid[4]  — the last four UID bytes
+
+    `-akrc` = activate field, keep it on after the frame, don't wait for a
+    reply (the magic write doesn't send one), append CRC. Both frames must
+    reach the tag in one field session, so callers pass them to `run()`
+    together — see `writer.write_uid`.
     """
     if len(uid_bytes) != 8:
         raise ValueError(f"UID must be 8 bytes, got {len(uid_bytes)}")
-    high = bytes([uid_bytes[7], uid_bytes[6], uid_bytes[5], uid_bytes[4]])
-    low = bytes([uid_bytes[3], uid_bytes[2], uid_bytes[1], uid_bytes[0]])
-    frame_high = "hf 15 raw -acw -d 02E00940" + high.hex().upper()
-    frame_low = "hf 15 raw -acw -d 02E00941" + low.hex().upper()
-    return frame_high, frame_low
+    first = bytes([uid_bytes[3], uid_bytes[2], uid_bytes[1], uid_bytes[0]])
+    last = bytes([uid_bytes[7], uid_bytes[6], uid_bytes[5], uid_bytes[4]])
+    frame_first = "hf 15 raw -akrc -d 02E00941" + first.hex().upper()
+    frame_last = "hf 15 raw -akrc -d 02E00940" + last.hex().upper()
+    return frame_first, frame_last
 
 
 def parse_info_uid(output: str) -> str | None:
