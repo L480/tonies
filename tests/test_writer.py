@@ -17,8 +17,8 @@ EXPECTED_ZUMA_DRY_RUN = [
     "hf 15 wrbl --ua -b 5 -d 2FB3911D",
     "hf 15 wrbl --ua -b 6 -d 982C1C55",
     "hf 15 wrbl --ua -b 7 -d 00F20064",
-    "hf 15 raw -akrc -d 02E00941500304E0",
-    "hf 15 raw -akrc -d 02E009401D363020",
+    "hf 15 raw -2 -akrc -d 02E00941500304E0",
+    "hf 15 raw -2 -krc -d 02E009401D363020",
 ]
 
 
@@ -91,6 +91,15 @@ class TestWriteUid(unittest.TestCase):
         self.assertTrue(result.ok)
         self.assertEqual(result.read_back_uid, tag.uid)
 
+    def test_only_the_first_frame_activates_the_field(self):
+        """`-a` re-inits the reader (field off/on), which drops the pending
+        first half — observed on real hardware as UID FF FF FF FF <last4>.
+        So: `-a` on frame 1 only, `-k` on both, one pm3 session."""
+        first, last = writer.proxmark.build_uid_frames(bytes.fromhex("E00403502030361D"))
+        self.assertIn(" -akrc ", first)
+        self.assertIn(" -krc ", last)
+        self.assertNotIn("-akrc", last)
+
     def test_both_frames_share_one_session(self):
         """The field must stay up between the two halves — one pm3 call, in
         vendor order (0x41 first)."""
@@ -105,8 +114,8 @@ class TestWriteUid(unittest.TestCase):
         self.assertEqual(
             runner.calls[0],
             [
-                "hf 15 raw -akrc -d 02E00941500304E0",
-                "hf 15 raw -akrc -d 02E009401D363020",
+                "hf 15 raw -2 -akrc -d 02E00941500304E0",
+                "hf 15 raw -2 -krc -d 02E009401D363020",
             ],
         )
 
@@ -117,6 +126,37 @@ class TestWriteUid(unittest.TestCase):
         result = writer.write_uid(tag, WriteOptions(), run_fn=runner, sleep_fn=lambda s: None)
         self.assertFalse(result.ok)
         self.assertEqual(result.attempts, 3)
+
+
+class TestClassifyUidFailure(unittest.TestCase):
+    TARGET = "E00403501C9FE7F1"
+
+    def test_half_written_first_is_the_observed_field_failure(self):
+        """Real hardware, `-a` on both frames: the 0x41 half is lost and the
+        tag reads FF FF FF FF followed by the correct last four bytes."""
+        self.assertEqual(
+            writer.classify_uid_failure(self.TARGET, "FFFFFFFF1C9FE7F1"),
+            "half-written-first",
+        )
+
+    def test_half_written_last(self):
+        self.assertEqual(
+            writer.classify_uid_failure(self.TARGET, "E0040350FFFFFFFF"),
+            "half-written-last",
+        )
+
+    def test_unchanged_uid_is_not_mistaken_for_a_half_write(self):
+        """Every SLIX-L UID starts with E0 04 03 50, so the shared prefix must
+        not read as 'first half written'."""
+        self.assertEqual(
+            writer.classify_uid_failure(
+                self.TARGET, "E004035011223344", previous_uid="E004035011223344"
+            ),
+            "unchanged",
+        )
+
+    def test_unknown_when_nothing_read_back(self):
+        self.assertEqual(writer.classify_uid_failure(self.TARGET, None), "unknown")
 
 
 class TestVerify(unittest.TestCase):
