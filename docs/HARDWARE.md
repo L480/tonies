@@ -117,15 +117,16 @@ instead.
 | `hf 15 info` | tag present? shows UID, chip type |
 | `hf 15 wrbl --ua -b <0-7> -d AABBCCDD` | write one 4-byte block, non-addressed (flags `0x02`) |
 | `hf 15 wrbl --ua -o -b <0-7> -d AABBCCDD` | same with the OPTION flag (`0x42`) — retry variant |
-| `hf 15 raw -akrc -d 02E00941<b3><b2><b1><b0>` | magic UID write, step 1 (first four UID bytes) |
-| `hf 15 raw -akrc -d 02E00940<b7><b6><b5><b4>` | magic UID write, step 2 (last four UID bytes) |
+| `hf 15 raw -2 -akrc -d 02E00941<b3><b2><b1><b0>` | magic UID write, step 1 (first four UID bytes) |
+| `hf 15 raw -2 -krc -d 02E00940<b7><b6><b5><b4>` | magic UID write, step 2 (last four UID bytes) |
 | `hf 15 rdbl --ua -b <0-7>` | read one block back (verification) |
 | `hf 15 dump --ns` | read all blocks, don't save to file |
 
 `hf 15 raw` flags: `-a` activate field, `-k` keep the field on after the
 frame, `-r` don't wait for a reply (the magic UID write doesn't send one),
-`-c` append CRC. `--ua` means unaddressed; without it, `hf 15` scans for a
-tag and writes *addressed*, which is not what we want here.
+`-c` append CRC, `-2` the slower '1 out of 256' mode. `--ua` means
+unaddressed; without it, `hf 15` scans for a tag and writes *addressed*,
+which is not what we want here.
 
 ### ⚠️ Why this repo never calls `csetuid`
 
@@ -141,8 +142,8 @@ instruction sheet shipped with the rfidfriend.com tags documents — is those
 two frames by hand:
 
 ```
-hf 15 raw -akrc -d 02E00941<uid[3]><uid[2]><uid[1]><uid[0]>
-hf 15 raw -akrc -d 02E00940<uid[7]><uid[6]><uid[5]><uid[4]>
+hf 15 raw -2 -akrc -d 02E00941<uid[3]><uid[2]><uid[1]><uid[0]>
+hf 15 raw -2 -krc  -d 02E00940<uid[7]><uid[6]><uid[5]><uid[4]>
 ```
 
 Each half is sent **reversed** (`uid[0]` = the first byte of the `.nfc`
@@ -150,13 +151,34 @@ file's `UID:` line = `E0`), because the card stores the UID LSB-first. For
 `UID: E0 04 03 50 20 30 36 1D`:
 
 ```
-hf 15 raw -akrc -d 02E00941500304E0
-hf 15 raw -akrc -d 02E009401D363020
+hf 15 raw -2 -akrc -d 02E00941500304E0
+hf 15 raw -2 -krc  -d 02E009401D363020
 ```
 
-Both frames go out in a **single** `pm3 -c` session, and `-k` keeps the
-field up between them. Sending them as two separate pm3 invocations power-
-cycles the tag in between, which can leave the UID half-written.
+### The field must not drop between the two halves
+
+Both frames go out in a **single** `pm3 -c` session, and only the *first*
+carries `-a`. This deviates from the printed vendor sheet, which shows
+`-akrc` on both lines — and that literal sequence does not work.
+
+In the Proxmark3 firmware `-a` means `Iso15693InitReader()`, which
+switches the field **off** and back on (`FPGA_MAJOR_MODE_OFF`, `SpinDelay(10)`,
+then a 250 ms re-energize) — see `armsrc/iso15693.c`. So `-a` on the second
+frame power-cycles the tag between the halves, and the pending 0x41 half is
+lost. Observed on real hardware writing `E0 04 03 50 1C 9F E7 F1`:
+
+```
+[+] UID....... FF FF FF FF 1C 9F E7 F1     <- 0x40 half took, 0x41 half gone
+```
+
+The tag is undamaged in that state — it just carries a half-finished UID
+until the next successful write. Sending the frames as two separate pm3
+invocations has the same effect, only worse: the field drops all the way
+down between processes.
+
+`-2` (slow '1 out of 256' mode) is part of the verified-working sequence on
+this hardware. It is not in the vendor sheet either; drop it only if you
+re-test the full write afterwards.
 
 `hf 15 csetuid` *without* `--v2` is a different, older magic protocol —
 it writes tag blocks `0x3E`/`0x3F` (config) plus `0x38`/`0x39`. The vendor

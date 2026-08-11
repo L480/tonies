@@ -39,15 +39,15 @@ class TestBuildUidFrames(unittest.TestCase):
     def test_known_vector_from_plan(self):
         uid = bytes.fromhex("E00403502030361D")
         first, last = build_uid_frames(uid)
-        self.assertEqual(first, "hf 15 raw -akrc -d 02E00941500304E0")
-        self.assertEqual(last, "hf 15 raw -akrc -d 02E009401D363020")
+        self.assertEqual(first, "hf 15 raw -2 -akrc -d 02E00941500304E0")
+        self.assertEqual(last, "hf 15 raw -2 -krc -d 02E009401D363020")
 
     def test_matches_vendor_documented_example(self):
         """The worked example on the rfidfriend.com instruction sheet:
         UID E0 04 03 50 12 34 56 78, step 1 then step 2."""
         first, last = build_uid_frames(bytes.fromhex("E004035012345678"))
-        self.assertEqual(first, "hf 15 raw -akrc -d 02E00941500304E0")
-        self.assertEqual(last, "hf 15 raw -akrc -d 02E0094078563412")
+        self.assertEqual(first, "hf 15 raw -2 -akrc -d 02E00941500304E0")
+        self.assertEqual(last, "hf 15 raw -2 -krc -d 02E0094078563412")
 
     def test_rejects_wrong_length(self):
         with self.assertRaises(ValueError):

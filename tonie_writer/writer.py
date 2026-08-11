@@ -149,6 +149,37 @@ def write_uid(
     return UidWriteResult(ok=False, read_back_uid=read_back, attempts=max_attempts)
 
 
+def classify_uid_failure(
+    target_uid: str,
+    read_back: str | None,
+    previous_uid: str | None = None,
+) -> str:
+    """Why did the UID write fail? The two halves are written by separate
+    frames, so a half-written UID is a distinct — and very informative —
+    outcome from a UID that never moved.
+
+    `previous_uid` (what the tag read before the write) breaks a tie the
+    halves alone cannot: every SLIX-L UID starts with `E0 04 03 50`, so a
+    matching first half proves nothing on its own.
+
+    Returns one of: "half-written-first", "half-written-last", "unchanged",
+    "unknown" (nothing could be read back).
+    """
+    if read_back is None:
+        return "unknown"
+    target_uid = target_uid.upper()
+    read_back = read_back.upper()
+    if previous_uid and read_back == previous_uid.upper():
+        return "unchanged"
+    first_ok = read_back[:8] == target_uid[:8]
+    last_ok = read_back[8:] == target_uid[8:]
+    if last_ok and not first_ok:
+        return "half-written-first"
+    if first_ok and not last_ok:
+        return "half-written-last"
+    return "unchanged"
+
+
 def verify(
     tag: TonieTag,
     options: WriteOptions,

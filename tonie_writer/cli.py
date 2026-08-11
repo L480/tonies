@@ -32,6 +32,16 @@ You need a magic SLIX-L tag with changeable UID (e.g. from rfidfriend.com).
 Run './tonie doctor --probe-magic' to check which kind of tag this is.
 See docs/HARDWARE.md for details."""
 
+UID_HALF_WRITTEN_EXPLANATION = """\
+Only one half of the UID took — this IS a magic tag, the write was
+interrupted. Each half is written by its own frame, and the tag drops the
+pending half if the RF field goes down in between.
+Retry the write; keep the tag flat on the antenna and don't move it.
+If it keeps happening, run the two frames by hand in one pm3 session —
+'./tonie write "<name>" --dry-run' prints them.
+The tag is not damaged — it is simply carrying a half-finished UID until
+the next successful write."""
+
 
 def _load_catalog_or_exit() -> list[catalog.CatalogEntry]:
     try:
@@ -261,7 +271,19 @@ def cmd_write(args: argparse.Namespace) -> int:
     report = writer.write_tag(tag, options)
 
     if report.uid_result is not None and not report.uid_result.ok:
-        print(UID_WRITE_FAILURE_EXPLANATION, file=sys.stderr)
+        reason = writer.classify_uid_failure(
+            tag.uid, report.uid_result.read_back_uid, current_uid
+        )
+        if report.uid_result.read_back_uid:
+            print(
+                f"Tag reads : {_format_uid(report.uid_result.read_back_uid)} "
+                f"(expected {_format_uid(tag.uid)})",
+                file=sys.stderr,
+            )
+        if reason.startswith("half-written"):
+            print(UID_HALF_WRITTEN_EXPLANATION, file=sys.stderr)
+        else:
+            print(UID_WRITE_FAILURE_EXPLANATION, file=sys.stderr)
         return EXIT_UID_WRITE_FAILED
 
     if not report.verified_ok:

@@ -122,17 +122,27 @@ def build_uid_frames(uid_bytes: bytes) -> tuple[str, str]:
       step 1 (0x41): uid[3] uid[2] uid[1] uid[0]  — the first four UID bytes
       step 2 (0x40): uid[7] uid[6] uid[5] uid[4]  — the last four UID bytes
 
-    `-akrc` = activate field, keep it on after the frame, don't wait for a
-    reply (the magic write doesn't send one), append CRC. Both frames must
-    reach the tag in one field session, so callers pass them to `run()`
-    together — see `writer.write_uid`.
+    Flags: `-a` activate field, `-k` keep it on afterwards, `-r` don't wait
+    for a reply (the magic write doesn't send one), `-c` append CRC, `-2`
+    the slower '1 out of 256' mode.
+
+    Only the *first* frame carries `-a`. In the Proxmark3 firmware `-a`
+    means `Iso15693InitReader()`, which switches the field off and back on
+    (`FPGA_MAJOR_MODE_OFF`, then 250 ms re-energize). Putting `-a` on the
+    second frame — as the vendor sheet's literal text does — power-cycles
+    the tag between the halves, and the tag then reports the first half as
+    `FF FF FF FF`: the 0x41 write is lost, only the 0x40 half sticks.
+    Verified on real hardware; see docs/HARDWARE.md.
+
+    Both frames must also reach the tag in one pm3 session, so callers pass
+    them to `run()` together — see `writer.write_uid`.
     """
     if len(uid_bytes) != 8:
         raise ValueError(f"UID must be 8 bytes, got {len(uid_bytes)}")
     first = bytes([uid_bytes[3], uid_bytes[2], uid_bytes[1], uid_bytes[0]])
     last = bytes([uid_bytes[7], uid_bytes[6], uid_bytes[5], uid_bytes[4]])
-    frame_first = "hf 15 raw -akrc -d 02E00941" + first.hex().upper()
-    frame_last = "hf 15 raw -akrc -d 02E00940" + last.hex().upper()
+    frame_first = "hf 15 raw -2 -akrc -d 02E00941" + first.hex().upper()
+    frame_last = "hf 15 raw -2 -krc -d 02E00940" + last.hex().upper()
     return frame_first, frame_last
 
 
