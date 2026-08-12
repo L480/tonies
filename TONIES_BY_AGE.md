@@ -1,14 +1,14 @@
 # Deutsche Tonies nach Alter sortiert
 
-Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), gruppiert nach der offiziellen tonies.de-Altersempfehlung der jeweiligen Serie.
+Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), gruppiert nach der offiziellen tonies.de-Altersempfehlung der jeweiligen Serie. Jede Serie ist zusätzlich nach Inhaltsformat markiert: **Hörspiel** (Hörspiel-Produktion mit Sprecherensemble), **Hörbuch** (ein Vorleser/eine Vorleserin liest einen Text), **Lieder** (Musik-/Liedersammlung), **Wissen** (Sachinhalt/Wissensformat), **Klangfigur** (Geräusch-/Musikfiguren für Babys ohne Handlung) oder **gemischt** (Serie enthält mehrere Formate).
 
-> **Hinweis zur Methodik:** Der Katalog selbst enthält keine Altersangaben (nur Name, Serie, Sprache, UID). Altersempfehlungen gelten bei Tonies pro Serie, nicht pro Einzelfigur, und wurden für die **64 größten Serien** (≥3 Tonies im Katalog, zusammen 388 der 629 deutschen Tonies) per Websuche recherchiert, da tonies.de selbst für diese Session per Netzwerkrichtlinie nicht direkt abrufbar war. Einträge mit „(gesch.)“ sind geschätzt, wenn keine eindeutige Quelle gefunden wurde. Für die übrigen, selteneren Serien war keine verlässliche Angabe recherchierbar; sie stehen am Ende ohne Altersangabe.
+> **Hinweis zur Methodik:** Der Katalog selbst enthält weder Altersangaben noch Formatangaben (nur Name, Serie, Sprache, UID). Beides gilt bei Tonies pro Serie, nicht pro Einzelfigur, und wurde für die **64 größten Serien** (≥3 Tonies im Katalog, zusammen 388 der 629 deutschen Tonies) per Websuche recherchiert, da tonies.de selbst für diese Session per Netzwerkrichtlinie nicht direkt abrufbar war. „Alter gesch.“ bzw. „... gesch.“ markiert Werte, für die keine eindeutige Quelle gefunden wurde, sondern eine Einschätzung anhand der Zielgruppe/des Franchise. Für die übrigen, selteneren Serien war keine verlässliche Angabe recherchierbar; sie stehen am Ende ohne Alters- und Formatangabe.
 
 
 ## Ab 1 Jahr
 
 
-### My First Tonies
+### My First Tonies *(Klangfigur gesch.)*
 
 - Bauernhof Set - Kuh
 - Bauernhof Set - Pferd
@@ -23,13 +23,13 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 ## Ab 3 Jahren
 
 
-### Adventskalender
+### Adventskalender *(Hörspiel)*
 
 - Adventskalender 2023 - Wuensch dir was kleines Rentier
 - Adventskalender 2024 - Ein Fest fuer die Waldfreunde
 - Adventskalender 2025 - Floeckchen und die verschwundenen Weihnachtslichter
 
-### Benjamin Bluemchen
+### Benjamin Bluemchen *(Hörspiel)*
 
 - Benjamin Bluemchen als Ritter
 - Benjamin als Baggerfahrer
@@ -40,7 +40,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Ein Toeroeoeoe fuer alle Faelle
 - Gute-Nacht-Geschichten - Pluesch
 
-### Bibi Blocksberg
+### Bibi Blocksberg *(Hörspiel)*
 
 - Ausgehext!
 - Bibi Blocksberg - Englisch lernen - Der Schatz von Blackford Castle
@@ -52,44 +52,44 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Hexenbesengeschichten - Pluesch
 - Mami spielt verrueckt
 
-### Bobo Siebenschlaefer *(gesch.)*
+### Bobo Siebenschlaefer *(Alter gesch., Hörbuch)*
 
 - Bobo beim Kinderarzt
 - Bobo feiert Kindergeburtstag
 - Bobos Ausflug zum Spielplatz
 
-### Cocomelon
+### Cocomelon *(Lieder)*
 
 - Mit JJ durch den Tag
 - Raus in die Welt mit JJ
 - Spiel und Spass mit JJ
 
-### Conni
+### Conni *(gemischt)*
 
 - Conni auf dem Bauernhof - Conni und das neue Baby
 - Conni backt Pizza - Conni lernt Rad fahren
 - Conni kommt in den Kindergarten & Conni geht aufs Toepfchen
 - Conni kommt in den Kindergarten & Conni macht das Seepferdchen
 
-### Der Grueffelo *(gesch.)*
+### Der Grueffelo *(Alter gesch., Hörspiel)*
 
 - Das Grueffelokind
 - Der Grueffelo
 - Der Grueffelo & Das Grueffelokind (Relaunch 2026)
 
-### Der kleine Rabe Socke
+### Der kleine Rabe Socke *(Hörspiel gesch.)*
 
 - Alles Schule
 - Alles erlaubt
 - Alles vermurkst
 
-### Die Biene Maja
+### Die Biene Maja *(Hörspiel)*
 
 - Der Bienentanz (Grashuepfer Flip)
 - Der Schmetterlingsball (Willi)
 - Majas Geburt (Maja)
 
-### Die Eule mit der Beule
+### Die Eule mit der Beule *(gemischt)*
 
 - Die Eule mit der Beule
 - Die kleine Eule feiert Weihnachten
@@ -97,7 +97,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Gute Nacht, kleine Eule
 - Liederalbum
 
-### Die Sendung mit der Maus & dem Elefanten
+### Die Sendung mit der Maus & dem Elefanten *(gemischt)*
 
 - (M)auserlesene Lieder
 - Die Sendung mit dem Elefanten
@@ -105,7 +105,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Schlaf schoen (Elefant)
 - Schlaf schoen (Maus)
 
-### Disney *(gesch.)*
+### Disney *(Alter gesch., gemischt)*
 
 - 101 Dalmatiner
 - Aladdin
@@ -167,20 +167,20 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Wish
 - Zoomania 1 & 2
 
-### Feuerwehrmann Sam
+### Feuerwehrmann Sam *(Hörspiel)*
 
 - Eine Insel voller Abenteuer (Penny)
 - In Pontypandy ist was los (Sam)
 - Wettlauf gegen die Zeit
 
-### Gabbys Dollhouse *(gesch.)*
+### Gabbys Dollhouse *(Alter gesch., Hörspiel)*
 
 - Das Raumschiff + Gabby hat einen Schluckauf
 - Der Cupcake-Baum + Die Puppenhausdetektive
 - Eroeffnungsfeier im Puppenhaus + Kitty Fees Uebernachtungsparty
 - Gabby, ich habe die Kaetzchen geschrumpft! + Der Eisbaer Pete
 
-### KLE!NE EXPERTEN
+### KLE!NE EXPERTEN *(Wissen)*
 
 - KLE!NE EXPERTEN ... begleiten Elefanten
 - KLE!NE EXPERTEN ... galoppieren mit Pferden
@@ -189,13 +189,13 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - KLE!NE EXPERTEN tauchen mit Walen
 - KLE!NE EXPERTEN treffen auf Dinosaurier
 
-### Lalalinos
+### Lalalinos *(gemischt gesch.)*
 
 - Lalalinos - Bumbaloo Beats (Cosmo)
 - Lalalinos - Die beste Band in Bumbaloo (Akio)
 - Lalalinos - Es groovt in Bumbaloo (Scout)
 
-### Leos Tag
+### Leos Tag *(gemischt)*
 
 - 1, 2, 3, sei beim Aufraeumen dabei!
 - Achtung, fertig, Zaehneputzen!
@@ -203,7 +203,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Hoppala, wer schnieft denn da
 - Windel, Toepfchen, Klo - das geht so!
 
-### Lichterkinder
+### Lichterkinder *(Lieder)*
 
 - Die besten Spiel- und Bewegungslieder
 - Die besten Weihnachts- und Winterlieder
@@ -213,7 +213,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Lichterkinder - Das kleine 1x1
 - Lichterkinder Schlaflieder
 
-### Lieblings-Kinderlieder
+### Lieblings-Kinderlieder *(Lieder)*
 
 - Englische Lieder
 - Europaeische Kinderlieder
@@ -242,7 +242,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Zaehllieder
 - Zaehllieder (Neuauflage 2023)
 
-### Lieblings-Klassiker
+### Lieblings-Klassiker *(Hörbuch)*
 
 - Alice im Wunderland und zwei weitere Klassiker
 - Der Zauberer von OZ und zwei weitere Klassiker
@@ -251,7 +251,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Pinocchio und 4 weitere Klassiker
 - Robinson Crusoe und vier weitere Klassiker
 
-### Lieblings-Maerchen
+### Lieblings-Maerchen *(Hörspiel)*
 
 - Der gestiefelte Kater (Neuauflage 2023)
 - Der gestiefelte Kater und vier weitere Maerchen
@@ -260,7 +260,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Rotkaeppchen und 4 weitere Maerchen
 - Sterntaler und 4 weitere Maerchen
 
-### PAW Patrol
+### PAW Patrol *(Hörspiel)*
 
 - Der Delfin-Freund (Sky)
 - Der Piratenschatz  (Rubble)
@@ -278,7 +278,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Schneller als die Feuerwehr
 - Zuma
 
-### Peppa Pig
+### Peppa Pig *(Hörspiel)*
 
 - Das Schulfest & 7 weitere Geschichten
 - Die Ritterburg und 7 weitere Geschichten
@@ -287,14 +287,14 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Meine Geburtstagsparty
 - Peppa und das neue Baby
 
-### Rolf Zuckowski
+### Rolf Zuckowski *(Lieder)*
 
 - In der Weihnachtsbaeckerei
 - Rolfs Hasengeschichte
 - Rolfs neue Schulweg-Hitparade
 - Rolfs neue Vogelhochzeit
 
-### Schlummerbande *(gesch.)*
+### Schlummerbande *(Alter gesch., gemischt)*
 
 - Gutenachtgeschichten - Schlaf schoen, kleiner Schlummerbaer
 - Klassik zum Einschlafen - Traeum schoen, kleiner Schlummerhase
@@ -312,19 +312,19 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Schlummerschaf - Einschlafmelodien von der Weide
 - Schlummerwal - Einschlafmelodien aus dem Ozean
 
-### Sesamstrasse
+### Sesamstrasse *(gemischt)*
 
 - Elmos Mitmachmusik
 - Ernies Mitmachmaerchen
 - Kruemelmonsters Mitmampfspass
 
-### Sing Kinderlieder *(gesch.)*
+### Sing Kinderlieder *(Alter gesch., Lieder)*
 
 - Bagger Mats + seine Freunde - Die schoensten Fahrzeuglieder
 - Milo, das Muellauto-Kind + seine Freunde - Abenteuer in der grossen Stadt
 - Timmy Traktor & seine Freunde Ferien auf dem Bauernhof
 
-### Steiff Soft Cuddly Friends
+### Steiff Soft Cuddly Friends *(Klangfigur gesch.)*
 
 - Bodo Schimpanse
 - Dinkie Esel
@@ -336,7 +336,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 ## Ab 4 Jahren
 
 
-### Eule findet den Beat *(gesch.)*
+### Eule findet den Beat *(Alter gesch., Wissen gesch.)*
 
 - Auf Europatour
 - Ein Entdeckerflug durch die Musikwelt
@@ -345,14 +345,14 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Eule findet den Beat Set - Mit Gefuehl
 - Eule findet den Beat Set - Mit Instrumenten
 
-### Green Team *(gesch.)*
+### Green Team *(Alter gesch., Wissen)*
 
 - Mission Rettung an Land mit Nina dem roten Panda
 - Mission Rettung im Wasser mit Bobby, der Meeresschildkroete
 - Mission Rettung in den Bergen mit Uli, dem Leoparden
 - Mission Rettung in der Luft mit John, der Schnee-Eule
 
-### Janosch
+### Janosch *(Hörspiel)*
 
 - Als Tiger und Baer beinahe das Beste verpassten
 - Emil Gruenbaer und die Bande - Abenteuer im Wald
@@ -360,14 +360,14 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Oh, wie schoen ist Panama
 - Post fuer den Tiger
 
-### Marvel Spidey und seine Super-Freunde *(gesch.)*
+### Marvel Spidey und seine Super-Freunde *(Alter gesch., Hörspiel)*
 
 - Spidey und seine Super-Freunde - Das Spidey Team & 3 weitere spannende Abenteuer
 - Spidey und seine Super-Freunde - Doc Ocks Superoktopus & 3 weitere spannende Abenteuer
 - Spidey und seine Super-Freunde - Kobzilla & 3 weitere spannende Abenteuer
 - Spidey und seine Super-Freunde - Raketen-Rhino & 3 weitere spannende Abenteuer
 
-### Pettersson und Findus
+### Pettersson und Findus *(Hörspiel)*
 
 - Findus und der Hahn im Korb
 - Findus zieht um
@@ -375,13 +375,13 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Mein Gartenjahr - Herbst & Winter
 - Wie Findus zu Pettersson kam
 
-### Pippi Langstrumpf
+### Pippi Langstrumpf *(Hörspiel)*
 
 - Pippi Langstrumpf
 - Pippi Langstrumpf - Das Hoerspiel (Neuauflage 2025)
 - Pippi Langstrumpf 2 - Pippi Langstrumpf geht an Bord
 
-### Unter meinem Bett
+### Unter meinem Bett *(Lieder)*
 
 - Unter meinem Bett 1
 - Unter meinem Bett 2
@@ -390,7 +390,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Unter meinem Bett 5
 - Unter meinem Bett 6
 
-### Yakari *(gesch.)*
+### Yakari *(Alter gesch., Hörspiel)*
 
 - Best of Kleiner Donner
 - Best of Regenbogen
@@ -399,20 +399,20 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 ## Ab 5 Jahren
 
 
-### Asterix
+### Asterix *(Hörspiel)*
 
 - Asterix der Gallier
 - Die Odyssee
 - Die goldene Sichel
 
-### Buehne frei fuer
+### Buehne frei fuer *(Wissen)*
 
 - Das Immunsystem
 - Das Nervensystem
 - Das Skelett
 - Der Verdauungstrakt
 
-### Clever Tonies/GEOlino
+### Clever Tonies/GEOlino *(Wissen)*
 
 - Alles ueber Meere + Ozeane
 - Alles ueber Sterne + Planeten
@@ -420,21 +420,21 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Alles ueber die Arktis + Antarktis
 - GEOlino Mini - Alles ueber Polizei, Feuerwehr und Rettung
 
-### Coole Jobs
+### Coole Jobs *(Wissen)*
 
 - 1 Tierfotografie - Wunderbare Wildnis
 - 2 Pizzabacken - Grammgenaue Wissenschaft
 - 3 Medizin - Gesundheit auf der Spur
 - 4 Raketenwissenschaft - Gegen die Schwerkraft
 
-### Der Raeuber Hotzenplotz
+### Der Raeuber Hotzenplotz *(Hörspiel)*
 
 - Der Raeuber Hotzenplotz
 - Hotzenplotz 3
 - Neues vom Raeuber Hotzenplotz
 - Und die Mondrakete
 
-### Der kleine Drache Kokosnuss
+### Der kleine Drache Kokosnuss *(Hörspiel)*
 
 - Der kleine Drache Kokosnuss feiert Weihnachten. Englisch lernen
 - Hoerspiel zur TV-Serie 01
@@ -442,26 +442,26 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Hoerspiel zur TV-Serie 03
 - Hoerspiel zur TV-Serie 04
 
-### Die Olchis
+### Die Olchis *(Hörspiel)*
 
 - Die Olchis auf Geburtstagsreise
 - Die Olchis und der schwarze Pirat
 - Die Olchis werden Fussballmeister
 
-### Die Playmos
+### Die Playmos *(Hörspiel)*
 
 - Der Ball im Prinzessinnen-Schloss
 - Der Schatz der Teufelsinsel
 - Grossbrand in der Feuerwache
 
-### Die Schluempfe
+### Die Schluempfe *(Hörspiel)*
 
 - Der doppelte Papa Schlumpf & 3 weitere schlumpfige Abenteuer
 - Ein tollpatschiger Held & 3 weitere schlumpfige Abenteuer
 - Ein unwiderschlumpfliches Laecheln & 3 weitere schlumpfige Abenteuer
 - Hefty Schlumpf - Wer ist heftiger & 3 weitere schlumpfige Abenteuer
 
-### Dreamworks *(gesch.)*
+### Dreamworks *(Alter gesch., Hörspiel)*
 
 - Drachenzaehmen leicht gemacht
 - Drachenzaehmen leicht gemacht 2
@@ -471,34 +471,34 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Trolls - Finde dein Glueck
 - Trolls - Gemeinsam Stark
 
-### Fuenf Freunde
+### Fuenf Freunde *(Hörspiel)*
 
 - Fuenf Freunde auf der Suche nach Timmy
 - Fuenf Freunde und der Grossalarm in Kirrin
 - Fuenf Freunde und die doppelte Erfindung
 - Fuenf Freunde und die verlassene Jagdhuette
 
-### Heidi
+### Heidi *(Hörspiel)*
 
 - Die Reise zum Grossvater
 - Ein Wolf im Doerfli
 - Freunde fuer immer
 
-### Lieblings-Meisterstuecke
+### Lieblings-Meisterstuecke *(Hörspiel)*
 
 - Der Nussknacker
 - Die Zauberfloete
 - Haensel und Gretel
 - Schwanensee
 
-### Loewenzahn
+### Loewenzahn *(Wissen)*
 
 - Loewenzahn - Abenteuer im Feuerland
 - Loewenzahn - Der doppelte Bankraeuber
 - Loewenzahn - Ein Dino im Garten
 - Loewenzahn - Ein Gas unter Druck
 
-### MIRA und das fliegende Haus
+### MIRA und das fliegende Haus *(Wissen gesch.)*
 
 - MIRA und das fliegende Haus - Der Familienzauber
 - MIRA und das fliegende Haus - Ich bin cool!
@@ -506,27 +506,27 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - MIRA und das fliegende Haus - Ich liebe mich!
 - MIRA und das fliegende Haus - Meine Gefuehle sind okay!
 
-### PJ Masks
+### PJ Masks *(Hörspiel)*
 
 - Ein maechtiges Mondproblem
 - Los gehts Pyjamahelden
 - Zeit ein Held zu sein
 
-### Sunspeed Explorers
+### Sunspeed Explorers *(Wissen)*
 
 - Gruenes Kopenhagen
 - Kenia recycelt
 - Meeresschutz in Australien
 - Muellfrei in Japan
 
-### TKKG Junior
+### TKKG Junior *(Hörspiel)*
 
 - Auf frischer tat ertappt
 - Der rote Retter
 - Giftige Schokolade
 - Vorsicht bissig!
 
-### Wickie
+### Wickie *(Hörspiel)*
 
 - Die Koenigin der Winde
 - Tanz mit dem Wolf und sechs weitere Episoden
@@ -535,7 +535,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 ## Ab 6 Jahren
 
 
-### Bibi & Tina
+### Bibi & Tina *(Hörspiel)*
 
 - Das Waisenfohlen
 - Der verschwundene Pokal
@@ -545,20 +545,20 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Die Wildpferde - Teil 2
 - Die verlorene Freundschaft (Neuauflage 2025)
 
-### Die drei Fragezeichen Kids
+### Die drei Fragezeichen Kids *(Hörspiel)*
 
 - Invasion der Fliegen
 - Panik im Paradies
 - Radio Rocky Beach
 - Soccer Mania (Englische Version)
 
-### Mia and me
+### Mia and me *(Hörspiel)*
 
 - Ankunft in Centopia & Eine neue Hoffnung
 - Das goldene Einhorn & Onchao und das Paradies
 - Mia und die Elfen
 
-### WAS IST WAS
+### WAS IST WAS *(Wissen)*
 
 - Dinosaurier - Ausgestorbene Tiere
 - Erfindungen - Bionik
@@ -571,7 +571,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Wale und Delfine - Geheimnis Tiefsee
 - Wunderbare Pferde - Reitervolk Mongolen
 
-### Woozle Goozle
+### Woozle Goozle *(Wissen)*
 
 - Luft & Elektrizitaet
 - Woozle Goozle Set - Elektrizitaet & Sehen
@@ -582,7 +582,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 ## Ab 7 Jahren
 
 
-### Checker Tobi
+### Checker Tobi *(Wissen)*
 
 - Checker Tobi 3 Das Extra zum Kinofilm
 - Der grosse Demokratie-Check Wahlen, Parlamente, Kinderrechte - Das check ich fuer euch!
@@ -592,13 +592,13 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 ## Ab 8 Jahren
 
 
-### Die drei Ausrufezeichen
+### Die drei Ausrufezeichen *(Hörspiel)*
 
 - Das Geheimnis der alten Villa
 - Das rote Phantom
 - Mission Pferdeshow
 
-### Wieso Weshalb Warum *(gesch.)*
+### Wieso Weshalb Warum *(Alter gesch., Wissen)*
 
 - Die Polizei
 - Profiwissen - Die Erde
@@ -607,7 +607,7 @@ Alle 629 deutschsprachigen Tonies aus dem lokalen Katalog (`data/tonies.json`), 
 - Profiwissen - Retter im Einsatz
 
 
-## Ohne Altersangabe
+## Ohne Alters- und Formatangabe
 
 
 *Serien mit weniger als 3 Tonies im Katalog wurden aus Aufwandsgründen nicht einzeln recherchiert (siehe Hinweis oben).*
