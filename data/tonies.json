@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-02T17:17:01Z",
-  "upstream_commit": "e6f8fd4",
-  "count": 755,
+  "generated_at": "2026-08-25T03:15:24Z",
+  "upstream_commit": "a6598da",
+  "count": 768,
   "tonies": [
     {
       "id": "english/ask-the-storybots/beep",
@@ -1552,6 +1552,24 @@
       "search": "german bob der baumeister kuechenmeister"
     },
     {
+      "id": "german/bobo-siebenschlaefer/bobo-auf-grosser-reise-und-weitere-folgen",
+      "name": "Bobo auf grosser Reise und weitere Folgen",
+      "series": "Bobo Siebenschlaefer",
+      "language": "German",
+      "path": "data/tonies/German/Bobo Siebenschlaefer/Bobo auf grosser Reise und weitere Folgen.nfc",
+      "uid": "E004035029ED15EA",
+      "search": "german bobo siebenschlaefer auf grosser reise und weitere folgen"
+    },
+    {
+      "id": "german/bobo-siebenschlaefer/bobo-baggert-und-weitere-folgen",
+      "name": "Bobo baggert und weitere Folgen",
+      "series": "Bobo Siebenschlaefer",
+      "language": "German",
+      "path": "data/tonies/German/Bobo Siebenschlaefer/Bobo baggert und weitere Folgen.nfc",
+      "uid": "E004035029761971",
+      "search": "german bobo siebenschlaefer baggert und weitere folgen"
+    },
+    {
       "id": "german/bobo-siebenschlaefer/bobo-beim-kinderarzt",
       "name": "Bobo beim Kinderarzt",
       "series": "Bobo Siebenschlaefer",
@@ -1991,6 +2009,15 @@
       "path": "data/tonies/German/DC/Batwheels.nfc",
       "uid": "E0040350200BAFA6",
       "search": "german dc batwheels"
+    },
+    {
+      "id": "german/dikka-boom-schakkalakka/dikka-boom-schakkalakka",
+      "name": "DIKKA - Boom Schakkalakka",
+      "series": "DIKKA - Boom Schakkalakka",
+      "language": "German",
+      "path": "data/tonies/German/DIKKA - Boom Schakkalakka/DIKKA - Boom Schakkalakka.nfc",
+      "uid": "E00403502B76BF35",
+      "search": "german dikka boom schakkalakka"
     },
     {
       "id": "german/dikka-oh-yeah/dikka-oh-yeah",
@@ -3017,6 +3044,15 @@
       "path": "data/tonies/German/Disney/Die Unglaublichen.nfc",
       "uid": "E00403501F818B1D",
       "search": "german disney die unglaublichen"
+    },
+    {
+      "id": "german/disney/disney-pixar-toy-story-5",
+      "name": "Disney Pixar - Toy Story 5",
+      "series": "Disney",
+      "language": "German",
+      "path": "data/tonies/German/Disney/Disney Pixar - Toy Story 5.nfc",
+      "uid": "E0040350290425D4",
+      "search": "german disney pixar toy story 5"
     },
     {
       "id": "german/disney/dornroeschen",
@@ -4963,6 +4999,33 @@
       "search": "german mama muh und die kraehe"
     },
     {
+      "id": "german/marvel/marvel-captain-america",
+      "name": "Marvel - Captain America",
+      "series": "Marvel",
+      "language": "German",
+      "path": "data/tonies/German/Marvel/Marvel - Captain America.nfc",
+      "uid": "E004035029587DA8",
+      "search": "german marvel captain america"
+    },
+    {
+      "id": "german/marvel/marvel-iron-man",
+      "name": "Marvel - Iron Man",
+      "series": "Marvel",
+      "language": "German",
+      "path": "data/tonies/German/Marvel/Marvel - Iron Man.nfc",
+      "uid": "E00403502ADDA631",
+      "search": "german marvel iron man"
+    },
+    {
+      "id": "german/marvel/marvel-spider-man",
+      "name": "Marvel - Spider-Man",
+      "series": "Marvel",
+      "language": "German",
+      "path": "data/tonies/German/Marvel/Marvel - Spider-Man.nfc",
+      "uid": "E00403502992725C",
+      "search": "german marvel spider man"
+    },
+    {
       "id": "german/marvel-spidey-und-seine-super-freunde/spidey-und-seine-super-freunde-das-spidey-team-3-weitere-spannende-abenteuer",
       "name": "Spidey und seine Super-Freunde - Das Spidey Team & 3 weitere spannende Abenteuer",
       "series": "Marvel Spidey und seine Super-Freunde",
@@ -5078,6 +5141,24 @@
       "path": "data/tonies/German/Michel aus Loenneberga/Der Tag, an dem Michel besonders nett sein wollte.nfc",
       "uid": "E004035019DDA1D8",
       "search": "german michel aus loenneberga der tag an dem besonders nett sein wollte"
+    },
+    {
+      "id": "german/micky-maus-wunderhaus/micky-maus-wunderhaus-mickey",
+      "name": "Micky Maus Wunderhaus - Mickey",
+      "series": "Micky Maus Wunderhaus",
+      "language": "German",
+      "path": "data/tonies/German/Micky Maus Wunderhaus/Micky Maus Wunderhaus - Mickey.nfc",
+      "uid": "E00403502A7408F8",
+      "search": "german micky maus wunderhaus mickey"
+    },
+    {
+      "id": "german/micky-maus-wunderhaus/micky-maus-wunderhaus-minnie",
+      "name": "Micky Maus Wunderhaus - Minnie",
+      "series": "Micky Maus Wunderhaus",
+      "language": "German",
+      "path": "data/tonies/German/Micky Maus Wunderhaus/Micky Maus Wunderhaus - Minnie.nfc",
+      "uid": "E00403502821393A",
+      "search": "german micky maus wunderhaus minnie"
     },
     {
       "id": "german/miffy/miffy",
@@ -5636,6 +5717,42 @@
       "path": "data/tonies/German/Planet Omar/Planet Omar.nfc",
       "uid": "E0040350168B6DC4",
       "search": "german planet omar"
+    },
+    {
+      "id": "german/pokemon/bisasam",
+      "name": "Bisasam",
+      "series": "Pokemon",
+      "language": "German",
+      "path": "data/tonies/German/Pokemon/Bisasam.nfc",
+      "uid": "E00403502926BC5C",
+      "search": "german pokemon bisasam"
+    },
+    {
+      "id": "german/pokemon/glumanda",
+      "name": "Glumanda",
+      "series": "Pokemon",
+      "language": "German",
+      "path": "data/tonies/German/Pokemon/Glumanda.nfc",
+      "uid": "E00403502956D0CE",
+      "search": "german pokemon glumanda"
+    },
+    {
+      "id": "german/pokemon/pikachu",
+      "name": "Pikachu",
+      "series": "Pokemon",
+      "language": "German",
+      "path": "data/tonies/German/Pokemon/Pikachu.nfc",
+      "uid": "E0040350296F6E5D",
+      "search": "german pokemon pikachu"
+    },
+    {
+      "id": "german/pokemon/schiggy",
+      "name": "Schiggy",
+      "series": "Pokemon",
+      "language": "German",
+      "path": "data/tonies/German/Pokemon/Schiggy.nfc",
+      "uid": "E00403502AE4740F",
+      "search": "german pokemon schiggy"
     },
     {
       "id": "german/positives-denken-mit-elefant-greta/geschichten-fuer-mehr-selbstsicherheit-und-achtsamkeit",
