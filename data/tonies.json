@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T03:15:24Z",
-  "upstream_commit": "a6598da",
-  "count": 768,
+  "generated_at": "2026-08-26T03:28:26Z",
+  "upstream_commit": "cef1b0e",
+  "count": 769,
   "tonies": [
     {
       "id": "english/ask-the-storybots/beep",
@@ -6059,6 +6059,15 @@
       "path": "data/tonies/German/Schlummerbande/Schlummerschaf - Einschlafmelodien von der Weide.nfc",
       "uid": "E0040350209C57F9",
       "search": "german schlummerbande schlummerschaf einschlafmelodien von der weide"
+    },
+    {
+      "id": "german/schlummerbande/schlummertukan-naturklaenge-aus-dem-schlummerdschungel",
+      "name": "Schlummertukan - Naturklaenge aus dem Schlummerdschungel",
+      "series": "Schlummerbande",
+      "language": "German",
+      "path": "data/tonies/German/Schlummerbande/Schlummertukan - Naturklaenge aus dem Schlummerdschungel.nfc",
+      "uid": "E0040350287C9F2F",
+      "search": "german schlummerbande schlummertukan naturklaenge aus dem schlummerdschungel"
     },
     {
       "id": "german/schlummerbande/schlummerwal-einschlafmelodien-aus-dem-ozean",
