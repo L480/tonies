@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-26T03:28:26Z",
-  "upstream_commit": "cef1b0e",
-  "count": 769,
+  "generated_at": "2026-09-01T07:52:39Z",
+  "upstream_commit": "ddd4af3",
+  "count": 794,
   "tonies": [
     {
       "id": "english/ask-the-storybots/beep",
@@ -157,6 +157,24 @@
       "search": "english disney aladdin"
     },
     {
+      "id": "english/disney/aladdin-princess-jasmine",
+      "name": "Aladdin - Princess Jasmine",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Aladdin - Princess Jasmine.nfc",
+      "uid": "E0040350271D32E3",
+      "search": "english disney aladdin princess jasmine"
+    },
+    {
+      "id": "english/disney/baby-lullabies",
+      "name": "Baby Lullabies",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Baby Lullabies.nfc",
+      "uid": "E00403502764CEA6",
+      "search": "english disney baby lullabies"
+    },
+    {
       "id": "english/disney/doc-mcstuffins",
       "name": "Doc McStuffins",
       "series": "Disney",
@@ -238,6 +256,15 @@
       "search": "english disney pocahontas"
     },
     {
+      "id": "english/disney/superkitties-ginny",
+      "name": "SuperKitties - Ginny",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/SuperKitties - Ginny.nfc",
+      "uid": "E004035023A33A3D",
+      "search": "english disney superkitties ginny"
+    },
+    {
       "id": "english/disney/tangled",
       "name": "Tangled",
       "series": "Disney",
@@ -263,6 +290,15 @@
       "path": "data/tonies/English/Disney/The Lion King.nfc",
       "uid": "E0040350204696FF",
       "search": "english disney the lion king"
+    },
+    {
+      "id": "english/disney/the-nightmare-before-christmas-jack-skellington",
+      "name": "The Nightmare Before Christmas - Jack Skellington",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/The Nightmare Before Christmas - Jack Skellington.nfc",
+      "uid": "E004035024F1CA49",
+      "search": "english disney the nightmare before christmas jack skellington"
     },
     {
       "id": "english/disney/the-princess-and-the-frog",
@@ -328,6 +364,15 @@
       "search": "english disney and pixar coco"
     },
     {
+      "id": "english/disney-and-pixar/finding-dory",
+      "name": "Finding Dory",
+      "series": "Disney and Pixar",
+      "language": "English",
+      "path": "data/tonies/English/Disney and Pixar/Finding Dory.nfc",
+      "uid": "E004035025F64379",
+      "search": "english disney and pixar finding dory"
+    },
+    {
       "id": "english/disney-and-pixar/finding-nemo",
       "name": "Finding Nemo",
       "series": "Disney and Pixar",
@@ -373,6 +418,15 @@
       "search": "english disney and pixar monsters inc"
     },
     {
+      "id": "english/disney-and-pixar/ratatouille",
+      "name": "Ratatouille",
+      "series": "Disney and Pixar",
+      "language": "English",
+      "path": "data/tonies/English/Disney and Pixar/Ratatouille.nfc",
+      "uid": "E00403502543D77E",
+      "search": "english disney and pixar ratatouille"
+    },
+    {
       "id": "english/disney-and-pixar/soul",
       "name": "Soul",
       "series": "Disney and Pixar",
@@ -389,6 +443,15 @@
       "path": "data/tonies/English/Disney and Pixar/The Incredibles.nfc",
       "uid": "E00403501BFDD9E2",
       "search": "english disney and pixar the incredibles"
+    },
+    {
+      "id": "english/disney-and-pixar/toy-story-bullseye",
+      "name": "Toy Story - Bullseye",
+      "series": "Disney and Pixar",
+      "language": "English",
+      "path": "data/tonies/English/Disney and Pixar/Toy Story - Bullseye.nfc",
+      "uid": "E00403502AD19ACA",
+      "search": "english disney and pixar toy story bullseye"
     },
     {
       "id": "english/disney-and-pixar/toy-story-woody",
@@ -571,6 +634,33 @@
       "search": "english mindfulness yoga with sara the llama"
     },
     {
+      "id": "english/my-first-tonies/farm/cow",
+      "name": "Cow",
+      "series": "My First Tonies/Farm",
+      "language": "English",
+      "path": "data/tonies/English/My First Tonies/Farm/Cow.nfc",
+      "uid": "E00403502651897C",
+      "search": "english my first tonies farm cow"
+    },
+    {
+      "id": "english/my-first-tonies/farm/horse",
+      "name": "Horse",
+      "series": "My First Tonies/Farm",
+      "language": "English",
+      "path": "data/tonies/English/My First Tonies/Farm/Horse.nfc",
+      "uid": "E004035026FF4BB9",
+      "search": "english my first tonies farm horse"
+    },
+    {
+      "id": "english/my-first-tonies/farm/pig",
+      "name": "Pig",
+      "series": "My First Tonies/Farm",
+      "language": "English",
+      "path": "data/tonies/English/My First Tonies/Farm/Pig.nfc",
+      "uid": "E0040350287A628E",
+      "search": "english my first tonies farm pig"
+    },
+    {
       "id": "english/national-geographic-kids/astronaut",
       "name": "Astronaut",
       "series": "National Geographic Kids",
@@ -688,6 +778,15 @@
       "search": "english other doggyland"
     },
     {
+      "id": "english/other/hot-wheels",
+      "name": "Hot Wheels",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Hot Wheels.nfc",
+      "uid": "E004035024729C00",
+      "search": "english other hot wheels"
+    },
+    {
       "id": "english/other/mama-llama",
       "name": "Mama Llama",
       "series": "Other",
@@ -704,6 +803,15 @@
       "path": "data/tonies/English/Other/Mo Willems The Pigeon.nfc",
       "uid": "E004035023D35C6A",
       "search": "english other mo willems the pigeon"
+    },
+    {
+      "id": "english/other/ms-rachel",
+      "name": "Ms Rachel",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Ms Rachel.nfc",
+      "uid": "E00403502BC51325",
+      "search": "english other ms rachel"
     },
     {
       "id": "english/other/paddington-bear",
@@ -947,6 +1055,42 @@
       "path": "data/tonies/English/Pete the Cat/Pete the Cat - Rock On.nfc",
       "uid": "E00403501B5CDC39",
       "search": "english pete the cat rock on"
+    },
+    {
+      "id": "english/pokemon/bulbasaur",
+      "name": "Bulbasaur",
+      "series": "Pokemon",
+      "language": "English",
+      "path": "data/tonies/English/Pokemon/Bulbasaur.nfc",
+      "uid": "E00403502A0E4BDB",
+      "search": "english pokemon bulbasaur"
+    },
+    {
+      "id": "english/pokemon/charmander",
+      "name": "Charmander",
+      "series": "Pokemon",
+      "language": "English",
+      "path": "data/tonies/English/Pokemon/Charmander.nfc",
+      "uid": "E00403502B146624",
+      "search": "english pokemon charmander"
+    },
+    {
+      "id": "english/pokemon/pikachu",
+      "name": "Pikachu",
+      "series": "Pokemon",
+      "language": "English",
+      "path": "data/tonies/English/Pokemon/Pikachu.nfc",
+      "uid": "E00403502AE90DEB",
+      "search": "english pokemon pikachu"
+    },
+    {
+      "id": "english/pokemon/squirtle",
+      "name": "Squirtle",
+      "series": "Pokemon",
+      "language": "English",
+      "path": "data/tonies/English/Pokemon/Squirtle.nfc",
+      "uid": "E004035023F8B85A",
+      "search": "english pokemon squirtle"
     },
     {
       "id": "english/sesame-street/cookie-monster",
@@ -3586,6 +3730,15 @@
       "search": "german europa park ed edda grand prix of europe"
     },
     {
+      "id": "german/fc-bayern-muenchen/die-welt-des-fc-bayern",
+      "name": "Die Welt des FC Bayern",
+      "series": "FC Bayern Muenchen",
+      "language": "German",
+      "path": "data/tonies/German/FC Bayern Muenchen/Die Welt des FC Bayern.nfc",
+      "uid": "E00403502C499423",
+      "search": "german fc bayern muenchen die welt des"
+    },
+    {
       "id": "german/fantasiereisen-mit-faultier-mo/8-besondere-orte-zum-entspannen",
       "name": "8 besondere Orte zum Entspannen",
       "series": "Fantasiereisen mit Faultier Mo",
@@ -4133,6 +4286,15 @@
       "path": "data/tonies/German/KLE!NE EXPERTEN/KLE!NE EXPERTEN ... galoppieren mit Pferden.nfc",
       "uid": "E0040350229AA51C",
       "search": "german kle ne experten galoppieren mit pferden"
+    },
+    {
+      "id": "german/kle-ne-experten/kle-ne-experten-loeschen-mit-der-feuerwehr",
+      "name": "KLE!NE EXPERTEN ... loeschen mit der Feuerwehr",
+      "series": "KLE!NE EXPERTEN",
+      "language": "German",
+      "path": "data/tonies/German/KLE!NE EXPERTEN/KLE!NE EXPERTEN ... loeschen mit der Feuerwehr.nfc",
+      "uid": "E004035028E84B76",
+      "search": "german kle ne experten loeschen mit der feuerwehr"
     },
     {
       "id": "german/kle-ne-experten/kle-ne-experten-muhen-mit-kuehen",
@@ -4774,6 +4936,15 @@
       "search": "german lieblings klassiker robinson crusoe und vier weitere"
     },
     {
+      "id": "german/lieblings-literatur/der-geheime-garten",
+      "name": "Der geheime Garten",
+      "series": "Lieblings-Literatur",
+      "language": "German",
+      "path": "data/tonies/German/Lieblings-Literatur/Der geheime Garten.nfc",
+      "uid": "E00403502B5270F0",
+      "search": "german lieblings literatur der geheime garten"
+    },
+    {
       "id": "german/lieblings-literatur/eine-weihnachtsgeschichte",
       "name": "Eine Weihnachtsgeschichte",
       "series": "Lieblings-Literatur",
@@ -4781,6 +4952,15 @@
       "path": "data/tonies/German/Lieblings-Literatur/Eine Weihnachtsgeschichte.nfc",
       "uid": "E0040350262D5F38",
       "search": "german lieblings literatur eine weihnachtsgeschichte"
+    },
+    {
+      "id": "german/lieblings-literatur/peter-pan",
+      "name": "Peter Pan",
+      "series": "Lieblings-Literatur",
+      "language": "German",
+      "path": "data/tonies/German/Lieblings-Literatur/Peter Pan.nfc",
+      "uid": "E00403502A860CDF",
+      "search": "german lieblings literatur peter pan"
     },
     {
       "id": "german/lieblings-maerchen/der-gestiefelte-kater-neuauflage-2023",
@@ -6178,6 +6358,15 @@
       "search": "german snoefrid aus dem wiesental das wahrlich grosse geheimnis von appelgarden"
     },
     {
+      "id": "german/sommerby/ein-sommer-in-sommerby",
+      "name": "Ein Sommer in Sommerby",
+      "series": "Sommerby",
+      "language": "German",
+      "path": "data/tonies/German/Sommerby/Ein Sommer in Sommerby.nfc",
+      "uid": "E00403502A8EC7FB",
+      "search": "german sommerby ein sommer in"
+    },
+    {
       "id": "german/spirit/spirit-frei-und-ungezaehmt",
       "name": "SPIRIT - Frei und Ungezaehmt",
       "series": "Spirit",
@@ -6275,6 +6464,24 @@
       "path": "data/tonies/German/Stockmann/Stockmann.nfc",
       "uid": "E004035017D25ACD",
       "search": "german stockmann"
+    },
+    {
+      "id": "german/story-mania/malva",
+      "name": "Malva",
+      "series": "Story Mania",
+      "language": "German",
+      "path": "data/tonies/German/Story Mania/Malva.nfc",
+      "uid": "E00403502B5F837A",
+      "search": "german story mania malva"
+    },
+    {
+      "id": "german/story-mania/mello",
+      "name": "Mello",
+      "series": "Story Mania",
+      "language": "German",
+      "path": "data/tonies/German/Story Mania/Mello.nfc",
+      "uid": "E00403502B9F5C89",
+      "search": "german story mania mello"
     },
     {
       "id": "german/sunspeed-explorers/gruenes-kopenhagen",
@@ -6806,6 +7013,24 @@
       "path": "data/tonies/German/Willy Astor/Willy Astor - Kindischer Ozean.nfc",
       "uid": "E0040350155F542D",
       "search": "german willy astor kindischer ozean"
+    },
+    {
+      "id": "german/winnie-puuh/ferkels-grosses-abenteuer",
+      "name": "Ferkels grosses Abenteuer",
+      "series": "Winnie Puuh",
+      "language": "German",
+      "path": "data/tonies/German/Winnie Puuh/Ferkels grosses Abenteuer.nfc",
+      "uid": "E004035029F88622",
+      "search": "german winnie puuh ferkels grosses abenteuer"
+    },
+    {
+      "id": "german/winnie-puuh/i-aah",
+      "name": "I-Aah",
+      "series": "Winnie Puuh",
+      "language": "German",
+      "path": "data/tonies/German/Winnie Puuh/I-Aah.nfc",
+      "uid": "E0040350265D79E7",
+      "search": "german winnie puuh i aah"
     },
     {
       "id": "german/wir-sind-nachher-wieder-da-wir-muessen-kurz-nach-afrika/wir-sind-nachher-wieder-da-wir-muessen-kurz-nach-afrika",
