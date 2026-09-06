@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-01T07:52:39Z",
-  "upstream_commit": "ddd4af3",
-  "count": 794,
+  "generated_at": "2026-09-06T07:11:00Z",
+  "upstream_commit": "ba57b86",
+  "count": 809,
   "tonies": [
     {
       "id": "english/ask-the-storybots/beep",
@@ -535,6 +535,15 @@
       "search": "english dr seuss the cat in hat"
     },
     {
+      "id": "english/dr-seuss/the-lorax",
+      "name": "The Lorax",
+      "series": "Dr Seuss",
+      "language": "English",
+      "path": "data/tonies/English/Dr Seuss/The Lorax.nfc",
+      "uid": "E0040350263C3D82",
+      "search": "english dr seuss the lorax"
+    },
+    {
       "id": "english/dreamworks/gabbys-dollhouse",
       "name": "Gabbys Dollhouse",
       "series": "DreamWorks",
@@ -751,6 +760,24 @@
       "search": "english other carmen sandiego"
     },
     {
+      "id": "english/other/chicka-chicka-boom-boom",
+      "name": "Chicka Chicka Boom Boom",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Chicka Chicka Boom Boom.nfc",
+      "uid": "E004035025C84291",
+      "search": "english other chicka boom"
+    },
+    {
+      "id": "english/other/corduroy",
+      "name": "Corduroy",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Corduroy.nfc",
+      "uid": "E00403502515863C",
+      "search": "english other corduroy"
+    },
+    {
       "id": "english/other/curious-george",
       "name": "Curious George",
       "series": "Other",
@@ -778,6 +805,15 @@
       "search": "english other doggyland"
     },
     {
+      "id": "english/other/duck-and-goose",
+      "name": "Duck and Goose",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Duck and Goose.nfc",
+      "uid": "E00403502249388D",
+      "search": "english other duck and goose"
+    },
+    {
       "id": "english/other/hot-wheels",
       "name": "Hot Wheels",
       "series": "Other",
@@ -785,6 +821,15 @@
       "path": "data/tonies/English/Other/Hot Wheels.nfc",
       "uid": "E004035024729C00",
       "search": "english other hot wheels"
+    },
+    {
+      "id": "english/other/kidnation",
+      "name": "KidNation",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/KidNation.nfc",
+      "uid": "E00403501BE01EF7",
+      "search": "english other kidnation"
     },
     {
       "id": "english/other/mama-llama",
@@ -823,6 +868,15 @@
       "search": "english other paddington bear"
     },
     {
+      "id": "english/other/piney-the-lonesome-pine",
+      "name": "Piney - The Lonesome Pine",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Piney - The Lonesome Pine.nfc",
+      "uid": "E004035020044B5C",
+      "search": "english other piney the lonesome pine"
+    },
+    {
       "id": "english/other/pinocchio-and-other-classic-stories",
       "name": "Pinocchio and other classic stories",
       "series": "Other",
@@ -832,6 +886,15 @@
       "search": "english other pinocchio and classic stories"
     },
     {
+      "id": "english/other/qai-qai-invisible-universe",
+      "name": "Qai Qai - Invisible Universe",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Qai Qai - Invisible Universe.nfc",
+      "uid": "E0040350224E140F",
+      "search": "english other qai invisible universe"
+    },
+    {
       "id": "english/other/spongebob-squarepants",
       "name": "SpongeBob SquarePants",
       "series": "Other",
@@ -839,6 +902,24 @@
       "path": "data/tonies/English/Other/SpongeBob SquarePants.nfc",
       "uid": "E004035020A8D45E",
       "search": "english other spongebob squarepants"
+    },
+    {
+      "id": "english/other/spot-fun-with-friends",
+      "name": "Spot - Fun with Friends",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Spot - Fun with Friends.nfc",
+      "uid": "E00403502338EF71",
+      "search": "english other spot fun with friends"
+    },
+    {
+      "id": "english/other/story-pirates",
+      "name": "Story Pirates",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Story Pirates.nfc",
+      "uid": "E0040350236D09C8",
+      "search": "english other story pirates"
     },
     {
       "id": "english/other/target-bullseye",
@@ -868,6 +949,24 @@
       "search": "english other the gruffalo"
     },
     {
+      "id": "english/other/the-king-of-kindergarten",
+      "name": "The King of Kindergarten",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/The King of Kindergarten.nfc",
+      "uid": "E004035024153540",
+      "search": "english other the king of kindergarten"
+    },
+    {
+      "id": "english/other/the-laurie-berkner-band",
+      "name": "The Laurie Berkner Band",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/The Laurie Berkner Band.nfc",
+      "uid": "E004035023E84FFC",
+      "search": "english other the laurie berkner band"
+    },
+    {
       "id": "english/other/the-lion-inside",
       "name": "The Lion Inside",
       "series": "Other",
@@ -875,6 +974,24 @@
       "path": "data/tonies/English/Other/The Lion Inside.nfc",
       "uid": "E00403501C2B831E",
       "search": "english other the lion inside"
+    },
+    {
+      "id": "english/other/the-little-engine-that-could",
+      "name": "The Little Engine That Could",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/The Little Engine That Could.nfc",
+      "uid": "E004035019B57977",
+      "search": "english other the little engine that could"
+    },
+    {
+      "id": "english/other/the-pout-pout-fish",
+      "name": "The Pout-Pout Fish",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/The Pout-Pout Fish.nfc",
+      "uid": "E004035022953B21",
+      "search": "english other the pout fish"
     },
     {
       "id": "english/other/the-velveteen-rabbit",
@@ -1138,6 +1255,15 @@
       "search": "english story time all engines go thomas the train"
     },
     {
+      "id": "english/tonies-originals/favorite-childrens-songs-animal-songs-dog",
+      "name": "Favorite Childrens Songs - Animal Songs (Dog)",
+      "series": "Tonies Originals",
+      "language": "English",
+      "path": "data/tonies/English/Tonies Originals/Favorite Childrens Songs - Animal Songs (Dog).nfc",
+      "uid": "E00403501B7F068D",
+      "search": "english tonies originals favorite childrens songs animal dog"
+    },
+    {
       "id": "english/tonies-originals/favorite-childrens-songs-bedtime-songs",
       "name": "Favorite Childrens Songs - Bedtime Songs",
       "series": "Tonies Originals",
@@ -1145,6 +1271,15 @@
       "path": "data/tonies/English/Tonies Originals/Favorite Childrens Songs - Bedtime Songs.nfc",
       "uid": "E00403501D9E9C77",
       "search": "english tonies originals favorite childrens songs bedtime"
+    },
+    {
+      "id": "english/tonies-originals/favorite-childrens-songs-celebration-songs",
+      "name": "Favorite Childrens Songs - Celebration Songs",
+      "series": "Tonies Originals",
+      "language": "English",
+      "path": "data/tonies/English/Tonies Originals/Favorite Childrens Songs - Celebration Songs.nfc",
+      "uid": "E004035023EA9D6C",
+      "search": "english tonies originals favorite childrens songs celebration"
     },
     {
       "id": "english/tonies-originals/nap-time-nature-sounds",
