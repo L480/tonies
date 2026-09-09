@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-06T07:11:00Z",
-  "upstream_commit": "ba57b86",
-  "count": 809,
+  "generated_at": "2026-09-09T07:26:53Z",
+  "upstream_commit": "2011f2a",
+  "count": 817,
   "tonies": [
     {
       "id": "english/ask-the-storybots/beep",
@@ -20,6 +20,15 @@
       "path": "data/tonies/English/Ask the Storybots/Bo.nfc",
       "uid": "E00403501BFA8087",
       "search": "english ask the storybots bo"
+    },
+    {
+      "id": "english/blaze-the-monster-machines/blaze",
+      "name": "Blaze",
+      "series": "Blaze & the Monster Machines",
+      "language": "English",
+      "path": "data/tonies/English/Blaze & the Monster Machines/Blaze.nfc",
+      "uid": "E004035027874EB2",
+      "search": "english blaze the monster machines"
     },
     {
       "id": "english/care-bears/cheer-bear",
@@ -146,6 +155,24 @@
       "path": "data/tonies/English/DC/Wonder Woman.nfc",
       "uid": "E00403501E630A08",
       "search": "english dc wonder woman"
+    },
+    {
+      "id": "english/daniel-tigers-neighborhood/daniel-tiger",
+      "name": "Daniel Tiger",
+      "series": "Daniel Tigers Neighborhood",
+      "language": "English",
+      "path": "data/tonies/English/Daniel Tigers Neighborhood/Daniel Tiger.nfc",
+      "uid": "E0040350242AF95E",
+      "search": "english daniel tigers neighborhood tiger"
+    },
+    {
+      "id": "english/despicable-me/the-junior-novel",
+      "name": "The Junior Novel",
+      "series": "Despicable Me",
+      "language": "English",
+      "path": "data/tonies/English/Despicable Me/The Junior Novel.nfc",
+      "uid": "E00403501EB43D78",
+      "search": "english despicable me the junior novel"
     },
     {
       "id": "english/disney/aladdin",
@@ -508,6 +535,15 @@
       "search": "english disney frozen olaf"
     },
     {
+      "id": "english/dora-the-explorer/dora",
+      "name": "Dora",
+      "series": "Dora the Explorer",
+      "language": "English",
+      "path": "data/tonies/English/Dora the Explorer/Dora.nfc",
+      "uid": "E0040350278CBDFA",
+      "search": "english dora the explorer"
+    },
+    {
       "id": "english/dr-seuss/green-eggs-ham",
       "name": "Green Eggs & Ham",
       "series": "Dr Seuss",
@@ -569,6 +605,15 @@
       "path": "data/tonies/English/DreamWorks/Kung Fu Panda.nfc",
       "uid": "E004035022B4BB77",
       "search": "english dreamworks kung fu panda"
+    },
+    {
+      "id": "english/dreamworks/gabbys-dollhouse/kitty-fairy",
+      "name": "Kitty Fairy",
+      "series": "DreamWorks/Gabbys Dollhouse",
+      "language": "English",
+      "path": "data/tonies/English/DreamWorks/Gabbys Dollhouse/Kitty Fairy.nfc",
+      "uid": "E004035025ABCFE2",
+      "search": "english dreamworks gabbys dollhouse kitty fairy"
     },
     {
       "id": "english/dreamworks/trolls/poppy",
@@ -641,6 +686,15 @@
       "path": "data/tonies/English/Mindfulness/Yoga with Sara the Llama.nfc",
       "uid": "E00403501C877B0F",
       "search": "english mindfulness yoga with sara the llama"
+    },
+    {
+      "id": "english/moshi/sleepypaws",
+      "name": "SleepyPaws",
+      "series": "Moshi",
+      "language": "English",
+      "path": "data/tonies/English/Moshi/SleepyPaws.nfc",
+      "uid": "E004035023340254",
+      "search": "english moshi sleepypaws"
     },
     {
       "id": "english/my-first-tonies/farm/cow",
@@ -1138,6 +1192,15 @@
       "search": "english paw patrol zuma"
     },
     {
+      "id": "english/peppa-pig/learn-with-peppa",
+      "name": "Learn with Peppa",
+      "series": "Peppa Pig",
+      "language": "English",
+      "path": "data/tonies/English/Peppa Pig/Learn with Peppa.nfc",
+      "uid": "E00403501F62A9FD",
+      "search": "english peppa pig learn with"
+    },
+    {
       "id": "english/peppa-pig/peppa-pig",
       "name": "Peppa Pig",
       "series": "Peppa Pig",
@@ -1226,6 +1289,15 @@
       "path": "data/tonies/English/Sesame Street/Elmo.nfc",
       "uid": "E004035020C0814A",
       "search": "english sesame street elmo"
+    },
+    {
+      "id": "english/sesame-street/elmo-tango",
+      "name": "Elmo & Tango",
+      "series": "Sesame Street",
+      "language": "English",
+      "path": "data/tonies/English/Sesame Street/Elmo & Tango.nfc",
+      "uid": "E00403502914415E",
+      "search": "english sesame street elmo tango"
     },
     {
       "id": "english/sleepy-time/sleepy-sheep-lullabies-from-the-sleepy-meadow",
