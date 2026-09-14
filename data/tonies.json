@@ -1,8 +1,17 @@
 {
-  "generated_at": "2026-09-09T07:26:53Z",
-  "upstream_commit": "2011f2a",
-  "count": 817,
+  "generated_at": "2026-09-14T07:58:02Z",
+  "upstream_commit": "167c855",
+  "count": 826,
   "tonies": [
+    {
+      "id": "english/animal-adventures/barry-buddy-swansea-jack",
+      "name": "Barry, Buddy & Swansea Jack",
+      "series": "Animal Adventures",
+      "language": "English",
+      "path": "data/tonies/English/Animal Adventures/Barry, Buddy & Swansea Jack.nfc",
+      "uid": "E0040350214B1E6F",
+      "search": "english animal adventures barry buddy swansea jack"
+    },
     {
       "id": "english/ask-the-storybots/beep",
       "name": "Beep",
@@ -20,6 +29,15 @@
       "path": "data/tonies/English/Ask the Storybots/Bo.nfc",
       "uid": "E00403501BFA8087",
       "search": "english ask the storybots bo"
+    },
+    {
+      "id": "english/baby-einstein/farm-explorers",
+      "name": "Farm Explorers",
+      "series": "Baby Einstein",
+      "language": "English",
+      "path": "data/tonies/English/Baby Einstein/Farm Explorers.nfc",
+      "uid": "E0040350296E3C80",
+      "search": "english baby einstein farm explorers"
     },
     {
       "id": "english/blaze-the-monster-machines/blaze",
@@ -65,6 +83,24 @@
       "path": "data/tonies/English/Clever Tonies Set/Animal World/Record Breakers/Slowpokes and Speedsters.nfc",
       "uid": "E004035022420E1C",
       "search": "english clever tonies set animal world record breakers slowpokes and speedsters"
+    },
+    {
+      "id": "english/clever-tonies-set/danny-go/danny-go-adventure-beats",
+      "name": "Danny Go - Adventure Beats",
+      "series": "Clever Tonies Set/Danny Go",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Danny Go/Danny Go - Adventure Beats.nfc",
+      "uid": "E00403502A8FEE86",
+      "search": "english clever tonies set danny go adventure beats"
+    },
+    {
+      "id": "english/clever-tonies-set/danny-go/danny-go-dance-party",
+      "name": "Danny Go - Dance Party",
+      "series": "Clever Tonies Set/Danny Go",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Danny Go/Danny Go - Dance Party.nfc",
+      "uid": "E00403502ACF110B",
+      "search": "english clever tonies set danny go dance party"
     },
     {
       "id": "english/clever-tonies-set/inventions/flight",
@@ -1300,6 +1336,15 @@
       "search": "english sesame street elmo tango"
     },
     {
+      "id": "english/sleepy-friends/bedtime-stories-with-sleepy-bear",
+      "name": "Bedtime Stories with Sleepy Bear",
+      "series": "Sleepy Friends",
+      "language": "English",
+      "path": "data/tonies/English/Sleepy Friends/Bedtime Stories with Sleepy Bear.nfc",
+      "uid": "E00403502066503B",
+      "search": "english sleepy friends bedtime stories with bear"
+    },
+    {
       "id": "english/sleepy-time/sleepy-sheep-lullabies-from-the-sleepy-meadow",
       "name": "Sleepy Sheep - Lullabies From the Sleepy Meadow",
       "series": "Sleepy Time",
@@ -1307,6 +1352,15 @@
       "path": "data/tonies/English/Sleepy Time/Sleepy Sheep - Lullabies From the Sleepy Meadow.nfc",
       "uid": "E004035020ABCDB0",
       "search": "english sleepy time sheep lullabies from the meadow"
+    },
+    {
+      "id": "english/sleepy-time/sleepy-whale-lullabies-from-the-ocean",
+      "name": "Sleepy Whale - Lullabies from the Ocean",
+      "series": "Sleepy Time",
+      "language": "English",
+      "path": "data/tonies/English/Sleepy Time/Sleepy Whale - Lullabies from the Ocean.nfc",
+      "uid": "E004035024B97F70",
+      "search": "english sleepy time whale lullabies from the ocean"
     },
     {
       "id": "english/story-time/all-engines-go/percy",
@@ -1523,6 +1577,15 @@
       "path": "data/tonies/German/Adventskalender/Adventskalender 2025 - Floeckchen und die verschwundenen Weihnachtslichter.nfc",
       "uid": "E004035024C2A7AD",
       "search": "german adventskalender 2025 floeckchen und die verschwundenen weihnachtslichter"
+    },
+    {
+      "id": "german/adventskalender/adventskalender-2026-milas-weihnachtsreise",
+      "name": "Adventskalender 2026 - Milas Weihnachtsreise",
+      "series": "Adventskalender",
+      "language": "German",
+      "path": "data/tonies/German/Adventskalender/Adventskalender 2026 - Milas Weihnachtsreise.nfc",
+      "uid": "E00403502C21500C",
+      "search": "german adventskalender 2026 milas weihnachtsreise"
     },
     {
       "id": "german/affenzahn/die-abenteuer-von-affenzahn",
@@ -3730,6 +3793,15 @@
       "search": "german disney zoomania 1 2"
     },
     {
+      "id": "german/disney-micky-maus-freunde/mickys-grosses-weihnachtsfest-eingeschneit-im-haus-der-maus",
+      "name": "Mickys grosses Weihnachtsfest - Eingeschneit im Haus der Maus",
+      "series": "Disney Micky Maus & Freunde",
+      "language": "German",
+      "path": "data/tonies/German/Disney Micky Maus & Freunde/Mickys grosses Weihnachtsfest - Eingeschneit im Haus der Maus.nfc",
+      "uid": "E004035028DAF3E0",
+      "search": "german disney micky maus freunde mickys grosses weihnachtsfest eingeschneit im haus der"
+    },
+    {
       "id": "german/doc-mcstuffins-spielzeugaerztin/buh-machst-du-3-weitere-geschichten",
       "name": "Buh machst du! & 3 weitere Geschichten",
       "series": "Doc McStuffins, Spielzeugaerztin",
@@ -5699,6 +5771,15 @@
       "path": "data/tonies/German/Nasreddin Hodscha/Seine ersten Abenteuer.nfc",
       "uid": "E00403501C0B4022",
       "search": "german nasreddin hodscha seine ersten abenteuer"
+    },
+    {
+      "id": "german/nico-sternbaum/schuettel-den-weihnachtsbaum",
+      "name": "Schuettel den Weihnachtsbaum",
+      "series": "Nico Sternbaum",
+      "language": "German",
+      "path": "data/tonies/German/Nico Sternbaum/Schuettel den Weihnachtsbaum.nfc",
+      "uid": "E004035026B7D29D",
+      "search": "german nico sternbaum schuettel den weihnachtsbaum"
     },
     {
       "id": "german/ohrenbaer/mulles-zaubersteinchen",
