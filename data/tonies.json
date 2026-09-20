@@ -1,8 +1,44 @@
 {
-  "generated_at": "2026-09-14T07:58:02Z",
-  "upstream_commit": "167c855",
-  "count": 826,
+  "generated_at": "2026-09-20T07:48:03Z",
+  "upstream_commit": "a05ba44",
+  "count": 830,
   "tonies": [
+    {
+      "id": "english/amelia-bedelia-and-friends/arise-and-shine",
+      "name": "Arise and Shine",
+      "series": "Amelia Bedelia and Friends",
+      "language": "English",
+      "path": "data/tonies/English/Amelia Bedelia and Friends/Arise and Shine.nfc",
+      "uid": "E004035028DD73BC",
+      "search": "english amelia bedelia and friends arise shine"
+    },
+    {
+      "id": "english/amelia-bedelia-and-friends/beat-the-clock",
+      "name": "Beat the Clock",
+      "series": "Amelia Bedelia and Friends",
+      "language": "English",
+      "path": "data/tonies/English/Amelia Bedelia and Friends/Beat the Clock.nfc",
+      "uid": "E0040350235A46F6",
+      "search": "english amelia bedelia and friends beat the clock"
+    },
+    {
+      "id": "english/amelia-bedelia-and-friends/paint-the-town",
+      "name": "Paint the Town",
+      "series": "Amelia Bedelia and Friends",
+      "language": "English",
+      "path": "data/tonies/English/Amelia Bedelia and Friends/Paint the Town.nfc",
+      "uid": "E004035028E18EA1",
+      "search": "english amelia bedelia and friends paint the town"
+    },
+    {
+      "id": "english/amelia-bedelia-and-friends/the-cats-meow",
+      "name": "The Cats Meow",
+      "series": "Amelia Bedelia and Friends",
+      "language": "English",
+      "path": "data/tonies/English/Amelia Bedelia and Friends/The Cats Meow.nfc",
+      "uid": "E004035028DF793F",
+      "search": "english amelia bedelia and friends the cats meow"
+    },
     {
       "id": "english/animal-adventures/barry-buddy-swansea-jack",
       "name": "Barry, Buddy & Swansea Jack",
