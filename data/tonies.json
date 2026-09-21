@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-20T07:48:03Z",
-  "upstream_commit": "a05ba44",
-  "count": 830,
+  "generated_at": "2026-09-21T08:01:42Z",
+  "upstream_commit": "bd809ff",
+  "count": 853,
   "tonies": [
     {
       "id": "english/amelia-bedelia-and-friends/arise-and-shine",
@@ -85,6 +85,33 @@
       "search": "english blaze the monster machines"
     },
     {
+      "id": "english/bluey/bingo",
+      "name": "Bingo",
+      "series": "Bluey",
+      "language": "English",
+      "path": "data/tonies/English/Bluey/Bingo.nfc",
+      "uid": "E00403502A956D7B",
+      "search": "english bluey bingo"
+    },
+    {
+      "id": "english/bluey/bluey",
+      "name": "Bluey",
+      "series": "Bluey",
+      "language": "English",
+      "path": "data/tonies/English/Bluey/Bluey.nfc",
+      "uid": "E004035029F09E3D",
+      "search": "english bluey"
+    },
+    {
+      "id": "english/bluey/muffin",
+      "name": "Muffin",
+      "series": "Bluey",
+      "language": "English",
+      "path": "data/tonies/English/Bluey/Muffin.nfc",
+      "uid": "E00403502A177011",
+      "search": "english bluey muffin"
+    },
+    {
       "id": "english/care-bears/cheer-bear",
       "name": "Cheer Bear",
       "series": "Care Bears",
@@ -119,6 +146,42 @@
       "path": "data/tonies/English/Clever Tonies Set/Animal World/Record Breakers/Slowpokes and Speedsters.nfc",
       "uid": "E004035022420E1C",
       "search": "english clever tonies set animal world record breakers slowpokes and speedsters"
+    },
+    {
+      "id": "english/clever-tonies-set/animal-world/wildlife-in-the-woods/amongst-giants",
+      "name": "Amongst Giants",
+      "series": "Clever Tonies Set/Animal World/Wildlife in the Woods",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Animal World/Wildlife in the Woods/Amongst Giants.nfc",
+      "uid": "E0040350296AEFD5",
+      "search": "english clever tonies set animal world wildlife in the woods amongst giants"
+    },
+    {
+      "id": "english/clever-tonies-set/animal-world/wildlife-in-the-woods/discover-the-amazon",
+      "name": "Discover the Amazon",
+      "series": "Clever Tonies Set/Animal World/Wildlife in the Woods",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Animal World/Wildlife in the Woods/Discover the Amazon.nfc",
+      "uid": "E0040350299CDAD2",
+      "search": "english clever tonies set animal world wildlife in the woods discover amazon"
+    },
+    {
+      "id": "english/clever-tonies-set/animal-world/wildlife-in-the-woods/fantastical-forests",
+      "name": "Fantastical Forests",
+      "series": "Clever Tonies Set/Animal World/Wildlife in the Woods",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Animal World/Wildlife in the Woods/Fantastical Forests.nfc",
+      "uid": "E0040350296BDB12",
+      "search": "english clever tonies set animal world wildlife in the woods fantastical forests"
+    },
+    {
+      "id": "english/clever-tonies-set/animal-world/wildlife-in-the-woods/mighty-mangroves",
+      "name": "Mighty Mangroves",
+      "series": "Clever Tonies Set/Animal World/Wildlife in the Woods",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Animal World/Wildlife in the Woods/Mighty Mangroves.nfc",
+      "uid": "E004035029AE7F47",
+      "search": "english clever tonies set animal world wildlife in the woods mighty mangroves"
     },
     {
       "id": "english/clever-tonies-set/danny-go/danny-go-adventure-beats",
@@ -706,6 +769,51 @@
       "search": "english dreamworks trolls viva"
     },
     {
+      "id": "english/favorite-children-s-songs/animal-songs",
+      "name": "Animal Songs",
+      "series": "Favorite Children's Songs",
+      "language": "English",
+      "path": "data/tonies/English/Favorite Children's Songs/Animal Songs.nfc",
+      "uid": "E00403502271ADE0",
+      "search": "english favorite children s songs animal"
+    },
+    {
+      "id": "english/favorite-children-s-songs/counting-songs",
+      "name": "Counting Songs",
+      "series": "Favorite Children's Songs",
+      "language": "English",
+      "path": "data/tonies/English/Favorite Children's Songs/Counting Songs.nfc",
+      "uid": "E004035026D4FA7F",
+      "search": "english favorite children s songs counting"
+    },
+    {
+      "id": "english/favorite-tales/red-riding-hood-and-other-fairy-tale-stories",
+      "name": "Red Riding Hood and Other Fairy Tale Stories",
+      "series": "Favorite Tales",
+      "language": "English",
+      "path": "data/tonies/English/Favorite Tales/Red Riding Hood and Other Fairy Tale Stories.nfc",
+      "uid": "E0040350233A51CE",
+      "search": "english favorite tales red riding hood and other fairy tale stories"
+    },
+    {
+      "id": "english/gracies-corner/gracies-corner",
+      "name": "Gracies Corner",
+      "series": "Gracies Corner",
+      "language": "English",
+      "path": "data/tonies/English/Gracies Corner/Gracies Corner.nfc",
+      "uid": "E00403502687A38F",
+      "search": "english gracies corner"
+    },
+    {
+      "id": "english/jurassic-world/camp-cretaceous",
+      "name": "Camp Cretaceous",
+      "series": "Jurassic World",
+      "language": "English",
+      "path": "data/tonies/English/Jurassic World/Camp Cretaceous.nfc",
+      "uid": "E00403501F5E0B33",
+      "search": "english jurassic world camp cretaceous"
+    },
+    {
       "id": "english/lalalinos/scout-move-and-groove",
       "name": "Scout - Move and Groove",
       "series": "Lalalinos",
@@ -713,6 +821,24 @@
       "path": "data/tonies/English/Lalalinos/Scout - Move and Groove.nfc",
       "uid": "E0040350213E7A6B",
       "search": "english lalalinos scout move and groove"
+    },
+    {
+      "id": "english/magic-tree-house/dinosaurs-before-dark",
+      "name": "Dinosaurs Before Dark",
+      "series": "Magic Tree House",
+      "language": "English",
+      "path": "data/tonies/English/Magic Tree House/Dinosaurs Before Dark.nfc",
+      "uid": "E00403502623D006",
+      "search": "english magic tree house dinosaurs before dark"
+    },
+    {
+      "id": "english/magic-tree-house/pirates-past-noon",
+      "name": "Pirates Past Noon",
+      "series": "Magic Tree House",
+      "language": "English",
+      "path": "data/tonies/English/Magic Tree House/Pirates Past Noon.nfc",
+      "uid": "E0040350257B84F2",
+      "search": "english magic tree house pirates past noon"
     },
     {
       "id": "english/marvels-spidey-and-his-amazing-friends/black-panther",
@@ -794,6 +920,15 @@
       "path": "data/tonies/English/My First Tonies/Farm/Pig.nfc",
       "uid": "E0040350287A628E",
       "search": "english my first tonies farm pig"
+    },
+    {
+      "id": "english/national-geographic-kids/ancient-egypt",
+      "name": "Ancient Egypt",
+      "series": "National Geographic Kids",
+      "language": "English",
+      "path": "data/tonies/English/National Geographic Kids/Ancient Egypt.nfc",
+      "uid": "E004035029793210",
+      "search": "english national geographic kids ancient egypt"
     },
     {
       "id": "english/national-geographic-kids/astronaut",
@@ -886,6 +1021,15 @@
       "search": "english other carmen sandiego"
     },
     {
+      "id": "english/other/caspar-babypants",
+      "name": "Caspar Babypants",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Caspar Babypants.nfc",
+      "uid": "E004035026A0BE77",
+      "search": "english other caspar babypants"
+    },
+    {
       "id": "english/other/chicka-chicka-boom-boom",
       "name": "Chicka Chicka Boom Boom",
       "series": "Other",
@@ -938,6 +1082,15 @@
       "path": "data/tonies/English/Other/Duck and Goose.nfc",
       "uid": "E00403502249388D",
       "search": "english other duck and goose"
+    },
+    {
+      "id": "english/other/emma-memma",
+      "name": "Emma Memma",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Emma Memma.nfc",
+      "uid": "E00403502A1F1520",
+      "search": "english other emma memma"
     },
     {
       "id": "english/other/hot-wheels",
@@ -1156,20 +1309,38 @@
       "search": "english other tiny chef"
     },
     {
-      "id": "english/paw-patrol-jungle-pups/marshall",
-      "name": "Marshall",
+      "id": "english/other/wicked",
+      "name": "Wicked",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Wicked.nfc",
+      "uid": "E0040350299DD531",
+      "search": "english other wicked"
+    },
+    {
+      "id": "english/paw-patrol-jungle-pups/jungle-pups-chase",
+      "name": "Jungle Pups Chase",
       "series": "PAW Patrol Jungle Pups",
       "language": "English",
-      "path": "data/tonies/English/PAW Patrol Jungle Pups/Marshall.nfc",
+      "path": "data/tonies/English/PAW Patrol Jungle Pups/Jungle Pups Chase.nfc",
+      "uid": "E0040350220407CC",
+      "search": "english paw patrol jungle pups chase"
+    },
+    {
+      "id": "english/paw-patrol-jungle-pups/jungle-pups-marshall",
+      "name": "Jungle Pups Marshall",
+      "series": "PAW Patrol Jungle Pups",
+      "language": "English",
+      "path": "data/tonies/English/PAW Patrol Jungle Pups/Jungle Pups Marshall.nfc",
       "uid": "E00403502026D49A",
       "search": "english paw patrol jungle pups marshall"
     },
     {
-      "id": "english/paw-patrol-jungle-pups/skye",
-      "name": "Skye",
+      "id": "english/paw-patrol-jungle-pups/jungle-pups-skye",
+      "name": "Jungle Pups Skye",
       "series": "PAW Patrol Jungle Pups",
       "language": "English",
-      "path": "data/tonies/English/PAW Patrol Jungle Pups/Skye.nfc",
+      "path": "data/tonies/English/PAW Patrol Jungle Pups/Jungle Pups Skye.nfc",
       "uid": "E0040350210CBED7",
       "search": "english paw patrol jungle pups skye"
     },
@@ -1190,15 +1361,6 @@
       "path": "data/tonies/English/Paw Patrol/Everest.nfc",
       "uid": "E00403501BC1F6EB",
       "search": "english paw patrol everest"
-    },
-    {
-      "id": "english/paw-patrol/jungle-pups-chase",
-      "name": "Jungle Pups Chase",
-      "series": "Paw Patrol",
-      "language": "English",
-      "path": "data/tonies/English/Paw Patrol/Jungle Pups Chase.nfc",
-      "uid": "E0040350220407CC",
-      "search": "english paw patrol jungle pups chase"
     },
     {
       "id": "english/paw-patrol/liberty",
@@ -1237,6 +1399,15 @@
       "search": "english paw patrol rubble"
     },
     {
+      "id": "english/paw-patrol/ryder",
+      "name": "Ryder",
+      "series": "Paw Patrol",
+      "language": "English",
+      "path": "data/tonies/English/Paw Patrol/Ryder.nfc",
+      "uid": "E0040350287B7CB2",
+      "search": "english paw patrol ryder"
+    },
+    {
       "id": "english/paw-patrol/skye",
       "name": "Skye",
       "series": "Paw Patrol",
@@ -1262,6 +1433,24 @@
       "path": "data/tonies/English/Paw Patrol/Zuma.nfc",
       "uid": "E00403502030361D",
       "search": "english paw patrol zuma"
+    },
+    {
+      "id": "english/peanuts/a-charlie-brown-christmas-vince-guaraldi-trio",
+      "name": "A Charlie Brown Christmas (Vince Guaraldi Trio)",
+      "series": "Peanuts",
+      "language": "English",
+      "path": "data/tonies/English/Peanuts/A Charlie Brown Christmas (Vince Guaraldi Trio).nfc",
+      "uid": "E004035025E569F7",
+      "search": "english peanuts a charlie brown christmas vince guaraldi trio"
+    },
+    {
+      "id": "english/peanuts/camp-snoopy",
+      "name": "Camp Snoopy",
+      "series": "Peanuts",
+      "language": "English",
+      "path": "data/tonies/English/Peanuts/Camp Snoopy.nfc",
+      "uid": "E00403502A1FC036",
+      "search": "english peanuts camp snoopy"
     },
     {
       "id": "english/peppa-pig/learn-with-peppa",
@@ -1341,7 +1530,7 @@
       "series": "Pokemon",
       "language": "English",
       "path": "data/tonies/English/Pokemon/Squirtle.nfc",
-      "uid": "E004035023F8B85A",
+      "uid": "E00403502AED88A9",
       "search": "english pokemon squirtle"
     },
     {
@@ -1415,6 +1604,24 @@
       "path": "data/tonies/English/Story Time/All Engines Go/Thomas the Train.nfc",
       "uid": "E00403501E3F0120",
       "search": "english story time all engines go thomas the train"
+    },
+    {
+      "id": "english/tales-of-the-teenage-mutant-ninja-turtles/leonardo",
+      "name": "Leonardo",
+      "series": "Tales of the Teenage Mutant Ninja Turtles",
+      "language": "English",
+      "path": "data/tonies/English/Tales of the Teenage Mutant Ninja Turtles/Leonardo.nfc",
+      "uid": "E004035025E43E12",
+      "search": "english tales of the teenage mutant ninja turtles leonardo"
+    },
+    {
+      "id": "english/the-wiggles/dorothy-the-dinosaur",
+      "name": "Dorothy The Dinosaur",
+      "series": "The Wiggles",
+      "language": "English",
+      "path": "data/tonies/English/The Wiggles/Dorothy The Dinosaur.nfc",
+      "uid": "E00403502A1C7639",
+      "search": "english the wiggles dorothy dinosaur"
     },
     {
       "id": "english/tonies-originals/favorite-childrens-songs-animal-songs-dog",
