@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-21T08:01:42Z",
-  "upstream_commit": "bd809ff",
-  "count": 853,
+  "generated_at": "2026-09-26T07:50:55Z",
+  "upstream_commit": "8ab5a87",
+  "count": 861,
   "tonies": [
     {
       "id": "english/amelia-bedelia-and-friends/arise-and-shine",
@@ -254,6 +254,42 @@
       "path": "data/tonies/English/Clever Tonies Set/Musicians/Trailblazers.nfc",
       "uid": "E0040350225BD6D0",
       "search": "english clever tonies set musicians trailblazers"
+    },
+    {
+      "id": "english/clever-tonies-set/space-explorers-club/gas-ice-giants",
+      "name": "Gas & Ice Giants",
+      "series": "Clever Tonies Set/Space Explorers Club",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Space Explorers Club/Gas & Ice Giants.nfc",
+      "uid": "E00403502B50D424",
+      "search": "english clever tonies set space explorers club gas ice giants"
+    },
+    {
+      "id": "english/clever-tonies-set/space-explorers-club/rocky-planets",
+      "name": "Rocky Planets",
+      "series": "Clever Tonies Set/Space Explorers Club",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Space Explorers Club/Rocky Planets.nfc",
+      "uid": "E00403502B50E7B0",
+      "search": "english clever tonies set space explorers club rocky planets"
+    },
+    {
+      "id": "english/clever-tonies-set/space-explorers-club/the-moon",
+      "name": "The Moon",
+      "series": "Clever Tonies Set/Space Explorers Club",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Space Explorers Club/The Moon.nfc",
+      "uid": "E004035028A492F5",
+      "search": "english clever tonies set space explorers club the moon"
+    },
+    {
+      "id": "english/clever-tonies-set/space-explorers-club/the-sun",
+      "name": "The Sun",
+      "series": "Clever Tonies Set/Space Explorers Club",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Space Explorers Club/The Sun.nfc",
+      "uid": "E00403502B50072C",
+      "search": "english clever tonies set space explorers club the sun"
     },
     {
       "id": "english/cocomelon/cocomelon",
@@ -742,6 +778,15 @@
       "search": "english dreamworks kung fu panda"
     },
     {
+      "id": "english/dreamworks/spirit-untamed",
+      "name": "Spirit Untamed",
+      "series": "DreamWorks",
+      "language": "English",
+      "path": "data/tonies/English/DreamWorks/Spirit Untamed.nfc",
+      "uid": "E00403501977DC6D",
+      "search": "english dreamworks spirit untamed"
+    },
+    {
       "id": "english/dreamworks/gabbys-dollhouse/kitty-fairy",
       "name": "Kitty Fairy",
       "series": "DreamWorks/Gabbys Dollhouse",
@@ -785,6 +830,33 @@
       "path": "data/tonies/English/Favorite Children's Songs/Counting Songs.nfc",
       "uid": "E004035026D4FA7F",
       "search": "english favorite children s songs counting"
+    },
+    {
+      "id": "english/favorite-tales/annie-oakley",
+      "name": "Annie Oakley",
+      "series": "Favorite Tales",
+      "language": "English",
+      "path": "data/tonies/English/Favorite Tales/Annie Oakley.nfc",
+      "uid": "E0040350196BE6BF",
+      "search": "english favorite tales annie oakley"
+    },
+    {
+      "id": "english/favorite-tales/puss-in-boots",
+      "name": "Puss in Boots",
+      "series": "Favorite Tales",
+      "language": "English",
+      "path": "data/tonies/English/Favorite Tales/Puss in Boots.nfc",
+      "uid": "E004035015FA1D6C",
+      "search": "english favorite tales puss in boots"
+    },
+    {
+      "id": "english/favorite-tales/rapunzel-other-fairy-tales",
+      "name": "Rapunzel & Other Fairy Tales",
+      "series": "Favorite Tales",
+      "language": "English",
+      "path": "data/tonies/English/Favorite Tales/Rapunzel & Other Fairy Tales.nfc",
+      "uid": "E00403501A698298",
+      "search": "english favorite tales rapunzel other fairy"
     },
     {
       "id": "english/favorite-tales/red-riding-hood-and-other-fairy-tale-stories",
