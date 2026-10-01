@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-26T07:50:55Z",
-  "upstream_commit": "8ab5a87",
-  "count": 861,
+  "generated_at": "2026-10-01T09:05:19Z",
+  "upstream_commit": "0c90e2c",
+  "count": 864,
   "tonies": [
     {
       "id": "english/amelia-bedelia-and-friends/arise-and-shine",
@@ -1244,6 +1244,15 @@
       "path": "data/tonies/English/Other/Qai Qai - Invisible Universe.nfc",
       "uid": "E0040350224E140F",
       "search": "english other qai invisible universe"
+    },
+    {
+      "id": "english/other/raffi-baby-beluga",
+      "name": "Raffi - Baby Beluga",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Raffi - Baby Beluga.nfc",
+      "uid": "E00403502BD4D2F8",
+      "search": "english other raffi baby beluga"
     },
     {
       "id": "english/other/spongebob-squarepants",
@@ -2588,10 +2597,10 @@
     },
     {
       "id": "german/clever-tonies/geolino/alles-ueber-sterne-planeten",
-      "name": "Alles ueber Sterne + Planeten",
+      "name": "Alles ueber Sterne & Planeten",
       "series": "Clever Tonies/GEOlino",
       "language": "German",
-      "path": "data/tonies/German/Clever Tonies/GEOlino/Alles ueber Sterne + Planeten.nfc",
+      "path": "data/tonies/German/Clever Tonies/GEOlino/Alles ueber Sterne & Planeten.nfc",
       "uid": "E00403501F8AF4E0",
       "search": "german clever tonies geolino alles ueber sterne planeten"
     },
@@ -2606,10 +2615,10 @@
     },
     {
       "id": "german/clever-tonies/geolino/alles-ueber-die-arktis-antarktis",
-      "name": "Alles ueber die Arktis + Antarktis",
+      "name": "Alles ueber die Arktis & Antarktis",
       "series": "Clever Tonies/GEOlino",
       "language": "German",
-      "path": "data/tonies/German/Clever Tonies/GEOlino/Alles ueber die Arktis + Antarktis.nfc",
+      "path": "data/tonies/German/Clever Tonies/GEOlino/Alles ueber die Arktis & Antarktis.nfc",
       "uid": "E00403501D8536BF",
       "search": "german clever tonies geolino alles ueber die arktis antarktis"
     },
@@ -6358,6 +6367,15 @@
       "search": "german peppa pig und das neue baby"
     },
     {
+      "id": "german/peppa-pig/schorschs-neue-klaenge",
+      "name": "Schorschs neue Klaenge",
+      "series": "Peppa Pig",
+      "language": "German",
+      "path": "data/tonies/German/Peppa Pig/Schorschs neue Klaenge.nfc",
+      "uid": "E004035024C7A917",
+      "search": "german peppa pig schorschs neue klaenge"
+    },
+    {
       "id": "german/peter-hase-und-seine-freunde/ein-geschichten-schatz",
       "name": "Ein Geschichten-Schatz",
       "series": "Peter Hase und seine Freunde",
@@ -6548,10 +6566,10 @@
     },
     {
       "id": "german/prinzessin-lillifee/gute-nacht-geschichten-die-verzauberten-seerosen-die-goldene-perle",
-      "name": "Gute-Nacht-Geschichten - Die verzauberten Seerosen+Die goldene Perle",
+      "name": "Gute-Nacht-Geschichten - Die verzauberten Seerosen & Die goldene Perle",
       "series": "Prinzessin Lillifee",
       "language": "German",
-      "path": "data/tonies/German/Prinzessin Lillifee/Gute-Nacht-Geschichten - Die verzauberten Seerosen+Die goldene Perle.nfc",
+      "path": "data/tonies/German/Prinzessin Lillifee/Gute-Nacht-Geschichten - Die verzauberten Seerosen & Die goldene Perle.nfc",
       "uid": "E0040350156131C3",
       "search": "german prinzessin lillifee gute nacht geschichten die verzauberten seerosen goldene perle"
     },
@@ -6572,6 +6590,15 @@
       "path": "data/tonies/German/Pummel & Friends/Das Pummeleinhorn - Der Herr der Donuts & Alles versalzen.nfc",
       "uid": "E00403501D083E15",
       "search": "german pummel friends das pummeleinhorn der herr donuts alles versalzen"
+    },
+    {
+      "id": "german/pumuckl/das-weihnachtsgeschenk-der-erste-schnee",
+      "name": "Das Weihnachtsgeschenk & Der erste Schnee",
+      "series": "Pumuckl",
+      "language": "German",
+      "path": "data/tonies/German/Pumuckl/Das Weihnachtsgeschenk & Der erste Schnee.nfc",
+      "uid": "E00403502B7B70BA",
+      "search": "german pumuckl das weihnachtsgeschenk der erste schnee"
     },
     {
       "id": "german/pumuckl/spuk-in-der-werkstatt-das-verkaufte-bett",
