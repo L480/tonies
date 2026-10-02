@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-01T09:05:19Z",
-  "upstream_commit": "0c90e2c",
+  "generated_at": "2026-10-02T08:39:24Z",
+  "upstream_commit": "a5d0196",
   "count": 864,
   "tonies": [
     {
@@ -4496,10 +4496,10 @@
     },
     {
       "id": "german/gabbys-dollhouse/das-raumschiff-gabby-hat-einen-schluckauf",
-      "name": "Das Raumschiff + Gabby hat einen Schluckauf",
+      "name": "Das Raumschiff & Gabby hat einen Schluckauf",
       "series": "Gabbys Dollhouse",
       "language": "German",
-      "path": "data/tonies/German/Gabbys Dollhouse/Das Raumschiff + Gabby hat einen Schluckauf.nfc",
+      "path": "data/tonies/German/Gabbys Dollhouse/Das Raumschiff & Gabby hat einen Schluckauf.nfc",
       "uid": "E00403501F2FD49E",
       "search": "german gabbys dollhouse das raumschiff gabby hat einen schluckauf"
     },
@@ -6953,19 +6953,19 @@
     },
     {
       "id": "german/sing-kinderlieder/bagger-mats-seine-freunde-die-schoensten-fahrzeuglieder",
-      "name": "Bagger Mats + seine Freunde - Die schoensten Fahrzeuglieder",
+      "name": "Bagger Mats & seine Freunde - Die schoensten Fahrzeuglieder",
       "series": "Sing Kinderlieder",
       "language": "German",
-      "path": "data/tonies/German/Sing Kinderlieder/Bagger Mats + seine Freunde - Die schoensten Fahrzeuglieder.nfc",
+      "path": "data/tonies/German/Sing Kinderlieder/Bagger Mats & seine Freunde - Die schoensten Fahrzeuglieder.nfc",
       "uid": "E004035021D5ADF9",
       "search": "german sing kinderlieder bagger mats seine freunde die schoensten fahrzeuglieder"
     },
     {
       "id": "german/sing-kinderlieder/milo-das-muellauto-kind-seine-freunde-abenteuer-in-der-grossen-stadt",
-      "name": "Milo, das Muellauto-Kind + seine Freunde - Abenteuer in der grossen Stadt",
+      "name": "Milo, das Muellauto-Kind & seine Freunde - Abenteuer in der grossen Stadt",
       "series": "Sing Kinderlieder",
       "language": "German",
-      "path": "data/tonies/German/Sing Kinderlieder/Milo, das Muellauto-Kind + seine Freunde - Abenteuer in der grossen Stadt.nfc",
+      "path": "data/tonies/German/Sing Kinderlieder/Milo, das Muellauto-Kind & seine Freunde - Abenteuer in der grossen Stadt.nfc",
       "uid": "E004035022EBE543",
       "search": "german sing kinderlieder milo das muellauto kind seine freunde abenteuer in der grossen stadt"
     },
