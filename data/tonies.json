@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-02T08:39:24Z",
-  "upstream_commit": "a5d0196",
-  "count": 864,
+  "generated_at": "2026-10-04T08:32:46Z",
+  "upstream_commit": "cc224bf",
+  "count": 869,
   "tonies": [
     {
       "id": "english/amelia-bedelia-and-friends/arise-and-shine",
@@ -1354,6 +1354,15 @@
       "search": "english other the pout fish"
     },
     {
+      "id": "english/other/the-secret-garden",
+      "name": "The Secret Garden",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/The Secret Garden.nfc",
+      "uid": "E00403502B42A8F1",
+      "search": "english other the secret garden"
+    },
+    {
       "id": "english/other/the-velveteen-rabbit",
       "name": "The Velveteen Rabbit",
       "series": "Other",
@@ -1694,6 +1703,42 @@
       "path": "data/tonies/English/Tales of the Teenage Mutant Ninja Turtles/Leonardo.nfc",
       "uid": "E004035025E43E12",
       "search": "english tales of the teenage mutant ninja turtles leonardo"
+    },
+    {
+      "id": "english/the-questioneers/ada-twist-and-the-perilous-pants",
+      "name": "Ada Twist and the Perilous Pants",
+      "series": "The Questioneers",
+      "language": "English",
+      "path": "data/tonies/English/The Questioneers/Ada Twist and the Perilous Pants.nfc",
+      "uid": "E0040350235E1416",
+      "search": "english the questioneers ada twist and perilous pants"
+    },
+    {
+      "id": "english/the-questioneers/iggy-peck-and-the-mysterious-mansion",
+      "name": "Iggy Peck and the Mysterious Mansion",
+      "series": "The Questioneers",
+      "language": "English",
+      "path": "data/tonies/English/The Questioneers/Iggy Peck and the Mysterious Mansion.nfc",
+      "uid": "E004035022DFFCD5",
+      "search": "english the questioneers iggy peck and mysterious mansion"
+    },
+    {
+      "id": "english/the-questioneers/rosie-revere-and-the-raucous-riveters",
+      "name": "Rosie Revere and the Raucous Riveters",
+      "series": "The Questioneers",
+      "language": "English",
+      "path": "data/tonies/English/The Questioneers/Rosie Revere and the Raucous Riveters.nfc",
+      "uid": "E0040350236C0CD7",
+      "search": "english the questioneers rosie revere and raucous riveters"
+    },
+    {
+      "id": "english/the-questioneers/sofia-valdez-and-the-vanishing-vote",
+      "name": "Sofia Valdez and the Vanishing Vote",
+      "series": "The Questioneers",
+      "language": "English",
+      "path": "data/tonies/English/The Questioneers/Sofia Valdez and the Vanishing Vote.nfc",
+      "uid": "E0040350236C1CEE",
+      "search": "english the questioneers sofia valdez and vanishing vote"
     },
     {
       "id": "english/the-wiggles/dorothy-the-dinosaur",
@@ -2588,10 +2633,10 @@
     },
     {
       "id": "german/clever-tonies/geolino/alles-ueber-meere-ozeane",
-      "name": "Alles ueber Meere + Ozeane",
+      "name": "Alles ueber Meere & Ozeane",
       "series": "Clever Tonies/GEOlino",
       "language": "German",
-      "path": "data/tonies/German/Clever Tonies/GEOlino/Alles ueber Meere + Ozeane.nfc",
+      "path": "data/tonies/German/Clever Tonies/GEOlino/Alles ueber Meere & Ozeane.nfc",
       "uid": "E00403501E7ED1FB",
       "search": "german clever tonies geolino alles ueber meere ozeane"
     },
@@ -4505,10 +4550,10 @@
     },
     {
       "id": "german/gabbys-dollhouse/der-cupcake-baum-die-puppenhausdetektive",
-      "name": "Der Cupcake-Baum + Die Puppenhausdetektive",
+      "name": "Der Cupcake-Baum & Die Puppenhausdetektive",
       "series": "Gabbys Dollhouse",
       "language": "German",
-      "path": "data/tonies/German/Gabbys Dollhouse/Der Cupcake-Baum + Die Puppenhausdetektive.nfc",
+      "path": "data/tonies/German/Gabbys Dollhouse/Der Cupcake-Baum & Die Puppenhausdetektive.nfc",
       "uid": "E0040350224F3344",
       "search": "german gabbys dollhouse der cupcake baum die puppenhausdetektive"
     },
