@@ -1,8 +1,17 @@
 {
-  "generated_at": "2026-10-04T08:32:46Z",
-  "upstream_commit": "cc224bf",
-  "count": 869,
+  "generated_at": "2026-10-05T09:14:10Z",
+  "upstream_commit": "b5f6e76",
+  "count": 881,
   "tonies": [
+    {
+      "id": "english/all-star-animals-the-golden-whistle-games/soccer",
+      "name": "Soccer",
+      "series": "All-Star Animals - The Golden Whistle Games",
+      "language": "English",
+      "path": "data/tonies/English/All-Star Animals - The Golden Whistle Games/Soccer.nfc",
+      "uid": "E00403502A43D7CC",
+      "search": "english all star animals the golden whistle games soccer"
+    },
     {
       "id": "english/amelia-bedelia-and-friends/arise-and-shine",
       "name": "Arise and Shine",
@@ -182,6 +191,42 @@
       "path": "data/tonies/English/Clever Tonies Set/Animal World/Wildlife in the Woods/Mighty Mangroves.nfc",
       "uid": "E004035029AE7F47",
       "search": "english clever tonies set animal world wildlife in the woods mighty mangroves"
+    },
+    {
+      "id": "english/clever-tonies-set/crayola-art-adventures/faces",
+      "name": "Faces",
+      "series": "Clever Tonies Set/Crayola Art Adventures",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Crayola Art Adventures/Faces.nfc",
+      "uid": "E0040350262A63B5",
+      "search": "english clever tonies set crayola art adventures faces"
+    },
+    {
+      "id": "english/clever-tonies-set/crayola-art-adventures/places",
+      "name": "Places",
+      "series": "Clever Tonies Set/Crayola Art Adventures",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Crayola Art Adventures/Places.nfc",
+      "uid": "E0040350271CCA83",
+      "search": "english clever tonies set crayola art adventures places"
+    },
+    {
+      "id": "english/clever-tonies-set/crayola-art-adventures/sounds",
+      "name": "Sounds",
+      "series": "Clever Tonies Set/Crayola Art Adventures",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Crayola Art Adventures/Sounds.nfc",
+      "uid": "E0040350270ED357",
+      "search": "english clever tonies set crayola art adventures sounds"
+    },
+    {
+      "id": "english/clever-tonies-set/crayola-art-adventures/squiggles",
+      "name": "Squiggles",
+      "series": "Clever Tonies Set/Crayola Art Adventures",
+      "language": "English",
+      "path": "data/tonies/English/Clever Tonies Set/Crayola Art Adventures/Squiggles.nfc",
+      "uid": "E004035025D6825F",
+      "search": "english clever tonies set crayola art adventures squiggles"
     },
     {
       "id": "english/clever-tonies-set/danny-go/danny-go-adventure-beats",
@@ -1192,6 +1237,15 @@
       "search": "english other mama llama"
     },
     {
+      "id": "english/other/mister-rogers-neighborhood",
+      "name": "Mister Rogers Neighborhood",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Mister Rogers Neighborhood.nfc",
+      "uid": "E0040350278D0557",
+      "search": "english other mister rogers neighborhood"
+    },
+    {
       "id": "english/other/mo-willems-the-pigeon",
       "name": "Mo Willems The Pigeon",
       "series": "Other",
@@ -1199,6 +1253,15 @@
       "path": "data/tonies/English/Other/Mo Willems The Pigeon.nfc",
       "uid": "E004035023D35C6A",
       "search": "english other mo willems the pigeon"
+    },
+    {
+      "id": "english/other/molly-of-denali",
+      "name": "Molly of Denali",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Molly of Denali.nfc",
+      "uid": "E00403502810AA90",
+      "search": "english other molly of denali"
     },
     {
       "id": "english/other/ms-rachel",
@@ -1660,6 +1723,15 @@
       "search": "english sleepy friends bedtime stories with bear"
     },
     {
+      "id": "english/sleepy-friends/classical-music-with-sleepy-rabbit",
+      "name": "Classical Music with Sleepy Rabbit",
+      "series": "Sleepy Friends",
+      "language": "English",
+      "path": "data/tonies/English/Sleepy Friends/Classical Music with Sleepy Rabbit.nfc",
+      "uid": "E004035023F8B85A",
+      "search": "english sleepy friends classical music with rabbit"
+    },
+    {
       "id": "english/sleepy-time/sleepy-sheep-lullabies-from-the-sleepy-meadow",
       "name": "Sleepy Sheep - Lullabies From the Sleepy Meadow",
       "series": "Sleepy Time",
@@ -1703,6 +1775,42 @@
       "path": "data/tonies/English/Tales of the Teenage Mutant Ninja Turtles/Leonardo.nfc",
       "uid": "E004035025E43E12",
       "search": "english tales of the teenage mutant ninja turtles leonardo"
+    },
+    {
+      "id": "english/the-chronicles-of-narnia/prince-caspian",
+      "name": "Prince Caspian",
+      "series": "The Chronicles of Narnia",
+      "language": "English",
+      "path": "data/tonies/English/The Chronicles of Narnia/Prince Caspian.nfc",
+      "uid": "E0040350299F3054",
+      "search": "english the chronicles of narnia prince caspian"
+    },
+    {
+      "id": "english/the-chronicles-of-narnia/the-horse-and-his-boy",
+      "name": "The Horse and His Boy",
+      "series": "The Chronicles of Narnia",
+      "language": "English",
+      "path": "data/tonies/English/The Chronicles of Narnia/The Horse and His Boy.nfc",
+      "uid": "E00403502996880C",
+      "search": "english the chronicles of narnia horse and his boy"
+    },
+    {
+      "id": "english/the-chronicles-of-narnia/the-lion-the-witch-and-the-wardrobe",
+      "name": "The Lion, the Witch and the Wardrobe",
+      "series": "The Chronicles of Narnia",
+      "language": "English",
+      "path": "data/tonies/English/The Chronicles of Narnia/The Lion, the Witch and the Wardrobe.nfc",
+      "uid": "E0040350296AFEC6",
+      "search": "english the chronicles of narnia lion witch and wardrobe"
+    },
+    {
+      "id": "english/the-chronicles-of-narnia/the-magicians-nephew",
+      "name": "The Magicians Nephew",
+      "series": "The Chronicles of Narnia",
+      "language": "English",
+      "path": "data/tonies/English/The Chronicles of Narnia/The Magicians Nephew.nfc",
+      "uid": "E0040350299433B2",
+      "search": "english the chronicles of narnia magicians nephew"
     },
     {
       "id": "english/the-questioneers/ada-twist-and-the-perilous-pants",
@@ -4559,19 +4667,19 @@
     },
     {
       "id": "german/gabbys-dollhouse/eroeffnungsfeier-im-puppenhaus-kitty-fees-uebernachtungsparty",
-      "name": "Eroeffnungsfeier im Puppenhaus + Kitty Fees Uebernachtungsparty",
+      "name": "Eroeffnungsfeier im Puppenhaus & Kitty Fees Uebernachtungsparty",
       "series": "Gabbys Dollhouse",
       "language": "German",
-      "path": "data/tonies/German/Gabbys Dollhouse/Eroeffnungsfeier im Puppenhaus + Kitty Fees Uebernachtungsparty.nfc",
+      "path": "data/tonies/German/Gabbys Dollhouse/Eroeffnungsfeier im Puppenhaus & Kitty Fees Uebernachtungsparty.nfc",
       "uid": "E00403502393EF4A",
       "search": "german gabbys dollhouse eroeffnungsfeier im puppenhaus kitty fees uebernachtungsparty"
     },
     {
       "id": "german/gabbys-dollhouse/gabby-ich-habe-die-kaetzchen-geschrumpft-der-eisbaer-pete",
-      "name": "Gabby, ich habe die Kaetzchen geschrumpft! + Der Eisbaer Pete",
+      "name": "Gabby, ich habe die Kaetzchen geschrumpft! & Der Eisbaer Pete",
       "series": "Gabbys Dollhouse",
       "language": "German",
-      "path": "data/tonies/German/Gabbys Dollhouse/Gabby, ich habe die Kaetzchen geschrumpft! + Der Eisbaer Pete.nfc",
+      "path": "data/tonies/German/Gabbys Dollhouse/Gabby, ich habe die Kaetzchen geschrumpft! & Der Eisbaer Pete.nfc",
       "uid": "E0040350250A44A3",
       "search": "german gabbys dollhouse gabby ich habe die kaetzchen geschrumpft der eisbaer pete"
     },
@@ -5900,10 +6008,10 @@
     },
     {
       "id": "german/mascha-und-der-baer/winterschlaf-fuer-alle-5-weitere-quirlige-und-lustige-geschichten",
-      "name": "Winterschlaf fuer alle + 5 weitere quirlige und lustige Geschichten",
+      "name": "Winterschlaf fuer alle & 5 weitere quirlige und lustige Geschichten",
       "series": "Mascha und der Baer",
       "language": "German",
-      "path": "data/tonies/German/Mascha und der Baer/Winterschlaf fuer alle + 5 weitere quirlige und lustige Geschichten.nfc",
+      "path": "data/tonies/German/Mascha und der Baer/Winterschlaf fuer alle & 5 weitere quirlige und lustige Geschichten.nfc",
       "uid": "E00403501E1C1C85",
       "search": "german mascha und der baer winterschlaf fuer alle 5 weitere quirlige lustige geschichten"
     },
