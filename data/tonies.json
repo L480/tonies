@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-05T09:14:10Z",
-  "upstream_commit": "b5f6e76",
-  "count": 881,
+  "generated_at": "2026-10-07T08:51:42Z",
+  "upstream_commit": "6eccee8",
+  "count": 882,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -2981,6 +2981,15 @@
       "path": "data/tonies/German/Das magische Baumhaus/Im Tal der Dinosaurier.nfc",
       "uid": "E004035021D9552F",
       "search": "german das magische baumhaus im tal der dinosaurier"
+    },
+    {
+      "id": "german/deine-freunde/das-gelbe-von-drei",
+      "name": "Das Gelbe von Drei",
+      "series": "Deine Freunde",
+      "language": "German",
+      "path": "data/tonies/German/Deine Freunde/Das Gelbe von Drei.nfc",
+      "uid": "E00403500C1CBB91",
+      "search": "german deine freunde das gelbe von drei"
     },
     {
       "id": "german/der-grolltroll/der-grolltroll",
