@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-07T08:51:42Z",
-  "upstream_commit": "6eccee8",
-  "count": 882,
+  "generated_at": "2026-10-08T09:08:48Z",
+  "upstream_commit": "181ce26",
+  "count": 884,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -5377,6 +5377,15 @@
       "search": "german lichterkinder laternen und herbstlieder"
     },
     {
+      "id": "german/lichterkinder/lernen-mit-liki-und-lumi-grosse-bunte-welt",
+      "name": "Lernen mit LIKI und LUMI - Grosse, bunte Welt",
+      "series": "Lichterkinder",
+      "language": "German",
+      "path": "data/tonies/German/Lichterkinder/Lernen mit LIKI und LUMI - Grosse, bunte Welt.nfc",
+      "uid": "E00403502BB27DE9",
+      "search": "german lichterkinder lernen mit liki und lumi grosse bunte welt"
+    },
+    {
       "id": "german/lichterkinder/lernen-mit-liki-und-lumi-rechnen-von-0-bis-10",
       "name": "Lernen mit LIKI und LUMI - Rechnen von 0 bis 10",
       "series": "Lichterkinder",
@@ -5384,6 +5393,15 @@
       "path": "data/tonies/German/Lichterkinder/Lernen mit LIKI und LUMI - Rechnen von 0 bis 10.nfc",
       "uid": "E004035022D4C484",
       "search": "german lichterkinder lernen mit liki und lumi rechnen von 0 bis 10"
+    },
+    {
+      "id": "german/lichterkinder/lernen-mit-liki-und-lumi-unsere-umwelt-und-natur",
+      "name": "Lernen mit LIKI und LUMI - Unsere Umwelt und Natur",
+      "series": "Lichterkinder",
+      "language": "German",
+      "path": "data/tonies/German/Lichterkinder/Lernen mit LIKI und LUMI - Unsere Umwelt und Natur.nfc",
+      "uid": "E00403502C386C9A",
+      "search": "german lichterkinder lernen mit liki und lumi unsere umwelt natur"
     },
     {
       "id": "german/lichterkinder/lernen-mit-liki-und-lumi-wir-bleiben-gesund",
