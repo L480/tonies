@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-08T09:08:48Z",
-  "upstream_commit": "181ce26",
-  "count": 884,
+  "generated_at": "2026-10-11T09:03:25Z",
+  "upstream_commit": "8d355b8",
+  "count": 895,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -2020,6 +2020,42 @@
       "search": "french other simon superlapin"
     },
     {
+      "id": "german/100-woerter-in-den-sprachen-dieser-welt/englisch",
+      "name": "Englisch",
+      "series": "100 Woerter in den Sprachen dieser Welt",
+      "language": "German",
+      "path": "data/tonies/German/100 Woerter in den Sprachen dieser Welt/Englisch.nfc",
+      "uid": "E00403502E924B61",
+      "search": "german 100 woerter in den sprachen dieser welt englisch"
+    },
+    {
+      "id": "german/100-woerter-in-den-sprachen-dieser-welt/franzoesisch",
+      "name": "Franzoesisch",
+      "series": "100 Woerter in den Sprachen dieser Welt",
+      "language": "German",
+      "path": "data/tonies/German/100 Woerter in den Sprachen dieser Welt/Franzoesisch.nfc",
+      "uid": "E00403502E8E1013",
+      "search": "german 100 woerter in den sprachen dieser welt franzoesisch"
+    },
+    {
+      "id": "german/100-woerter-in-den-sprachen-dieser-welt/mandarin",
+      "name": "Mandarin",
+      "series": "100 Woerter in den Sprachen dieser Welt",
+      "language": "German",
+      "path": "data/tonies/German/100 Woerter in den Sprachen dieser Welt/Mandarin.nfc",
+      "uid": "E00403502E54B5A5",
+      "search": "german 100 woerter in den sprachen dieser welt mandarin"
+    },
+    {
+      "id": "german/100-woerter-in-den-sprachen-dieser-welt/spanisch",
+      "name": "Spanisch",
+      "series": "100 Woerter in den Sprachen dieser Welt",
+      "language": "German",
+      "path": "data/tonies/German/100 Woerter in den Sprachen dieser Welt/Spanisch.nfc",
+      "uid": "E00403502E8FA84C",
+      "search": "german 100 woerter in den sprachen dieser welt spanisch"
+    },
+    {
       "id": "german/100-wolf/100-wolf",
       "name": "100% Wolf",
       "series": "100% Wolf",
@@ -2153,6 +2189,15 @@
       "path": "data/tonies/German/Bakabu/Beste Freunde.nfc",
       "uid": "E0040350157025F7",
       "search": "german bakabu beste freunde"
+    },
+    {
+      "id": "german/barbie/du-kannst-alles-sein",
+      "name": "Du kannst alles sein",
+      "series": "Barbie",
+      "language": "German",
+      "path": "data/tonies/German/Barbie/Du kannst alles sein.nfc",
+      "uid": "E00403502C04924A",
+      "search": "german barbie du kannst alles sein"
     },
     {
       "id": "german/barbie/prinzessinen-abenteuer",
@@ -3253,6 +3298,15 @@
       "search": "german der kleine siebenschlaefer die geschichte vom kleinen nicht einschlafen konnte"
     },
     {
+      "id": "german/der-kleine-vampir/der-kleine-vampir",
+      "name": "Der kleine Vampir",
+      "series": "Der kleine Vampir",
+      "language": "German",
+      "path": "data/tonies/German/Der kleine Vampir/Der kleine Vampir.nfc",
+      "uid": "E00403502BA1A071",
+      "search": "german der kleine vampir"
+    },
+    {
       "id": "german/der-kleine-wassermann/der-kleine-wassermann-neuauflage-2022",
       "name": "Der kleine Wassermann (Neuauflage 2022)",
       "series": "Der kleine Wassermann",
@@ -3548,6 +3602,15 @@
       "path": "data/tonies/German/Die Schule der magischen Tiere/Die Schule der magischen Tiere.nfc",
       "uid": "E00403502519F208",
       "search": "german die schule der magischen tiere"
+    },
+    {
+      "id": "german/die-schule-der-magischen-tiere/die-schule-der-magischen-tiere-2026",
+      "name": "Die Schule der magischen Tiere (2026)",
+      "series": "Die Schule der magischen Tiere",
+      "language": "German",
+      "path": "data/tonies/German/Die Schule der magischen Tiere/Die Schule der magischen Tiere (2026).nfc",
+      "uid": "E00403502B0ADAAF",
+      "search": "german die schule der magischen tiere 2026"
     },
     {
       "id": "german/die-sendung-mit-der-maus-dem-elefanten/m-auserlesene-lieder",
@@ -4657,6 +4720,24 @@
       "search": "german grosse experten das alte aegypten"
     },
     {
+      "id": "german/grosse-experten/die-eisenbahn",
+      "name": "Die Eisenbahn",
+      "series": "GROSSE EXPERTEN",
+      "language": "German",
+      "path": "data/tonies/German/GROSSE EXPERTEN/Die Eisenbahn.nfc",
+      "uid": "E00403502E9F08C4",
+      "search": "german grosse experten die eisenbahn"
+    },
+    {
+      "id": "german/grosse-experten/piraten",
+      "name": "Piraten",
+      "series": "GROSSE EXPERTEN",
+      "language": "German",
+      "path": "data/tonies/German/GROSSE EXPERTEN/Piraten.nfc",
+      "uid": "E00403502E5669F2",
+      "search": "german grosse experten piraten"
+    },
+    {
       "id": "german/gabbys-dollhouse/das-raumschiff-gabby-hat-einen-schluckauf",
       "name": "Das Raumschiff & Gabby hat einen Schluckauf",
       "series": "Gabbys Dollhouse",
@@ -4898,6 +4979,15 @@
       "path": "data/tonies/German/Heidi/Freunde fuer immer.nfc",
       "uid": "E00403500B05851E",
       "search": "german heidi freunde fuer immer"
+    },
+    {
+      "id": "german/helene-fischer/die-schoensten-kinderlieder",
+      "name": "Die schoensten Kinderlieder",
+      "series": "Helene Fischer",
+      "language": "German",
+      "path": "data/tonies/German/Helene Fischer/Die schoensten Kinderlieder.nfc",
+      "uid": "E00403502CB7E8BB",
+      "search": "german helene fischer die schoensten kinderlieder"
     },
     {
       "id": "german/heule-eule/heule-eule-und-andere-geschichten",
@@ -6059,6 +6149,15 @@
       "path": "data/tonies/German/Mein Lotta-Leben/Alles voller Kaninchen.nfc",
       "uid": "E00403501256A15C",
       "search": "german mein lotta leben alles voller kaninchen"
+    },
+    {
+      "id": "german/mein-lotta-leben/suesser-die-esel-nie-singen",
+      "name": "Suesser die Esel nie singen",
+      "series": "Mein Lotta-Leben",
+      "language": "German",
+      "path": "data/tonies/German/Mein Lotta-Leben/Suesser die Esel nie singen.nfc",
+      "uid": "E00403502C15CC08",
+      "search": "german mein lotta leben suesser die esel nie singen"
     },
     {
       "id": "german/mia-and-me/ankunft-in-centopia-eine-neue-hoffnung",
