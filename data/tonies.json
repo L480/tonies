@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-11T09:03:25Z",
-  "upstream_commit": "8d355b8",
-  "count": 895,
+  "generated_at": "2026-10-19T07:54:56Z",
+  "upstream_commit": "50b8231",
+  "count": 898,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -6304,6 +6304,15 @@
       "search": "german my first tonies bauernhof set schwein"
     },
     {
+      "id": "german/my-first-tonies/baustellen-set-kipplaster",
+      "name": "Baustellen Set - Kipplaster",
+      "series": "My First Tonies",
+      "language": "German",
+      "path": "data/tonies/German/My First Tonies/Baustellen Set - Kipplaster.nfc",
+      "uid": "E004035026BC1650",
+      "search": "german my first tonies baustellen set kipplaster"
+    },
+    {
       "id": "german/my-first-tonies/dschungel-set-affe",
       "name": "Dschungel Set - Affe",
       "series": "My First Tonies",
@@ -7231,6 +7240,15 @@
       "search": "german sesamstrasse kruemelmonsters mitmampfspass"
     },
     {
+      "id": "german/si-sa-singemaus/lern-spiel-und-spasslieder",
+      "name": "Lern,- Spiel- und Spasslieder",
+      "series": "Si-Sa-Singemaus",
+      "language": "German",
+      "path": "data/tonies/German/Si-Sa-Singemaus/Lern,- Spiel- und Spasslieder.nfc",
+      "uid": "E00403502B726F69",
+      "search": "german si sa singemaus lern spiel und spasslieder"
+    },
+    {
       "id": "german/sing-kinderlieder/bagger-mats-seine-freunde-die-schoensten-fahrzeuglieder",
       "name": "Bagger Mats & seine Freunde - Die schoensten Fahrzeuglieder",
       "series": "Sing Kinderlieder",
@@ -7283,6 +7301,15 @@
       "path": "data/tonies/German/Spirit/SPIRIT - Frei und Ungezaehmt.nfc",
       "uid": "E00403501BB1D00A",
       "search": "german spirit frei und ungezaehmt"
+    },
+    {
+      "id": "german/spongebob-schwammkopf/patrick-der-postbote-und-weitere-abenteuer",
+      "name": "Patrick, der Postbote und weitere Abenteuer",
+      "series": "SpongeBob Schwammkopf",
+      "language": "German",
+      "path": "data/tonies/German/SpongeBob Schwammkopf/Patrick, der Postbote und weitere Abenteuer.nfc",
+      "uid": "E00403502CBC4A04",
+      "search": "german spongebob schwammkopf patrick der postbote und weitere abenteuer"
     },
     {
       "id": "german/spongebob-schwammkopf/spongebob-schwammkopf-der-ferngesteuerte-fahrschueler-und-weitere-abenteuer",
