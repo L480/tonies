@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-19T07:54:56Z",
-  "upstream_commit": "50b8231",
-  "count": 898,
+  "generated_at": "2026-10-24T07:24:43Z",
+  "upstream_commit": "e05e0b4",
+  "count": 901,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -2477,6 +2477,33 @@
       "path": "data/tonies/German/Bitte nicht oeffnen/Bissig!.nfc",
       "uid": "E0040350192D558C",
       "search": "german bitte nicht oeffnen bissig"
+    },
+    {
+      "id": "german/bluey-tonies-3er-set/bingo",
+      "name": "Bingo",
+      "series": "Bluey Tonies 3er-Set",
+      "language": "German",
+      "path": "data/tonies/German/Bluey Tonies 3er-Set/Bingo.nfc",
+      "uid": "E00403502A0CF7EA",
+      "search": "german bluey tonies 3er set bingo"
+    },
+    {
+      "id": "german/bluey-tonies-3er-set/bluey",
+      "name": "Bluey",
+      "series": "Bluey Tonies 3er-Set",
+      "language": "German",
+      "path": "data/tonies/German/Bluey Tonies 3er-Set/Bluey.nfc",
+      "uid": "E00403502998222C",
+      "search": "german bluey tonies 3er set"
+    },
+    {
+      "id": "german/bluey-tonies-3er-set/muffin",
+      "name": "Muffin",
+      "series": "Bluey Tonies 3er-Set",
+      "language": "German",
+      "path": "data/tonies/German/Bluey Tonies 3er-Set/Muffin.nfc",
+      "uid": "E00403502C3AC76B",
+      "search": "german bluey tonies 3er set muffin"
     },
     {
       "id": "german/bob-der-baumeister/bob-der-kuechenmeister",
