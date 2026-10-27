@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-24T07:24:43Z",
-  "upstream_commit": "e05e0b4",
-  "count": 901,
+  "generated_at": "2026-10-27T08:01:27Z",
+  "upstream_commit": "1548d6a",
+  "count": 907,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -427,6 +427,15 @@
       "search": "english disney doc mcstuffins"
     },
     {
+      "id": "english/disney/eeyore",
+      "name": "Eeyore",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Eeyore.nfc",
+      "uid": "E00403502BE29499",
+      "search": "english disney eeyore"
+    },
+    {
       "id": "english/disney/encanto",
       "name": "Encanto",
       "series": "Disney",
@@ -571,6 +580,15 @@
       "search": "english disney tinker bell"
     },
     {
+      "id": "english/disney/up",
+      "name": "Up",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Up.nfc",
+      "uid": "E004035026ACB65C",
+      "search": "english disney up"
+    },
+    {
       "id": "english/disney/winnie-the-pooh",
       "name": "Winnie the Pooh",
       "series": "Disney",
@@ -587,6 +605,15 @@
       "path": "data/tonies/English/Disney/Wish.nfc",
       "uid": "E00403501E6F2D8C",
       "search": "english disney wish"
+    },
+    {
+      "id": "english/disney/zootopia",
+      "name": "Zootopia",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Zootopia.nfc",
+      "uid": "E0040350293293A7",
+      "search": "english disney zootopia"
     },
     {
       "id": "english/disney-and-pixar/brave",
@@ -1102,6 +1129,15 @@
       "search": "english octonauts peso"
     },
     {
+      "id": "english/other/a-christmas-carol",
+      "name": "A Christmas Carol",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/A Christmas Carol.nfc",
+      "uid": "E004035025D95DD8",
+      "search": "english other a christmas carol"
+    },
+    {
       "id": "english/other/blippi",
       "name": "Blippi",
       "series": "Other",
@@ -1244,6 +1280,15 @@
       "path": "data/tonies/English/Other/Mister Rogers Neighborhood.nfc",
       "uid": "E0040350278D0557",
       "search": "english other mister rogers neighborhood"
+    },
+    {
+      "id": "english/other/mo-willems-elephant-piggie",
+      "name": "Mo Willems Elephant & Piggie",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Mo Willems Elephant & Piggie.nfc",
+      "uid": "E004035025E1D557",
+      "search": "english other mo willems elephant piggie"
     },
     {
       "id": "english/other/mo-willems-the-pigeon",
@@ -1685,6 +1730,15 @@
       "path": "data/tonies/English/Pokemon/Squirtle.nfc",
       "uid": "E00403502AED88A9",
       "search": "english pokemon squirtle"
+    },
+    {
+      "id": "english/sesame-street/abby-cadabby",
+      "name": "Abby Cadabby",
+      "series": "Sesame Street",
+      "language": "English",
+      "path": "data/tonies/English/Sesame Street/Abby Cadabby.nfc",
+      "uid": "E00403502A47850F",
+      "search": "english sesame street abby cadabby"
     },
     {
       "id": "english/sesame-street/cookie-monster",
