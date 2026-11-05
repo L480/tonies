@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-27T08:01:27Z",
-  "upstream_commit": "1548d6a",
-  "count": 907,
+  "generated_at": "2026-11-05T09:38:35Z",
+  "upstream_commit": "9489315",
+  "count": 914,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -418,6 +418,15 @@
       "search": "english disney baby lullabies"
     },
     {
+      "id": "english/disney/beauty-the-beast",
+      "name": "Beauty & the Beast",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Beauty & the Beast.nfc",
+      "uid": "E004035029752132",
+      "search": "english disney beauty the beast"
+    },
+    {
       "id": "english/disney/doc-mcstuffins",
       "name": "Doc McStuffins",
       "series": "Disney",
@@ -452,6 +461,15 @@
       "path": "data/tonies/English/Disney/Hercules.nfc",
       "uid": "E00403501EED8A02",
       "search": "english disney hercules"
+    },
+    {
+      "id": "english/disney/holiday-mickey",
+      "name": "Holiday Mickey",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Holiday Mickey.nfc",
+      "uid": "E00403502C2B83E1",
+      "search": "english disney holiday mickey"
     },
     {
       "id": "english/disney/lady-and-the-tramp",
@@ -499,6 +517,15 @@
       "search": "english disney moana"
     },
     {
+      "id": "english/disney/moana-2-simea",
+      "name": "Moana 2 - Simea",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Moana 2 - Simea.nfc",
+      "uid": "E004035025756D78",
+      "search": "english disney moana 2 simea"
+    },
+    {
       "id": "english/disney/pocahontas",
       "name": "Pocahontas",
       "series": "Disney",
@@ -506,6 +533,15 @@
       "path": "data/tonies/English/Disney/Pocahontas.nfc",
       "uid": "E00403501BA173D8",
       "search": "english disney pocahontas"
+    },
+    {
+      "id": "english/disney/sleeping-beauty",
+      "name": "Sleeping Beauty",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Sleeping Beauty.nfc",
+      "uid": "E004035020FE4507",
+      "search": "english disney sleeping beauty"
     },
     {
       "id": "english/disney/superkitties-ginny",
@@ -983,6 +1019,33 @@
       "path": "data/tonies/English/Magic Tree House/Pirates Past Noon.nfc",
       "uid": "E0040350257B84F2",
       "search": "english magic tree house pirates past noon"
+    },
+    {
+      "id": "english/marvel/captain-america",
+      "name": "Captain America",
+      "series": "Marvel",
+      "language": "English",
+      "path": "data/tonies/English/Marvel/Captain America.nfc",
+      "uid": "E0040350297A0366",
+      "search": "english marvel captain america"
+    },
+    {
+      "id": "english/marvel/iron-man",
+      "name": "Iron Man",
+      "series": "Marvel",
+      "language": "English",
+      "path": "data/tonies/English/Marvel/Iron Man.nfc",
+      "uid": "E00403502ADEF72C",
+      "search": "english marvel iron man"
+    },
+    {
+      "id": "english/marvel/spider-man",
+      "name": "Spider-Man",
+      "series": "Marvel",
+      "language": "English",
+      "path": "data/tonies/English/Marvel/Spider-Man.nfc",
+      "uid": "E00403502C421C3D",
+      "search": "english marvel spider man"
     },
     {
       "id": "english/marvels-spidey-and-his-amazing-friends/black-panther",
