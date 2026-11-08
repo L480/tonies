@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-05T09:38:35Z",
-  "upstream_commit": "9489315",
-  "count": 914,
+  "generated_at": "2026-11-08T09:11:25Z",
+  "upstream_commit": "895405a",
+  "count": 927,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -508,6 +508,15 @@
       "search": "english disney minnie mouse"
     },
     {
+      "id": "english/disney/minnie-mouse-cuddle",
+      "name": "Minnie Mouse Cuddle",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Minnie Mouse Cuddle.nfc",
+      "uid": "E004035027EAEF7C",
+      "search": "english disney minnie mouse cuddle"
+    },
+    {
       "id": "english/disney/moana",
       "name": "Moana",
       "series": "Disney",
@@ -524,6 +533,15 @@
       "path": "data/tonies/English/Disney/Moana 2 - Simea.nfc",
       "uid": "E004035025756D78",
       "search": "english disney moana 2 simea"
+    },
+    {
+      "id": "english/disney/olaf-cuddle",
+      "name": "Olaf Cuddle",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Olaf Cuddle.nfc",
+      "uid": "E004035027DF6783",
+      "search": "english disney olaf cuddle"
     },
     {
       "id": "english/disney/pocahontas",
@@ -632,6 +650,15 @@
       "path": "data/tonies/English/Disney/Winnie the Pooh.nfc",
       "uid": "E00403501DCC3BA3",
       "search": "english disney winnie the pooh"
+    },
+    {
+      "id": "english/disney/winnie-the-pooh-cuddle",
+      "name": "Winnie the Pooh Cuddle",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Winnie the Pooh Cuddle.nfc",
+      "uid": "E004035028944A00",
+      "search": "english disney winnie the pooh cuddle"
     },
     {
       "id": "english/disney/wish",
@@ -895,6 +922,15 @@
       "search": "english dreamworks spirit untamed"
     },
     {
+      "id": "english/dreamworks/gabbys-dollhouse/cakey-cat",
+      "name": "Cakey Cat",
+      "series": "DreamWorks/Gabbys Dollhouse",
+      "language": "English",
+      "path": "data/tonies/English/DreamWorks/Gabbys Dollhouse/Cakey Cat.nfc",
+      "uid": "E004035029F78034",
+      "search": "english dreamworks gabbys dollhouse cakey cat"
+    },
+    {
       "id": "english/dreamworks/gabbys-dollhouse/kitty-fairy",
       "name": "Kitty Fairy",
       "series": "DreamWorks/Gabbys Dollhouse",
@@ -947,6 +983,15 @@
       "path": "data/tonies/English/Favorite Tales/Annie Oakley.nfc",
       "uid": "E0040350196BE6BF",
       "search": "english favorite tales annie oakley"
+    },
+    {
+      "id": "english/favorite-tales/christmas-tales",
+      "name": "Christmas Tales",
+      "series": "Favorite Tales",
+      "language": "English",
+      "path": "data/tonies/English/Favorite Tales/Christmas Tales.nfc",
+      "uid": "E00403501EC730B5",
+      "search": "english favorite tales christmas"
     },
     {
       "id": "english/favorite-tales/puss-in-boots",
@@ -1201,6 +1246,15 @@
       "search": "english other a christmas carol"
     },
     {
+      "id": "english/other/avatar-the-last-airbender-aang",
+      "name": "Avatar - The Last Airbender - Aang",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Avatar - The Last Airbender - Aang.nfc",
+      "uid": "E00403502B0FD11A",
+      "search": "english other avatar the last airbender aang"
+    },
+    {
       "id": "english/other/blippi",
       "name": "Blippi",
       "series": "Other",
@@ -1307,6 +1361,24 @@
       "path": "data/tonies/English/Other/Emma Memma.nfc",
       "uid": "E00403502A1F1520",
       "search": "english other emma memma"
+    },
+    {
+      "id": "english/other/favorite-masterpieces-the-nutcracker",
+      "name": "Favorite Masterpieces - The Nutcracker",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Favorite Masterpieces - The Nutcracker.nfc",
+      "uid": "E004035019AEBAD5",
+      "search": "english other favorite masterpieces the nutcracker"
+    },
+    {
+      "id": "english/other/hollys-christmas-adventure-advent-calendar",
+      "name": "Hollys Christmas Adventure Advent Calendar",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Hollys Christmas Adventure Advent Calendar.nfc",
+      "uid": "E00403502BE2619D",
+      "search": "english other hollys christmas adventure advent calendar"
     },
     {
       "id": "english/other/hot-wheels",
@@ -1498,6 +1570,15 @@
       "search": "english other the laurie berkner band"
     },
     {
+      "id": "english/other/the-laurie-berkner-band-harry-the-chipmunks-treasure-hunt",
+      "name": "The Laurie Berkner Band - Harry the Chipmunks Treasure Hunt",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/The Laurie Berkner Band - Harry the Chipmunks Treasure Hunt.nfc",
+      "uid": "E00403502B425CC6",
+      "search": "english other the laurie berkner band harry chipmunks treasure hunt"
+    },
+    {
       "id": "english/other/the-lion-inside",
       "name": "The Lion Inside",
       "series": "Other",
@@ -1676,6 +1757,15 @@
       "path": "data/tonies/English/Paw Patrol/Skye.nfc",
       "uid": "E00403501DC28A38",
       "search": "english paw patrol skye"
+    },
+    {
+      "id": "english/paw-patrol/the-dino-movie",
+      "name": "The Dino Movie",
+      "series": "Paw Patrol",
+      "language": "English",
+      "path": "data/tonies/English/Paw Patrol/The Dino Movie.nfc",
+      "uid": "E00403502B0F6C49",
+      "search": "english paw patrol the dino movie"
     },
     {
       "id": "english/paw-patrol/tracker",
@@ -1885,6 +1975,15 @@
       "search": "english story time all engines go thomas the train"
     },
     {
+      "id": "english/tales-of-the-teenage-mutant-ninja-turtles/donatello",
+      "name": "Donatello",
+      "series": "Tales of the Teenage Mutant Ninja Turtles",
+      "language": "English",
+      "path": "data/tonies/English/Tales of the Teenage Mutant Ninja Turtles/Donatello.nfc",
+      "uid": "E00403502BF0DC1F",
+      "search": "english tales of the teenage mutant ninja turtles donatello"
+    },
+    {
       "id": "english/tales-of-the-teenage-mutant-ninja-turtles/leonardo",
       "name": "Leonardo",
       "series": "Tales of the Teenage Mutant Ninja Turtles",
@@ -2000,6 +2099,24 @@
       "path": "data/tonies/English/Tonies Originals/Favorite Childrens Songs - Celebration Songs.nfc",
       "uid": "E004035023EA9D6C",
       "search": "english tonies originals favorite childrens songs celebration"
+    },
+    {
+      "id": "english/tonies-originals/favorite-childrens-songs-holiday-songs-penguin",
+      "name": "Favorite Childrens Songs - Holiday Songs (Penguin)",
+      "series": "Tonies Originals",
+      "language": "English",
+      "path": "data/tonies/English/Tonies Originals/Favorite Childrens Songs - Holiday Songs (Penguin).nfc",
+      "uid": "E0040350290ACE3D",
+      "search": "english tonies originals favorite childrens songs holiday penguin"
+    },
+    {
+      "id": "english/tonies-originals/favorite-childrens-songs-holiday-songs-2-rudolph",
+      "name": "Favorite Childrens Songs - Holiday Songs 2 (Rudolph)",
+      "series": "Tonies Originals",
+      "language": "English",
+      "path": "data/tonies/English/Tonies Originals/Favorite Childrens Songs - Holiday Songs 2 (Rudolph).nfc",
+      "uid": "E00403502CB5EA89",
+      "search": "english tonies originals favorite childrens songs holiday 2 rudolph"
     },
     {
       "id": "english/tonies-originals/nap-time-nature-sounds",
