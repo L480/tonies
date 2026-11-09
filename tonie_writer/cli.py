@@ -8,7 +8,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from tonie_writer import catalog, proxmark, writer
+from tonie_writer import catalog, emulator, proxmark, writer
 from tonie_writer.nfcfile import NfcParseError, parse_nfc_file
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -347,6 +347,35 @@ def cmd_read(args: argparse.Namespace) -> int:
     return EXIT_OK
 
 
+def cmd_emulate(args: argparse.Namespace) -> int:
+    entries = _load_catalog_or_exit()
+    entry = _resolve_or_exit(entries, args.query, args.language, args.pick, args.yes)
+    try:
+        tag = parse_nfc_file(_entry_path(entry))
+        image = emulator.build_image(tag)
+    except (NfcParseError, OSError, ValueError) as exc:
+        print(f"error: could not prepare {entry.path}: {exc}", file=sys.stderr)
+        return EXIT_UNEXPECTED
+
+    if args.dry_run:
+        if args.json:
+            print(jsonlib.dumps({"image": image, "commands": [emulator.load_command(Path("<temporary-image.json>")), "hf 15 sim"]}, indent=2))
+        else:
+            print(f"Tonie: {_format_candidate(entry)}")
+            print(f"UID: {_format_uid(tag.uid)}; 8 x 4-byte blocks")
+            print("Convert the NFC dump to a temporary Proxmark3 ISO15693 JSON image.")
+            print(emulator.load_command(Path("<temporary-image.json>")))
+            print("hf 15 sim")
+        return EXIT_OK
+    if args.json:
+        print("error: live emulation streams Proxmark3 output; use --json with --dry-run only.", file=sys.stderr)
+        return EXIT_UNEXPECTED
+
+    print(f"Emulating: {_format_candidate(entry)} (UID {_format_uid(tag.uid)})", flush=True)
+    emulator.emulate(tag, port=args.port, verbose=args.verbose)
+    return EXIT_OK
+
+
 # --------------------------------------------------------------------------
 # tonie doctor
 # --------------------------------------------------------------------------
@@ -496,6 +525,14 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_read = sub.add_parser("read", help="read the tag on the reader")
     p_read.set_defaults(func=cmd_read)
+
+    p_emulate = sub.add_parser("emulate", help="emulate a Tonie NFC tag with the Proxmark3")
+    p_emulate.add_argument("query")
+    p_emulate.add_argument("--language")
+    p_emulate.add_argument("--pick", type=int)
+    p_emulate.add_argument("--yes", action="store_true", help="resolve without interactive selection")
+    p_emulate.add_argument("--dry-run", action="store_true", help="preview without connecting to hardware")
+    p_emulate.set_defaults(func=cmd_emulate)
 
     p_doctor = sub.add_parser("doctor", help="environment + hardware check")
     p_doctor.add_argument("--probe-magic", action="store_true")
