@@ -9,6 +9,7 @@ from __future__ import annotations
 import re
 import shutil
 import subprocess
+import sys
 from dataclasses import dataclass
 
 ANSI_ESCAPE_RE = re.compile(r"\x1b\[[0-9;]*m")
@@ -92,6 +93,42 @@ def validate_block_hex(data_hex: str) -> str:
     if not BLOCK_HEX_RE.fullmatch(data_hex):
         raise ValueError(f"Invalid block data (expected 8 hex chars): {data_hex!r}")
     return data_hex
+
+
+def run_live(
+    commands: list[str], port: str | None = None, pm3_bin: str | None = None
+) -> Pm3Result:
+    """Run a long-lived simulation with visible output and no reader timeout."""
+    binary = pm3_bin or locate_pm3()
+    if not binary:
+        raise ProxmarkNotFoundError("Could not find 'pm3' or 'proxmark3' on PATH.")
+    argv = [binary]
+    if port:
+        argv += ["-p", port]
+    argv += ["-f", "-c", ";".join(commands)]
+    output: list[str] = []
+    try:
+        with subprocess.Popen(
+            argv, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
+        ) as proc:
+            try:
+                for line in proc.stdout:
+                    sys.stdout.write(line)
+                    sys.stdout.flush()
+                    output.append(line)
+                returncode = proc.wait()
+            except KeyboardInterrupt:
+                proc.terminate()
+                try:
+                    proc.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    proc.kill()
+                    proc.wait()
+                print("\nPress the Proxmark3 hardware button to stop any active emulation.", file=sys.stderr)
+                raise
+    except OSError as exc:
+        raise ProxmarkError(f"Could not execute '{binary}': {exc}") from exc
+    return Pm3Result(strip_ansi("".join(output)), "", returncode)
 
 
 def validate_block_number(block: int) -> int:
