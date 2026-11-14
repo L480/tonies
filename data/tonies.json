@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-08T09:11:25Z",
-  "upstream_commit": "895405a",
-  "count": 927,
+  "generated_at": "2026-11-14T09:06:03Z",
+  "upstream_commit": "b314b71",
+  "count": 941,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -499,6 +499,15 @@
       "search": "english disney mickey mouse"
     },
     {
+      "id": "english/disney/mickey-mouse-cuddle",
+      "name": "Mickey Mouse Cuddle",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Mickey Mouse Cuddle.nfc",
+      "uid": "E00403502A993864",
+      "search": "english disney mickey mouse cuddle"
+    },
+    {
       "id": "english/disney/minnie-mouse",
       "name": "Minnie Mouse",
       "series": "Disney",
@@ -506,6 +515,15 @@
       "path": "data/tonies/English/Disney/Minnie Mouse.nfc",
       "uid": "E00403501B6D90B6",
       "search": "english disney minnie mouse"
+    },
+    {
+      "id": "english/disney/minnie-mouse-clubhouse",
+      "name": "Minnie Mouse Clubhouse",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Minnie Mouse Clubhouse.nfc",
+      "uid": "E00403502A75028A",
+      "search": "english disney minnie mouse clubhouse"
     },
     {
       "id": "english/disney/minnie-mouse-cuddle",
@@ -596,6 +614,15 @@
       "path": "data/tonies/English/Disney/The Lion King.nfc",
       "uid": "E0040350204696FF",
       "search": "english disney the lion king"
+    },
+    {
+      "id": "english/disney/the-little-mermaid",
+      "name": "The Little Mermaid",
+      "series": "Disney",
+      "language": "English",
+      "path": "data/tonies/English/Disney/The Little Mermaid.nfc",
+      "uid": "E004035026C4F298",
+      "search": "english disney the little mermaid"
     },
     {
       "id": "english/disney/the-nightmare-before-christmas-jack-skellington",
@@ -778,22 +805,13 @@
       "search": "english disney and pixar the incredibles"
     },
     {
-      "id": "english/disney-and-pixar/toy-story-bullseye",
-      "name": "Toy Story - Bullseye",
+      "id": "english/disney-and-pixar/toy-story-1-woody",
+      "name": "Toy Story 1 - Woody",
       "series": "Disney and Pixar",
       "language": "English",
-      "path": "data/tonies/English/Disney and Pixar/Toy Story - Bullseye.nfc",
-      "uid": "E00403502AD19ACA",
-      "search": "english disney and pixar toy story bullseye"
-    },
-    {
-      "id": "english/disney-and-pixar/toy-story-woody",
-      "name": "Toy Story - Woody",
-      "series": "Disney and Pixar",
-      "language": "English",
-      "path": "data/tonies/English/Disney and Pixar/Toy Story - Woody.nfc",
+      "path": "data/tonies/English/Disney and Pixar/Toy Story 1 - Woody.nfc",
       "uid": "E00403501EE25735",
-      "search": "english disney and pixar toy story woody"
+      "search": "english disney and pixar toy story 1 woody"
     },
     {
       "id": "english/disney-and-pixar/toy-story-2-buzz-lightyear",
@@ -805,6 +823,15 @@
       "search": "english disney and pixar toy story 2 buzz lightyear"
     },
     {
+      "id": "english/disney-and-pixar/toy-story-5-bullseye",
+      "name": "Toy Story 5 - Bullseye",
+      "series": "Disney and Pixar",
+      "language": "English",
+      "path": "data/tonies/English/Disney and Pixar/Toy Story 5 - Bullseye.nfc",
+      "uid": "E00403502AD19ACA",
+      "search": "english disney and pixar toy story 5 bullseye"
+    },
+    {
       "id": "english/disney-the-muppets/kermit-the-frog",
       "name": "Kermit the Frog",
       "series": "Disney the Muppets",
@@ -814,15 +841,6 @@
       "search": "english disney the muppets kermit frog"
     },
     {
-      "id": "english/disney/frozen/anna",
-      "name": "Anna",
-      "series": "Disney/Frozen",
-      "language": "English",
-      "path": "data/tonies/English/Disney/Frozen/Anna.nfc",
-      "uid": "E00403501B2FA296",
-      "search": "english disney frozen anna"
-    },
-    {
       "id": "english/disney/frozen/elsa",
       "name": "Elsa",
       "series": "Disney/Frozen",
@@ -830,6 +848,15 @@
       "path": "data/tonies/English/Disney/Frozen/Elsa.nfc",
       "uid": "E004035019D09157",
       "search": "english disney frozen elsa"
+    },
+    {
+      "id": "english/disney/frozen/frozen-2-anna",
+      "name": "Frozen 2 - Anna",
+      "series": "Disney/Frozen",
+      "language": "English",
+      "path": "data/tonies/English/Disney/Frozen/Frozen 2 - Anna.nfc",
+      "uid": "E00403501B2FA296",
+      "search": "english disney frozen 2 anna"
     },
     {
       "id": "english/disney/frozen/olaf",
@@ -902,6 +929,15 @@
       "path": "data/tonies/English/DreamWorks/How to Train Your Dragon.nfc",
       "uid": "E00403501EBF9679",
       "search": "english dreamworks how to train your dragon"
+    },
+    {
+      "id": "english/dreamworks/how-to-train-your-dragon-toothless",
+      "name": "How to Train Your Dragon - Toothless",
+      "series": "DreamWorks",
+      "language": "English",
+      "path": "data/tonies/English/DreamWorks/How to Train Your Dragon - Toothless.nfc",
+      "uid": "E004035027BF3F39",
+      "search": "english dreamworks how to train your dragon toothless"
     },
     {
       "id": "english/dreamworks/kung-fu-panda",
@@ -1255,6 +1291,15 @@
       "search": "english other avatar the last airbender aang"
     },
     {
+      "id": "english/other/baby-shark",
+      "name": "Baby Shark",
+      "series": "Other",
+      "language": "English",
+      "path": "data/tonies/English/Other/Baby Shark.nfc",
+      "uid": "E00403502B15C5F0",
+      "search": "english other baby shark"
+    },
+    {
       "id": "english/other/blippi",
       "name": "Blippi",
       "series": "Other",
@@ -1561,13 +1606,13 @@
       "search": "english other the king of kindergarten"
     },
     {
-      "id": "english/other/the-laurie-berkner-band",
-      "name": "The Laurie Berkner Band",
+      "id": "english/other/the-laurie-berkner-band-dino",
+      "name": "The Laurie Berkner Band - Dino",
       "series": "Other",
       "language": "English",
-      "path": "data/tonies/English/Other/The Laurie Berkner Band.nfc",
+      "path": "data/tonies/English/Other/The Laurie Berkner Band - Dino.nfc",
       "uid": "E004035023E84FFC",
-      "search": "english other the laurie berkner band"
+      "search": "english other the laurie berkner band dino"
     },
     {
       "id": "english/other/the-laurie-berkner-band-harry-the-chipmunks-treasure-hunt",
@@ -1937,6 +1982,15 @@
       "path": "data/tonies/English/Sleepy Friends/Classical Music with Sleepy Rabbit.nfc",
       "uid": "E004035023F8B85A",
       "search": "english sleepy friends classical music with rabbit"
+    },
+    {
+      "id": "english/sleepy-time/sleepy-jaguar-lullabies-from-the-sleepy-jungle",
+      "name": "Sleepy Jaguar - Lullabies From the Sleepy Jungle",
+      "series": "Sleepy Time",
+      "language": "English",
+      "path": "data/tonies/English/Sleepy Time/Sleepy Jaguar - Lullabies From the Sleepy Jungle.nfc",
+      "uid": "E004035024816FF4",
+      "search": "english sleepy time jaguar lullabies from the jungle"
     },
     {
       "id": "english/sleepy-time/sleepy-sheep-lullabies-from-the-sleepy-meadow",
@@ -3334,6 +3388,15 @@
       "search": "german der grueffelo das grueffelokind relaunch 2026"
     },
     {
+      "id": "german/der-herr-der-elemente/aang",
+      "name": "Aang",
+      "series": "Der Herr der Elemente",
+      "language": "German",
+      "path": "data/tonies/German/Der Herr der Elemente/Aang.nfc",
+      "uid": "E00403502AEC8FA3",
+      "search": "german der herr elemente aang"
+    },
+    {
       "id": "german/der-loewe-in-dir/der-loewe-in-dir-und-andere-geschichten",
       "name": "Der Loewe in dir und andere Geschichten",
       "series": "Der Loewe in dir",
@@ -4162,6 +4225,15 @@
       "search": "german disney coco"
     },
     {
+      "id": "german/disney/cuddle-tonie-minnie",
+      "name": "Cuddle Tonie Minnie",
+      "series": "Disney",
+      "language": "German",
+      "path": "data/tonies/German/Disney/Cuddle Tonie Minnie.nfc",
+      "uid": "E004035027ED5610",
+      "search": "german disney cuddle tonie minnie"
+    },
+    {
       "id": "german/disney/cuddle-tonie-olaf",
       "name": "Cuddle Tonie Olaf",
       "series": "Disney",
@@ -4268,6 +4340,15 @@
       "path": "data/tonies/German/Disney/Die Unglaublichen.nfc",
       "uid": "E00403501F818B1D",
       "search": "german disney die unglaublichen"
+    },
+    {
+      "id": "german/disney/disney-baby-klaviermelodien-zum-einschlafen",
+      "name": "Disney Baby - Klaviermelodien zum Einschlafen",
+      "series": "Disney",
+      "language": "German",
+      "path": "data/tonies/German/Disney/Disney Baby - Klaviermelodien zum Einschlafen.nfc",
+      "uid": "E004035027503A93",
+      "search": "german disney baby klaviermelodien zum einschlafen"
     },
     {
       "id": "german/disney/disney-pixar-toy-story-5",
@@ -4621,6 +4702,15 @@
       "search": "german doc mcstuffins spielzeugaerztin buh machst du 3 weitere geschichten"
     },
     {
+      "id": "german/doggyland/doggyland",
+      "name": "Doggyland",
+      "series": "Doggyland",
+      "language": "German",
+      "path": "data/tonies/German/Doggyland/Doggyland.nfc",
+      "uid": "E00403502CBAC667",
+      "search": "german doggyland"
+    },
+    {
       "id": "german/dora/dora",
       "name": "Dora",
       "series": "Dora",
@@ -4711,13 +4801,22 @@
       "search": "german ein freund wie kein anderer"
     },
     {
-      "id": "german/ella/ella-in-der-schule",
-      "name": "Ella in der Schule",
+      "id": "german/ella/ella-in-der-schule-2017",
+      "name": "Ella in der Schule (2017)",
       "series": "Ella",
       "language": "German",
-      "path": "data/tonies/German/Ella/Ella in der Schule.nfc",
+      "path": "data/tonies/German/Ella/Ella in der Schule (2017).nfc",
       "uid": "E004035018213AC2",
-      "search": "german ella in der schule"
+      "search": "german ella in der schule 2017"
+    },
+    {
+      "id": "german/ella/ella-in-der-schule-2026",
+      "name": "Ella in der Schule (2026)",
+      "series": "Ella",
+      "language": "German",
+      "path": "data/tonies/German/Ella/Ella in der Schule (2026).nfc",
+      "uid": "E004035029B0F9FB",
+      "search": "german ella in der schule 2026"
     },
     {
       "id": "german/elmar/kunterbunte-geschichten",
@@ -6403,6 +6502,15 @@
       "search": "german maulwurf vom kleinen der wissen wollte wer ihm auf den kopf gemacht hat die rache des hans heinerich"
     },
     {
+      "id": "german/mein-knopf-ein-universum/auf-zu-neuen-wunsch-abenteuern",
+      "name": "Auf zu neuen Wunsch-Abenteuern",
+      "series": "Mein Knopf, ein Universum",
+      "language": "German",
+      "path": "data/tonies/German/Mein Knopf, ein Universum/Auf zu neuen Wunsch-Abenteuern.nfc",
+      "uid": "E00403502BF38C1B",
+      "search": "german mein knopf ein universum auf zu neuen wunsch abenteuern"
+    },
+    {
       "id": "german/mein-lotta-leben/alles-voller-kaninchen",
       "name": "Alles voller Kaninchen",
       "series": "Mein Lotta-Leben",
@@ -6689,6 +6797,15 @@
       "path": "data/tonies/German/PAW Patrol/Der Delfin-Freund (Sky).nfc",
       "uid": "E004035017CC2849",
       "search": "german paw patrol der delfin freund sky"
+    },
+    {
+      "id": "german/paw-patrol/der-dino-film",
+      "name": "Der Dino Film",
+      "series": "PAW Patrol",
+      "language": "German",
+      "path": "data/tonies/German/PAW Patrol/Der Dino Film.nfc",
+      "uid": "E00403502A75314E",
+      "search": "german paw patrol der dino film"
     },
     {
       "id": "german/paw-patrol/der-piratenschatz-rubble",
@@ -8210,6 +8327,15 @@
       "path": "data/tonies/German/Willy Astor/Willy Astor - Kindischer Ozean.nfc",
       "uid": "E0040350155F542D",
       "search": "german willy astor kindischer ozean"
+    },
+    {
+      "id": "german/winnie-puuh/cuddle-tonie-winnie",
+      "name": "Cuddle Tonie Winnie",
+      "series": "Winnie Puuh",
+      "language": "German",
+      "path": "data/tonies/German/Winnie Puuh/Cuddle Tonie Winnie.nfc",
+      "uid": "E00403502892E50D",
+      "search": "german winnie puuh cuddle tonie"
     },
     {
       "id": "german/winnie-puuh/ferkels-grosses-abenteuer",
