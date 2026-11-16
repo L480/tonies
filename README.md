@@ -38,6 +38,7 @@ No `pip install` step: the CLI is Python standard library only.
 | `tonie info <query>` | resolved Tonie: name, series, language, UID, path, all 8 blocks |
 | `tonie write <query> [flags]` | resolve, confirm, write, and verify a Tonie onto the tag on the reader |
 | `tonie read` | read the tag on the reader and identify it against the catalog |
+| `tonie emulate <query> [--language X] [--pick N] [--dry-run]` | emulate a Tonie NFC tag using the Proxmark3 HF antenna |
 | `tonie doctor [--probe-magic]` | environment + hardware check |
 | `tonie index` | regenerate `data/tonies.json` + `TONIES.md` locally |
 
@@ -46,6 +47,32 @@ Global flags: `--port <dev>`, `--json`, `--verbose`.
 `tonie write` flags: `--dry-run`, `--yes`, `--uid-only`, `--blocks-only`,
 `--no-verify`, `--retries N`, `--language`, `--pick N`. There is deliberately
 no `--gen2` flag — see `docs/HARDWARE.md` for why.
+
+## Emulate a tag
+
+```sh
+./tonie emulate "Zuma" --language English --dry-run
+./tonie emulate "Zuma" --language English
+# To select a specific Proxmark3:
+./tonie --port /dev/ttyACM0 emulate "Zuma" --language English
+```
+
+Keep the Proxmark3 powered over USB and place its HF antenna against the
+Toniebox reader. Press the **Proxmark3 hardware button** to stop emulation.
+If you interrupt the client with Ctrl-C, press the hardware button as well
+to stop any simulation still running on the device.
+
+The command converts the selected dump to a temporary ISO15693 emulator
+image, uploads its UID, eight memory blocks, security flags, and privacy
+password with `hf 15 eload`, then starts `hf 15 sim`. It overwrites the
+Proxmark3's emulator memory; it does not need a blank tag. `--dry-run` works
+without hardware, and `--json` can be used with `--dry-run` to inspect the
+image and command plan.
+
+Use matching Iceman client and firmware with `hf 15 eload` and `hf 15 sim`
+support. Emulation support and RF timing depend on the firmware and antenna
+placement; playback on a stock Toniebox has not been hardware-verified for
+this command. No firmware is flashed by this tool.
 
 ## The catalog
 
