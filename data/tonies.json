@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-14T09:06:03Z",
-  "upstream_commit": "b314b71",
-  "count": 941,
+  "generated_at": "2026-11-27T11:00:09Z",
+  "upstream_commit": "3293ebe",
+  "count": 942,
   "tonies": [
     {
       "id": "english/all-star-animals-the-golden-whistle-games/soccer",
@@ -2378,6 +2378,15 @@
       "path": "data/tonies/German/Adventskalender/Adventskalender 2025 - Floeckchen und die verschwundenen Weihnachtslichter.nfc",
       "uid": "E004035024C2A7AD",
       "search": "german adventskalender 2025 floeckchen und die verschwundenen weihnachtslichter"
+    },
+    {
+      "id": "german/adventskalender/adventskalender-2026-ein-knuspriges-weihnachtsfest",
+      "name": "Adventskalender 2026 - Ein knuspriges Weihnachtsfest",
+      "series": "Adventskalender",
+      "language": "German",
+      "path": "data/tonies/German/Adventskalender/Adventskalender 2026 - Ein knuspriges Weihnachtsfest.nfc",
+      "uid": "E00403502A5CD464",
+      "search": "german adventskalender 2026 ein knuspriges weihnachtsfest"
     },
     {
       "id": "german/adventskalender/adventskalender-2026-milas-weihnachtsreise",
